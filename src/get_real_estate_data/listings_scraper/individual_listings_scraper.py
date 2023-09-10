@@ -20,7 +20,7 @@ class IndividualListingsScraper(WebscrapingHelper):
             elems_path: Dict,
             imgs_path: Dict,
             helper_path: Dict,
-            no_links_after_delete_cookies: int = 2,
+            no_links_after_delete_cookies: int = 10,
     ):
         """
         Initialize the IndividualListingsScraper class.
@@ -97,11 +97,17 @@ class IndividualListingsScraper(WebscrapingHelper):
 
         if img_count_element:
             num_images = int(re.search(r'\d+', img_count_element.text).group())
-            button_element = self.driver.find_element(By.CSS_SELECTOR, button_path)
+            button_element = None
 
-            for _ in range(num_images):
-                button_element.click()
-                time.sleep(1)
+            try:
+                button_element = self.driver.find_element(By.CSS_SELECTOR, button_path)
+            except NoSuchElementException:
+                pass
+
+            if button_element:
+                for _ in range(num_images):
+                    button_element.click()
+                    time.sleep(1)
 
             image_elements = self.driver.find_elements(By.CSS_SELECTOR, images_path)
             image_links = [element.get_attribute('src') for element in image_elements if element]

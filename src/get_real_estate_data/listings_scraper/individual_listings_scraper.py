@@ -210,12 +210,27 @@ class IndividualListingsScraper(WebscrapingHelper):
 
         listings_details = []
 
+        total_properties = len(df)
         for counter, (_, row) in enumerate(rows):
-            existing_info_dict = self._get_links_and_existing_info(row=row, df=df)
-            info_dict = self._loop_through_all_paths_and_clean(
-                existing_info_dict=existing_info_dict, row=row, counter=counter,
-            )
-            listings_details.append(info_dict)
+            property_id = row['url'].split('/')[-1]
+            print(f"Scraping property {property_id} ({counter + 1} out of {total_properties})")
+
+            try:
+                existing_info_dict = self._get_links_and_existing_info(row=row, df=df)
+                info_dict = self._loop_through_all_paths_and_clean(
+                    existing_info_dict=existing_info_dict, row=row, counter=counter,
+                )
+                listings_details.append(info_dict)
+            except Exception as e:
+                print(f"Error occurred while scraping property {property_id}: {e}")
+                print("Saving scraped properties so far to 'incomplete_listings_details.csv'")
+                scraped_properties_df = pd.DataFrame(listings_details)
+                scraped_properties_df.to_csv('uncompleted_properties_details.csv', index=False, encoding='utf-8')
+                print("Data saved. Continuing with the next property.")
+
             time.sleep(4)
 
-        return pd.DataFrame(listings_details)
+        listings_details_df = pd.DataFrame(listings_details)
+        today = str(pd.to_datetime('today').normalize().date())
+        listings_details_df.to_csv(f'listings_details_{today}.csv', index=False, encoding='utf-8')
+        return listings_details_df

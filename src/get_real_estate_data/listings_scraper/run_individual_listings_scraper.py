@@ -14,7 +14,7 @@ load_dotenv()
 file_path = os.getenv("file_path")
 
 df_links = pd.read_csv(file_path, index_col=False)
-# df_links = df_links[49:51]
+df_links = df_links[49:51]
 
 my_driver = uc.Chrome()
 
@@ -23,5 +23,3 @@ data_extractor = IndividualListingsScraper(
     driver=my_driver, elems_path=details_paths, imgs_path=path_images, helper_path=paths_helper,
 )
 ad_details_df = data_extractor.scrape_all_properties(df=df_links)
-today = str(pd.to_datetime('today').normalize().date())
-ad_details_df.to_csv(f'detail_listings_{today}.csv', index=False, encoding='utf-8')

@@ -14,7 +14,6 @@ load_dotenv()
 file_path = os.getenv("file_path")
 
 df_links = pd.read_csv(file_path, index_col=False)
-df_links = df_links[49:51]
 
 my_driver = uc.Chrome()
 

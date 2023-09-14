@@ -10,6 +10,7 @@ from selenium.common.exceptions import NoSuchElementException
 import undetected_chromedriver as uc
 
 from src.get_real_estate_data.listings_scraper.data_cleaner import DataCleaner
+from src.get_real_estate_data.listings_scraper.features_split import SplitFeatures
 from src.get_real_estate_data.shared.webscraping_helper import WebscrapingHelper
 
 
@@ -23,7 +24,7 @@ class IndividualListingsScraper(WebscrapingHelper):
             no_links_after_delete_cookies: int = 10,
     ):
         """
-        Initialize the IndividualListingsScraper class.
+        Scrape property listings details from a real estate website based on previously scraped links.
 
         :param driver: the undetected_chromedriver instance
         :param elems_path: Dict containing property details paths for scraping
@@ -198,6 +199,18 @@ class IndividualListingsScraper(WebscrapingHelper):
 
         return existing_info_dict
 
+    @staticmethod
+    def save_df_to_csv(df: pd.DataFrame, file_name: str) -> None:
+        """
+        Save the input DataFrame to a CSV file with the given file name and today's date.
+
+        :param df: pd.DataFrame, the DataFrame to be saved
+        :param file_name: str, the base file name for the CSV file
+        """
+        today = str(pd.to_datetime("today").normalize().date())
+        file_name_with_date = f"{file_name}_{today}.csv"
+        df.to_csv(file_name_with_date, index=False, encoding="utf-8")
+
     def scrape_all_properties(self, df: pd.DataFrame) -> pd.DataFrame:
         """
         Scrape all properties in the given DataFrame.
@@ -212,7 +225,7 @@ class IndividualListingsScraper(WebscrapingHelper):
 
         total_properties = len(df)
         for counter, (_, row) in enumerate(rows):
-            property_id = row['url'].split('/')[-1]
+            property_id = row["url"].split("/")[-1]
             print(f"Scraping property {property_id} ({counter + 1} out of {total_properties})")
 
             try:
@@ -225,12 +238,16 @@ class IndividualListingsScraper(WebscrapingHelper):
                 print(f"Error occurred while scraping property {property_id}: {e}")
                 print("Saving scraped properties so far to 'incomplete_listings_details.csv'")
                 scraped_properties_df = pd.DataFrame(listings_details)
-                scraped_properties_df.to_csv('uncompleted_properties_details.csv', index=False, encoding='utf-8')
+                self.save_df_to_csv(scraped_properties_df, "uncompleted_properties_details")
                 print("Data saved. Continuing with the next property.")
 
             time.sleep(4)
 
         listings_details_df = pd.DataFrame(listings_details)
-        today = str(pd.to_datetime('today').normalize().date())
-        listings_details_df.to_csv(f'listings_details_{today}.csv', index=False, encoding='utf-8')
-        return listings_details_df
+
+        split_features = SplitFeatures()
+        processed_df = split_features.process_data(listings_details_df)
+
+        self.save_df_to_csv(processed_df, "listings_details")
+
+        return processed_df

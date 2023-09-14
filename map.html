@@ -1,0 +1,4353 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_12c95d24852b746c858de16b16197fa9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_12c95d24852b746c858de16b16197fa9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_12c95d24852b746c858de16b16197fa9 = L.map(
+                "map_12c95d24852b746c858de16b16197fa9",
+                {
+                    center: [47.3799835, 8.507053],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_90a20d8807d46763c3b92cc04bcf5a90 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+            var marker_c882c0e257fe835b9ce0a40f0ad096bd = L.marker(
+                [47.3799835, 8.507053],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_17edef9218ced458cf74c81ba9319989 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_20005e0d925e5bb3e14b99a2beca01cc = $(`<div id="html_20005e0d925e5bb3e14b99a2beca01cc" style="width: 100.0%; height: 100.0%;">Feature 1:  995000<br>Feature 2: Badenerstrasse 414, 8004 Zürich<br>Feature 3: 67</div>`)[0];
+                popup_17edef9218ced458cf74c81ba9319989.setContent(html_20005e0d925e5bb3e14b99a2beca01cc);
+            
+        
+
+        marker_c882c0e257fe835b9ce0a40f0ad096bd.bindPopup(popup_17edef9218ced458cf74c81ba9319989)
+        .openPopup();
+
+        
+    
+    
+            var marker_fef896026c01540aa6f2f3e1d57fcc69 = L.marker(
+                [47.4082056, 8.491383850753063],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_83f9c5e272b62803885e79a83f58c44f = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_02d833d17e34106d44075edf7f02505e = $(`<div id="html_02d833d17e34106d44075edf7f02505e" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: Segantinistrasse 174, 8049 Zürich<br>Feature 3: 139</div>`)[0];
+                popup_83f9c5e272b62803885e79a83f58c44f.setContent(html_02d833d17e34106d44075edf7f02505e);
+            
+        
+
+        marker_fef896026c01540aa6f2f3e1d57fcc69.bindPopup(popup_83f9c5e272b62803885e79a83f58c44f)
+        .openPopup();
+
+        
+    
+    
+            var marker_1ab72c4a29afbf863e97e69c271c0ac7 = L.marker(
+                [47.405106950000004, 8.569967588260145],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_2ffbf56c35302ab73aed71f7b86f89e0 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_2b25429983371ab0fb5a57542cc483e2 = $(`<div id="html_2b25429983371ab0fb5a57542cc483e2" style="width: 100.0%; height: 100.0%;">Feature 1:  3000000<br>Feature 2: Friedrichstrasse 26, 8051 Zürich<br>Feature 3: nan</div>`)[0];
+                popup_2ffbf56c35302ab73aed71f7b86f89e0.setContent(html_2b25429983371ab0fb5a57542cc483e2);
+            
+        
+
+        marker_1ab72c4a29afbf863e97e69c271c0ac7.bindPopup(popup_2ffbf56c35302ab73aed71f7b86f89e0)
+        .openPopup();
+
+        
+    
+    
+            var marker_0be7e5ece7064ecf5c13742b916e09ba = L.marker(
+                [47.3608909, 8.577314095495666],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_dc88ae2617e197aeafdafd1a66246cb5 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_668316ed711efdbf877b859efe9d27ed = $(`<div id="html_668316ed711efdbf877b859efe9d27ed" style="width: 100.0%; height: 100.0%;">Feature 1:  1995000<br>Feature 2: Witikonerstrasse 180, 8053 Zürich<br>Feature 3: 65</div>`)[0];
+                popup_dc88ae2617e197aeafdafd1a66246cb5.setContent(html_668316ed711efdbf877b859efe9d27ed);
+            
+        
+
+        marker_0be7e5ece7064ecf5c13742b916e09ba.bindPopup(popup_dc88ae2617e197aeafdafd1a66246cb5)
+        .openPopup();
+
+        
+    
+    
+            var marker_7ce8ca08c2faa4f0c37e4ab6c5190f48 = L.marker(
+                [47.405079, 8.498336183632968],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_6e3f1402098cff2870a1a54831fbc9e5 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_07555a4369b47e98656635408974789b = $(`<div id="html_07555a4369b47e98656635408974789b" style="width: 100.0%; height: 100.0%;">Feature 1:  2495000<br>Feature 2: Ferdinand-Hodler-Strasse 44, 8049 Zürich<br>Feature 3: 183</div>`)[0];
+                popup_6e3f1402098cff2870a1a54831fbc9e5.setContent(html_07555a4369b47e98656635408974789b);
+            
+        
+
+        marker_7ce8ca08c2faa4f0c37e4ab6c5190f48.bindPopup(popup_6e3f1402098cff2870a1a54831fbc9e5)
+        .openPopup();
+
+        
+    
+    
+            var marker_75fc5a721cba283b7f6bcc4bb6178574 = L.marker(
+                [47.3773825, 8.5667819],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_b07bff976ad4614ff977d7f3b08a793b = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_b175ae51ef85c486a193fe49403ba713 = $(`<div id="html_b175ae51ef85c486a193fe49403ba713" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: Susenbergstrasse, 8044 Zürich<br>Feature 3: 811</div>`)[0];
+                popup_b07bff976ad4614ff977d7f3b08a793b.setContent(html_b175ae51ef85c486a193fe49403ba713);
+            
+        
+
+        marker_75fc5a721cba283b7f6bcc4bb6178574.bindPopup(popup_b07bff976ad4614ff977d7f3b08a793b)
+        .openPopup();
+
+        
+    
+    
+            var marker_787bf4a9d91c015526e39fd85107ce28 = L.marker(
+                [47.3788855, 8.565951817118108],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_1c8adbdcfb9b5b9c8f05f3ebf55b1ba8 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_bb826cc0a8b7cd0aa61176c5e151ab40 = $(`<div id="html_bb826cc0a8b7cd0aa61176c5e151ab40" style="width: 100.0%; height: 100.0%;">Feature 1:  1580000<br>Feature 2: Krähbühlstrasse 57, 8044 Zürich<br>Feature 3: 90</div>`)[0];
+                popup_1c8adbdcfb9b5b9c8f05f3ebf55b1ba8.setContent(html_bb826cc0a8b7cd0aa61176c5e151ab40);
+            
+        
+
+        marker_787bf4a9d91c015526e39fd85107ce28.bindPopup(popup_1c8adbdcfb9b5b9c8f05f3ebf55b1ba8)
+        .openPopup();
+
+        
+    
+    
+            var marker_8446ad552b30179f12de8e50c528cb87 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_2d0f60f647a54625fcb3f5ef5552e36e = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_74dc9b541084069a02affc7e3e2e3d8f = $(`<div id="html_74dc9b541084069a02affc7e3e2e3d8f" style="width: 100.0%; height: 100.0%;">Feature 1:  3500000<br>Feature 2: 8037 Zürich<br>Feature 3: 167</div>`)[0];
+                popup_2d0f60f647a54625fcb3f5ef5552e36e.setContent(html_74dc9b541084069a02affc7e3e2e3d8f);
+            
+        
+
+        marker_8446ad552b30179f12de8e50c528cb87.bindPopup(popup_2d0f60f647a54625fcb3f5ef5552e36e)
+        .openPopup();
+
+        
+    
+    
+            var marker_c41fe69c658e5444ae40d4fc40f2d664 = L.marker(
+                [47.39861585, 8.52273667602632],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_4d7f99f046de16ccce6cce97d9e2da71 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_7eab0a8e86fc78fbaa0a46832174b827 = $(`<div id="html_7eab0a8e86fc78fbaa0a46832174b827" style="width: 100.0%; height: 100.0%;">Feature 1:  2140000<br>Feature 2: Tièchestr. 77, 8037 Zürich<br>Feature 3: 135</div>`)[0];
+                popup_4d7f99f046de16ccce6cce97d9e2da71.setContent(html_7eab0a8e86fc78fbaa0a46832174b827);
+            
+        
+
+        marker_c41fe69c658e5444ae40d4fc40f2d664.bindPopup(popup_4d7f99f046de16ccce6cce97d9e2da71)
+        .openPopup();
+
+        
+    
+    
+            var marker_51a051ed35b78de60aab9e79842592df = L.marker(
+                [47.4157099, 8.5544499],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_2ebfa965e79b60d17dc2cbbdf64adbe8 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_5c86bc421c846fc63c5f54e495af7aae = $(`<div id="html_5c86bc421c846fc63c5f54e495af7aae" style="width: 100.0%; height: 100.0%;">Feature 1:  2685000<br>Feature 2: Leutschenbachstrasse 40, 8050 Zürich<br>Feature 3: 154</div>`)[0];
+                popup_2ebfa965e79b60d17dc2cbbdf64adbe8.setContent(html_5c86bc421c846fc63c5f54e495af7aae);
+            
+        
+
+        marker_51a051ed35b78de60aab9e79842592df.bindPopup(popup_2ebfa965e79b60d17dc2cbbdf64adbe8)
+        .openPopup();
+
+        
+    
+    
+            var marker_2eae05f0b10aec763072f9e92e5273b7 = L.marker(
+                [47.38515375, 8.53973468584563],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_5404176ea3a39dd53ad8bd4fe252a8df = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_7ad96da86f0ff248f733ec87ce8f8d19 = $(`<div id="html_7ad96da86f0ff248f733ec87ce8f8d19" style="width: 100.0%; height: 100.0%;">Feature 1:  4610000<br>Feature 2: Stampfenbachstrasse 127, 8006 Zürich<br>Feature 3: 188</div>`)[0];
+                popup_5404176ea3a39dd53ad8bd4fe252a8df.setContent(html_7ad96da86f0ff248f733ec87ce8f8d19);
+            
+        
+
+        marker_2eae05f0b10aec763072f9e92e5273b7.bindPopup(popup_5404176ea3a39dd53ad8bd4fe252a8df)
+        .openPopup();
+
+        
+    
+    
+            var marker_c69f82612c9855843e149b68b195c313 = L.marker(
+                [47.4086291, 8.5449233],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_534f607b580b861c0fb4da6e28898ffa = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_b75f592f4b4d08f9e6d1e05a8d1aae69 = $(`<div id="html_b75f592f4b4d08f9e6d1e05a8d1aae69" style="width: 100.0%; height: 100.0%;">Feature 1:  2350000<br>Feature 2: Baumackerstrasse, 8050 Zürich<br>Feature 3: 128</div>`)[0];
+                popup_534f607b580b861c0fb4da6e28898ffa.setContent(html_b75f592f4b4d08f9e6d1e05a8d1aae69);
+            
+        
+
+        marker_c69f82612c9855843e149b68b195c313.bindPopup(popup_534f607b580b861c0fb4da6e28898ffa)
+        .openPopup();
+
+        
+    
+    
+            var marker_bb51f93294c9100db1179d4db841de11 = L.marker(
+                [47.4086291, 8.5449233],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_1d09545ffc3ed6dd8ea42b54d932c7ee = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_efee0d1edf7812031399375d02052787 = $(`<div id="html_efee0d1edf7812031399375d02052787" style="width: 100.0%; height: 100.0%;">Feature 1:  1995000<br>Feature 2: Baumackerstrasse, 8050 Zürich<br>Feature 3: 126</div>`)[0];
+                popup_1d09545ffc3ed6dd8ea42b54d932c7ee.setContent(html_efee0d1edf7812031399375d02052787);
+            
+        
+
+        marker_bb51f93294c9100db1179d4db841de11.bindPopup(popup_1d09545ffc3ed6dd8ea42b54d932c7ee)
+        .openPopup();
+
+        
+    
+    
+            var marker_022b3384deb2fd566b5d136fd7eefcf5 = L.marker(
+                [47.4086291, 8.5449233],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_76edb62918b92b9adc73b3ae7d2c4141 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_41924c88aaa4ac8af5b6ae2a79399ae3 = $(`<div id="html_41924c88aaa4ac8af5b6ae2a79399ae3" style="width: 100.0%; height: 100.0%;">Feature 1:  2120000<br>Feature 2: Baumackerstrasse, 8050 Zürich<br>Feature 3: 126</div>`)[0];
+                popup_76edb62918b92b9adc73b3ae7d2c4141.setContent(html_41924c88aaa4ac8af5b6ae2a79399ae3);
+            
+        
+
+        marker_022b3384deb2fd566b5d136fd7eefcf5.bindPopup(popup_76edb62918b92b9adc73b3ae7d2c4141)
+        .openPopup();
+
+        
+    
+    
+            var marker_0a0c369baa912240cfa02e8e243e7211 = L.marker(
+                [47.4007267, 8.4943303],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_0b9bdee0541610af93ef9657ee0b14ca = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_aadcc9d5fcde0d03b2a17b448a5054f8 = $(`<div id="html_aadcc9d5fcde0d03b2a17b448a5054f8" style="width: 100.0%; height: 100.0%;">Feature 1:  1300000<br>Feature 2: Am Wettingertobel 3, 8049 Zürich<br>Feature 3: 97</div>`)[0];
+                popup_0b9bdee0541610af93ef9657ee0b14ca.setContent(html_aadcc9d5fcde0d03b2a17b448a5054f8);
+            
+        
+
+        marker_0a0c369baa912240cfa02e8e243e7211.bindPopup(popup_0b9bdee0541610af93ef9657ee0b14ca)
+        .openPopup();
+
+        
+    
+    
+            var marker_8beb1b2481f752e3f652ba53e8be54d6 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_383a97b0796db27952b44122fd84adb3 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_baa8207294471a9e083923f0174f9dae = $(`<div id="html_baa8207294471a9e083923f0174f9dae" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: 8032 Zürich<br>Feature 3: 190</div>`)[0];
+                popup_383a97b0796db27952b44122fd84adb3.setContent(html_baa8207294471a9e083923f0174f9dae);
+            
+        
+
+        marker_8beb1b2481f752e3f652ba53e8be54d6.bindPopup(popup_383a97b0796db27952b44122fd84adb3)
+        .openPopup();
+
+        
+    
+    
+            var marker_feb44e8679a0a071675d4d3403f0572e = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_aef462f50e12756943a61605cd4b4f3b = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_f58558b109686c8f14eba452cb8f77a3 = $(`<div id="html_f58558b109686c8f14eba452cb8f77a3" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: 8032 Zürich<br>Feature 3: 627</div>`)[0];
+                popup_aef462f50e12756943a61605cd4b4f3b.setContent(html_f58558b109686c8f14eba452cb8f77a3);
+            
+        
+
+        marker_feb44e8679a0a071675d4d3403f0572e.bindPopup(popup_aef462f50e12756943a61605cd4b4f3b)
+        .openPopup();
+
+        
+    
+    
+            var marker_3da301ad14bdef96efd3a594de3c4b1b = L.marker(
+                [47.3847606, 8.528072456758869],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_2b11f41c8b6b4cc6a6628ff2baa52f0b = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_9fd6f26fc2c14980cdfe74b39c9e38e9 = $(`<div id="html_9fd6f26fc2c14980cdfe74b39c9e38e9" style="width: 100.0%; height: 100.0%;">Feature 1:  2460000<br>Feature 2: Quellenstrasse 10, 8005 Zürich<br>Feature 3: 130</div>`)[0];
+                popup_2b11f41c8b6b4cc6a6628ff2baa52f0b.setContent(html_9fd6f26fc2c14980cdfe74b39c9e38e9);
+            
+        
+
+        marker_3da301ad14bdef96efd3a594de3c4b1b.bindPopup(popup_2b11f41c8b6b4cc6a6628ff2baa52f0b)
+        .openPopup();
+
+        
+    
+    
+            var marker_026798b748660e7476df1a07de8ace9c = L.marker(
+                [47.3718324, 8.483477568257666],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_9b2b7dd1731205a37fa5fc5d723f4ae6 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_656b5417b9797e8091dd6a7d50f4adfb = $(`<div id="html_656b5417b9797e8091dd6a7d50f4adfb" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: Hagenbuchrain 38, 8047 Zürich<br>Feature 3: 111</div>`)[0];
+                popup_9b2b7dd1731205a37fa5fc5d723f4ae6.setContent(html_656b5417b9797e8091dd6a7d50f4adfb);
+            
+        
+
+        marker_026798b748660e7476df1a07de8ace9c.bindPopup(popup_9b2b7dd1731205a37fa5fc5d723f4ae6)
+        .openPopup();
+
+        
+    
+    
+            var marker_636907246af18ee93efb775bd916a477 = L.marker(
+                [47.4283774, 8.5508468],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_ff43d241781f4f2e15ff25bbbf136ed3 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_de79754e65054d00cdf99ff98c428ba2 = $(`<div id="html_de79754e65054d00cdf99ff98c428ba2" style="width: 100.0%; height: 100.0%;">Feature 1:  1070000<br>Feature 2: Frohbühlstrasse 9, 8052 Zürich<br>Feature 3: 11</div>`)[0];
+                popup_ff43d241781f4f2e15ff25bbbf136ed3.setContent(html_de79754e65054d00cdf99ff98c428ba2);
+            
+        
+
+        marker_636907246af18ee93efb775bd916a477.bindPopup(popup_ff43d241781f4f2e15ff25bbbf136ed3)
+        .openPopup();
+
+        
+    
+    
+            var marker_c1cf967223227577d42305283a20d9f9 = L.marker(
+                [47.3624229, 8.561927788200908],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_598f6c554fe124ced16cca1487ee76c5 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_4a97ff7eb3b85e28b4e87769888fd430 = $(`<div id="html_4a97ff7eb3b85e28b4e87769888fd430" style="width: 100.0%; height: 100.0%;">Feature 1:  1850000<br>Feature 2: Hegibachstrasse 22,, 8032 Zürich<br>Feature 3: 97</div>`)[0];
+                popup_598f6c554fe124ced16cca1487ee76c5.setContent(html_4a97ff7eb3b85e28b4e87769888fd430);
+            
+        
+
+        marker_c1cf967223227577d42305283a20d9f9.bindPopup(popup_598f6c554fe124ced16cca1487ee76c5)
+        .openPopup();
+
+        
+    
+    
+            var marker_6410977f01e19902dea63ef62b463e65 = L.marker(
+                [47.38515375, 8.53973468584563],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_15715786f4a18c0569773b7c1b6a9863 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_f8ae28a9e86630e6993826c15b5a89ff = $(`<div id="html_f8ae28a9e86630e6993826c15b5a89ff" style="width: 100.0%; height: 100.0%;">Feature 1:  1950000<br>Feature 2: Stampfenbachstrasse 127, 8006 Zürich<br>Feature 3: 90</div>`)[0];
+                popup_15715786f4a18c0569773b7c1b6a9863.setContent(html_f8ae28a9e86630e6993826c15b5a89ff);
+            
+        
+
+        marker_6410977f01e19902dea63ef62b463e65.bindPopup(popup_15715786f4a18c0569773b7c1b6a9863)
+        .openPopup();
+
+        
+    
+    
+            var marker_976cdec314480cc10a45c99fe021c61c = L.marker(
+                [47.3672229, 8.5659053],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_7c52f7d3c3101a1e5e745e8302717af0 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_c558b89efe96afd921787369ab65d6f2 = $(`<div id="html_c558b89efe96afd921787369ab65d6f2" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: Sonnenbergstrasse, 8032 Zürich<br>Feature 3: 326</div>`)[0];
+                popup_7c52f7d3c3101a1e5e745e8302717af0.setContent(html_c558b89efe96afd921787369ab65d6f2);
+            
+        
+
+        marker_976cdec314480cc10a45c99fe021c61c.bindPopup(popup_7c52f7d3c3101a1e5e745e8302717af0)
+        .openPopup();
+
+        
+    
+    
+            var marker_63acf109796f08f11ded139faef31a6a = L.marker(
+                [47.354996549999996, 8.5117982923542],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_1828902cccbec78cc99c21678f3be27e = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_b62a50830c79a5c9fb0998a882cc81a5 = $(`<div id="html_b62a50830c79a5c9fb0998a882cc81a5" style="width: 100.0%; height: 100.0%;">Feature 1:  4500000<br>Feature 2: Frauentalweg 17, 8045 Zürich<br>Feature 3: 5</div>`)[0];
+                popup_1828902cccbec78cc99c21678f3be27e.setContent(html_b62a50830c79a5c9fb0998a882cc81a5);
+            
+        
+
+        marker_63acf109796f08f11ded139faef31a6a.bindPopup(popup_1828902cccbec78cc99c21678f3be27e)
+        .openPopup();
+
+        
+    
+    
+            var marker_19003b4ebabfd787675560c06cc7c020 = L.marker(
+                [47.4095637, 8.530379450000002],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_868f4b4755b74915349e297837ad4fb9 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_4fc2c389c06862d7b64f2b0b3e21e340 = $(`<div id="html_4fc2c389c06862d7b64f2b0b3e21e340" style="width: 100.0%; height: 100.0%;">Feature 1:  2175000<br>Feature 2: Immenweg 23, 8050 Zürich<br>Feature 3: 126</div>`)[0];
+                popup_868f4b4755b74915349e297837ad4fb9.setContent(html_4fc2c389c06862d7b64f2b0b3e21e340);
+            
+        
+
+        marker_19003b4ebabfd787675560c06cc7c020.bindPopup(popup_868f4b4755b74915349e297837ad4fb9)
+        .openPopup();
+
+        
+    
+    
+            var marker_f02b1d3b260423401aadaf01353c227d = L.marker(
+                [47.4128887, 8.5321239],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_8ea28c7be7dfef49350627bee68fe958 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_49db3e0b96e8c7cbbcd0a38a1fda356e = $(`<div id="html_49db3e0b96e8c7cbbcd0a38a1fda356e" style="width: 100.0%; height: 100.0%;">Feature 1:  1550000<br>Feature 2: Chaletweg 9, 8050 Zürich<br>Feature 3: 113</div>`)[0];
+                popup_8ea28c7be7dfef49350627bee68fe958.setContent(html_49db3e0b96e8c7cbbcd0a38a1fda356e);
+            
+        
+
+        marker_f02b1d3b260423401aadaf01353c227d.bindPopup(popup_8ea28c7be7dfef49350627bee68fe958)
+        .openPopup();
+
+        
+    
+    
+            var marker_d3b506991186102403c8a9da64304eeb = L.marker(
+                [47.4245272, 8.4992105],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_871192de95e82a1755cf542e4ae1f05b = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_6a91ce135b163c1547ddcb93b7ddd2e9 = $(`<div id="html_6a91ce135b163c1547ddcb93b7ddd2e9" style="width: 100.0%; height: 100.0%;">Feature 1:  1580000<br>Feature 2: Michael-Maggi-Strasse 10, 8046 Zürich<br>Feature 3: 123</div>`)[0];
+                popup_871192de95e82a1755cf542e4ae1f05b.setContent(html_6a91ce135b163c1547ddcb93b7ddd2e9);
+            
+        
+
+        marker_d3b506991186102403c8a9da64304eeb.bindPopup(popup_871192de95e82a1755cf542e4ae1f05b)
+        .openPopup();
+
+        
+    
+    
+            var marker_d508cc6971371eeb6431d2692995bb47 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_738581c0b2bd1e2706bf57d42ad1d89d = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_74ffc3e935c8f188c62ba6695b6d9ac8 = $(`<div id="html_74ffc3e935c8f188c62ba6695b6d9ac8" style="width: 100.0%; height: 100.0%;">Feature 1:  3185000<br>Feature 2: 8037 Zürich<br>Feature 3: 10</div>`)[0];
+                popup_738581c0b2bd1e2706bf57d42ad1d89d.setContent(html_74ffc3e935c8f188c62ba6695b6d9ac8);
+            
+        
+
+        marker_d508cc6971371eeb6431d2692995bb47.bindPopup(popup_738581c0b2bd1e2706bf57d42ad1d89d)
+        .openPopup();
+
+        
+    
+    
+            var marker_66fcb6df849b5544e90d5ba773f33dc5 = L.marker(
+                [47.38519755, 8.494020208851943],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_51cb13f826431473b809352f042fdbd9 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_82a206875854ccc215220b18aa68278a = $(`<div id="html_82a206875854ccc215220b18aa68278a" style="width: 100.0%; height: 100.0%;">Feature 1:  1682000<br>Feature 2: Badenerstrasse 595, 8048 Zürich<br>Feature 3: 105</div>`)[0];
+                popup_51cb13f826431473b809352f042fdbd9.setContent(html_82a206875854ccc215220b18aa68278a);
+            
+        
+
+        marker_66fcb6df849b5544e90d5ba773f33dc5.bindPopup(popup_51cb13f826431473b809352f042fdbd9)
+        .openPopup();
+
+        
+    
+    
+            var marker_f64052112de5630d4f797e52d8f81ed1 = L.marker(
+                [47.3869748, 8.5134469],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_dcce788ec2c4b227e4d90e3072e60283 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_f1541d6ad645d871a886dff71bd1d25a = $(`<div id="html_f1541d6ad645d871a886dff71bd1d25a" style="width: 100.0%; height: 100.0%;">Feature 1:  1720000<br>Feature 2: Turbinenstrasse 56, 8005 Zürich<br>Feature 3: 75</div>`)[0];
+                popup_dcce788ec2c4b227e4d90e3072e60283.setContent(html_f1541d6ad645d871a886dff71bd1d25a);
+            
+        
+
+        marker_f64052112de5630d4f797e52d8f81ed1.bindPopup(popup_dcce788ec2c4b227e4d90e3072e60283)
+        .openPopup();
+
+        
+    
+    
+            var marker_4917c9174beeb4ae9800d2f1436b43ae = L.marker(
+                [47.363468499999996, 8.558197300000005],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_eb827c6f88d066cc138df61f1e7c192c = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_525abd390bdcab9e124b4296e591e8b8 = $(`<div id="html_525abd390bdcab9e124b4296e591e8b8" style="width: 100.0%; height: 100.0%;">Feature 1:  3900000<br>Feature 2: Minervastrasse 124, 8032 Zürich<br>Feature 3: 148</div>`)[0];
+                popup_eb827c6f88d066cc138df61f1e7c192c.setContent(html_525abd390bdcab9e124b4296e591e8b8);
+            
+        
+
+        marker_4917c9174beeb4ae9800d2f1436b43ae.bindPopup(popup_eb827c6f88d066cc138df61f1e7c192c)
+        .openPopup();
+
+        
+    
+    
+            var marker_9d85564dd256b893e267a4c675578eb3 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_550dc0a2610383331a1198a083f7f9bb = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_97cbaad0a9e3d1327b3c2fb1682274b0 = $(`<div id="html_97cbaad0a9e3d1327b3c2fb1682274b0" style="width: 100.0%; height: 100.0%;">Feature 1:  1740000<br>Feature 2: Zürich, 8055 Zürich<br>Feature 3: 93</div>`)[0];
+                popup_550dc0a2610383331a1198a083f7f9bb.setContent(html_97cbaad0a9e3d1327b3c2fb1682274b0);
+            
+        
+
+        marker_9d85564dd256b893e267a4c675578eb3.bindPopup(popup_550dc0a2610383331a1198a083f7f9bb)
+        .openPopup();
+
+        
+    
+    
+            var marker_aab6fa99fdfd7cabd8495c083d26f928 = L.marker(
+                [47.37950055, 8.559156250000004],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_4d591322a190aeb765eb71af40e2ee6b = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_d69ad6f7bd72a72c95807a69758fd38b = $(`<div id="html_d69ad6f7bd72a72c95807a69758fd38b" style="width: 100.0%; height: 100.0%;">Feature 1:  2150000<br>Feature 2: Toblerstrasse 71, 8044 Zürich<br>Feature 3: 86</div>`)[0];
+                popup_4d591322a190aeb765eb71af40e2ee6b.setContent(html_d69ad6f7bd72a72c95807a69758fd38b);
+            
+        
+
+        marker_aab6fa99fdfd7cabd8495c083d26f928.bindPopup(popup_4d591322a190aeb765eb71af40e2ee6b)
+        .openPopup();
+
+        
+    
+    
+            var marker_ad28924b145370ebf51f9afb2df7b93c = L.marker(
+                [47.4094013, 8.5300226],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_f91d094d43ce4b0f2bcc08ed9c7f3149 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_ca0166aa9c6511bc7bea88f1c935793a = $(`<div id="html_ca0166aa9c6511bc7bea88f1c935793a" style="width: 100.0%; height: 100.0%;">Feature 1:  1755000<br>Feature 2: Immenweg 35, 8050 Zürich<br>Feature 3: 96</div>`)[0];
+                popup_f91d094d43ce4b0f2bcc08ed9c7f3149.setContent(html_ca0166aa9c6511bc7bea88f1c935793a);
+            
+        
+
+        marker_ad28924b145370ebf51f9afb2df7b93c.bindPopup(popup_f91d094d43ce4b0f2bcc08ed9c7f3149)
+        .openPopup();
+
+        
+    
+    
+            var marker_70bc63553c7760ef8a120254536356ae = L.marker(
+                [47.4094013, 8.5300226],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_69c70ecf0a21da5e4309b9b6e409857c = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_6ca58cc6bf66c3f8b713c0aa91a498b3 = $(`<div id="html_6ca58cc6bf66c3f8b713c0aa91a498b3" style="width: 100.0%; height: 100.0%;">Feature 1:  2350000<br>Feature 2: Immenweg 35, 8050 Zürich<br>Feature 3: 11</div>`)[0];
+                popup_69c70ecf0a21da5e4309b9b6e409857c.setContent(html_6ca58cc6bf66c3f8b713c0aa91a498b3);
+            
+        
+
+        marker_70bc63553c7760ef8a120254536356ae.bindPopup(popup_69c70ecf0a21da5e4309b9b6e409857c)
+        .openPopup();
+
+        
+    
+    
+            var marker_de9400e1b53d4dae0428e7d36162010e = L.marker(
+                [47.4094013, 8.5300226],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_172d262deb159c44b0fced177f20087c = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_cdbdae22204ebbbc319bd1195c602cfc = $(`<div id="html_cdbdae22204ebbbc319bd1195c602cfc" style="width: 100.0%; height: 100.0%;">Feature 1:  1950000<br>Feature 2: Immenweg 35, 8050 Zürich<br>Feature 3: 107</div>`)[0];
+                popup_172d262deb159c44b0fced177f20087c.setContent(html_cdbdae22204ebbbc319bd1195c602cfc);
+            
+        
+
+        marker_de9400e1b53d4dae0428e7d36162010e.bindPopup(popup_172d262deb159c44b0fced177f20087c)
+        .openPopup();
+
+        
+    
+    
+            var marker_b91a333b5efc13877a273b38ef3c186e = L.marker(
+                [47.406094800000005, 8.570301821167764],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_864ac4f90b01ecea36997c15534aa347 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_b53b2122f766d53f6e1c7280f7ef020b = $(`<div id="html_b53b2122f766d53f6e1c7280f7ef020b" style="width: 100.0%; height: 100.0%;">Feature 1:  2380000<br>Feature 2: Saatlenstrasse 32, 8051 Zürich<br>Feature 3: 170</div>`)[0];
+                popup_864ac4f90b01ecea36997c15534aa347.setContent(html_b53b2122f766d53f6e1c7280f7ef020b);
+            
+        
+
+        marker_b91a333b5efc13877a273b38ef3c186e.bindPopup(popup_864ac4f90b01ecea36997c15534aa347)
+        .openPopup();
+
+        
+    
+    
+            var marker_68ad4ca4faa3a8fc6c59c749901ff0b5 = L.marker(
+                [47.4155605, 8.5007842],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_9f7cedae19cd7fe312c7619c803c8f63 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_1da80765373b9b7ac16f355610ffa3c7 = $(`<div id="html_1da80765373b9b7ac16f355610ffa3c7" style="width: 100.0%; height: 100.0%;">Feature 1:  1760000<br>Feature 2: Holderbachweg, 8046 Zürich<br>Feature 3: 101</div>`)[0];
+                popup_9f7cedae19cd7fe312c7619c803c8f63.setContent(html_1da80765373b9b7ac16f355610ffa3c7);
+            
+        
+
+        marker_68ad4ca4faa3a8fc6c59c749901ff0b5.bindPopup(popup_9f7cedae19cd7fe312c7619c803c8f63)
+        .openPopup();
+
+        
+    
+    
+            var marker_a63723b2bdab7c12202611530fafbadc = L.marker(
+                [47.4155605, 8.5007842],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_0c0ccd2ddfeacf503a7976e9299502fb = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_8153c493efedd2c9d40d52cb74b5a037 = $(`<div id="html_8153c493efedd2c9d40d52cb74b5a037" style="width: 100.0%; height: 100.0%;">Feature 1:  2180000<br>Feature 2: Holderbachweg, 8046 Zürich<br>Feature 3: 128</div>`)[0];
+                popup_0c0ccd2ddfeacf503a7976e9299502fb.setContent(html_8153c493efedd2c9d40d52cb74b5a037);
+            
+        
+
+        marker_a63723b2bdab7c12202611530fafbadc.bindPopup(popup_0c0ccd2ddfeacf503a7976e9299502fb)
+        .openPopup();
+
+        
+    
+    
+            var marker_0a5f5d1505d9770da3c8786eacb5a422 = L.marker(
+                [47.4155605, 8.5007842],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_13bcaa819541b92e72ae27861d91cfc0 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_ed57081b9024d8fc70ea02e0c29025fd = $(`<div id="html_ed57081b9024d8fc70ea02e0c29025fd" style="width: 100.0%; height: 100.0%;">Feature 1:  2010000<br>Feature 2: Holderbachweg, 8046 Zürich<br>Feature 3: 101</div>`)[0];
+                popup_13bcaa819541b92e72ae27861d91cfc0.setContent(html_ed57081b9024d8fc70ea02e0c29025fd);
+            
+        
+
+        marker_0a5f5d1505d9770da3c8786eacb5a422.bindPopup(popup_13bcaa819541b92e72ae27861d91cfc0)
+        .openPopup();
+
+        
+    
+    
+            var marker_ad565a7ab223f86f57c468b4fdfd1752 = L.marker(
+                [47.4155605, 8.5007842],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_fb7069fb0658ffe5584a6e87006063c8 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_d0196e4ab99e9c48b7cb6ece44a2ec6b = $(`<div id="html_d0196e4ab99e9c48b7cb6ece44a2ec6b" style="width: 100.0%; height: 100.0%;">Feature 1:  2070000<br>Feature 2: Holderbachweg, 8046 Zürich<br>Feature 3: 116</div>`)[0];
+                popup_fb7069fb0658ffe5584a6e87006063c8.setContent(html_d0196e4ab99e9c48b7cb6ece44a2ec6b);
+            
+        
+
+        marker_ad565a7ab223f86f57c468b4fdfd1752.bindPopup(popup_fb7069fb0658ffe5584a6e87006063c8)
+        .openPopup();
+
+        
+    
+    
+            var marker_1d12cf34e3036642457b9cc69ce95fc2 = L.marker(
+                [47.4200824, 8.5355223],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_d560b27cc0f2066822bf331fe0ecebab = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_154adaac659faccc5e6108c5e8bffd2e = $(`<div id="html_154adaac659faccc5e6108c5e8bffd2e" style="width: 100.0%; height: 100.0%;">Feature 1:  1440000<br>Feature 2: Seebacherstrasse 30, 8052 Zürich-Seebach<br>Feature 3: 99</div>`)[0];
+                popup_d560b27cc0f2066822bf331fe0ecebab.setContent(html_154adaac659faccc5e6108c5e8bffd2e);
+            
+        
+
+        marker_1d12cf34e3036642457b9cc69ce95fc2.bindPopup(popup_d560b27cc0f2066822bf331fe0ecebab)
+        .openPopup();
+
+        
+    
+    
+            var marker_6eb163a115d2bac09223e1ae17afacd3 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_5a6cb07cf235e5b98a1918fd0bc09344 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_cba8d497e5d8a0bdb977986f25c65dd7 = $(`<div id="html_cba8d497e5d8a0bdb977986f25c65dd7" style="width: 100.0%; height: 100.0%;">Feature 1:  950000<br>Feature 2: Zürich, 8041 Zürich<br>Feature 3: 90</div>`)[0];
+                popup_5a6cb07cf235e5b98a1918fd0bc09344.setContent(html_cba8d497e5d8a0bdb977986f25c65dd7);
+            
+        
+
+        marker_6eb163a115d2bac09223e1ae17afacd3.bindPopup(popup_5a6cb07cf235e5b98a1918fd0bc09344)
+        .openPopup();
+
+        
+    
+    
+            var marker_1852955d1803ff387f88514d7380b83d = L.marker(
+                [47.4200824, 8.5355223],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_1fecbbfee4c6372e7dedf3ed1f9bd049 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_0e4f96050c88185636860fac364a6536 = $(`<div id="html_0e4f96050c88185636860fac364a6536" style="width: 100.0%; height: 100.0%;">Feature 1:  910000<br>Feature 2: Seebacherstrasse 28, 8052 Zürich-Seebach<br>Feature 3: 6</div>`)[0];
+                popup_1fecbbfee4c6372e7dedf3ed1f9bd049.setContent(html_0e4f96050c88185636860fac364a6536);
+            
+        
+
+        marker_1852955d1803ff387f88514d7380b83d.bindPopup(popup_1fecbbfee4c6372e7dedf3ed1f9bd049)
+        .openPopup();
+
+        
+    
+    
+            var marker_3c889cd5bbd9d6156c172851c064bde0 = L.marker(
+                [47.4200824, 8.5355223],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_c9a3964f5561f49d9551adce8038b87d = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_f300a803d4aee1a8a5c57e66cfe1d67f = $(`<div id="html_f300a803d4aee1a8a5c57e66cfe1d67f" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: Seebacherstrasse 28 - 30, 8052 Zürich-Seebach<br>Feature 3: nan</div>`)[0];
+                popup_c9a3964f5561f49d9551adce8038b87d.setContent(html_f300a803d4aee1a8a5c57e66cfe1d67f);
+            
+        
+
+        marker_3c889cd5bbd9d6156c172851c064bde0.bindPopup(popup_c9a3964f5561f49d9551adce8038b87d)
+        .openPopup();
+
+        
+    
+    
+            var marker_b1dac64a64bd35900e6130347dfe2d50 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_9082359b07834e717aa2c9b4cf2058ed = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_2f35b353bc831f4f80134c37f9d92641 = $(`<div id="html_2f35b353bc831f4f80134c37f9d92641" style="width: 100.0%; height: 100.0%;">Feature 1:  1130000<br>Feature 2: Zürich, 8049 Zürich<br>Feature 3: 64</div>`)[0];
+                popup_9082359b07834e717aa2c9b4cf2058ed.setContent(html_2f35b353bc831f4f80134c37f9d92641);
+            
+        
+
+        marker_b1dac64a64bd35900e6130347dfe2d50.bindPopup(popup_9082359b07834e717aa2c9b4cf2058ed)
+        .openPopup();
+
+        
+    
+    
+            var marker_b796b3cfef8469bcdeb01cc0a7b758a8 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_f7b3da3af5a30d3159eefdaae9700394 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_5a873ac42199beedafa618f9dc56f855 = $(`<div id="html_5a873ac42199beedafa618f9dc56f855" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: 8044 Zürich<br>Feature 3: 300</div>`)[0];
+                popup_f7b3da3af5a30d3159eefdaae9700394.setContent(html_5a873ac42199beedafa618f9dc56f855);
+            
+        
+
+        marker_b796b3cfef8469bcdeb01cc0a7b758a8.bindPopup(popup_f7b3da3af5a30d3159eefdaae9700394)
+        .openPopup();
+
+        
+    
+    
+            var marker_b44f0a837e5c1e8222cb9e13eacdec04 = L.marker(
+                [47.4081138, 8.542896541064874],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_d4add4643f6b99a18a869397b316200d = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_05504207d5f77ee32ac4221b42a9cf54 = $(`<div id="html_05504207d5f77ee32ac4221b42a9cf54" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: Regensbergstrasse 138, 8050 Zürich<br>Feature 3: 98</div>`)[0];
+                popup_d4add4643f6b99a18a869397b316200d.setContent(html_05504207d5f77ee32ac4221b42a9cf54);
+            
+        
+
+        marker_b44f0a837e5c1e8222cb9e13eacdec04.bindPopup(popup_d4add4643f6b99a18a869397b316200d)
+        .openPopup();
+
+        
+    
+    
+            var marker_5d4bcfe9b20c529d4ada000be6130625 = L.marker(
+                [47.4081138, 8.542896541064874],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_de64f6d37ffb176b651eb71241d96d26 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_120d4e8173747841f0cdef71d010ffbb = $(`<div id="html_120d4e8173747841f0cdef71d010ffbb" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: Regensbergstrasse 138, 8050 Zürich<br>Feature 3: 75</div>`)[0];
+                popup_de64f6d37ffb176b651eb71241d96d26.setContent(html_120d4e8173747841f0cdef71d010ffbb);
+            
+        
+
+        marker_5d4bcfe9b20c529d4ada000be6130625.bindPopup(popup_de64f6d37ffb176b651eb71241d96d26)
+        .openPopup();
+
+        
+    
+    
+            var marker_9a538ceacc2b01e42a2d41c10716c101 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_af5fa8512db6bb8f0063b2223fbf018b = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_e8d73fdb32ee7d6f857be83414e7a6a8 = $(`<div id="html_e8d73fdb32ee7d6f857be83414e7a6a8" style="width: 100.0%; height: 100.0%;">Feature 1:  2650000<br>Feature 2: 8053 Zürich<br>Feature 3: 138</div>`)[0];
+                popup_af5fa8512db6bb8f0063b2223fbf018b.setContent(html_e8d73fdb32ee7d6f857be83414e7a6a8);
+            
+        
+
+        marker_9a538ceacc2b01e42a2d41c10716c101.bindPopup(popup_af5fa8512db6bb8f0063b2223fbf018b)
+        .openPopup();
+
+        
+    
+    
+            var marker_a689b01b39aa333b4865270dfbe64cff = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_9812e8a1cc7c50230cec9cb718e0b54c = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_83d5fb52a7d1d13f90261353995697bd = $(`<div id="html_83d5fb52a7d1d13f90261353995697bd" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: 8002 Zürich<br>Feature 3: 95</div>`)[0];
+                popup_9812e8a1cc7c50230cec9cb718e0b54c.setContent(html_83d5fb52a7d1d13f90261353995697bd);
+            
+        
+
+        marker_a689b01b39aa333b4865270dfbe64cff.bindPopup(popup_9812e8a1cc7c50230cec9cb718e0b54c)
+        .openPopup();
+
+        
+    
+    
+            var marker_3d8edb0971ca269817042540a83cb6fc = L.marker(
+                [47.40555505, 8.567193614334602],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_284d038eed63a09e88d53bb2311a6735 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_ce5fdbca736bb0fa6b0339bb56c0e372 = $(`<div id="html_ce5fdbca736bb0fa6b0339bb56c0e372" style="width: 100.0%; height: 100.0%;">Feature 1:  2110000<br>Feature 2: Tulpenstrasse 35, 8051 Zürich<br>Feature 3: 156</div>`)[0];
+                popup_284d038eed63a09e88d53bb2311a6735.setContent(html_ce5fdbca736bb0fa6b0339bb56c0e372);
+            
+        
+
+        marker_3d8edb0971ca269817042540a83cb6fc.bindPopup(popup_284d038eed63a09e88d53bb2311a6735)
+        .openPopup();
+
+        
+    
+    
+            var marker_42671fbdaa5d318a2eed2b245feded27 = L.marker(
+                [47.41167175, 8.485243586399791],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_c08903747044e7eb706b366392b4860d = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_8e3c299407b8c095033f4d3e43839a8c = $(`<div id="html_8e3c299407b8c095033f4d3e43839a8c" style="width: 100.0%; height: 100.0%;">Feature 1:  1560000<br>Feature 2: Heizenholz 47, 8049 Zürich<br>Feature 3: 104</div>`)[0];
+                popup_c08903747044e7eb706b366392b4860d.setContent(html_8e3c299407b8c095033f4d3e43839a8c);
+            
+        
+
+        marker_42671fbdaa5d318a2eed2b245feded27.bindPopup(popup_c08903747044e7eb706b366392b4860d)
+        .openPopup();
+
+        
+    
+    
+            var marker_b3cf9c90ed5d2583445d4a86a822d395 = L.marker(
+                [47.38561585, 8.558129310722142],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_9fd6355b0898dd85b78d93eb20426f9a = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_de6e195588ecfb86590a398fe1ffedd9 = $(`<div id="html_de6e195588ecfb86590a398fe1ffedd9" style="width: 100.0%; height: 100.0%;">Feature 1:  3000000<br>Feature 2: Susenbergstrasse 160, 8044 Zürich<br>Feature 3: 116</div>`)[0];
+                popup_9fd6355b0898dd85b78d93eb20426f9a.setContent(html_de6e195588ecfb86590a398fe1ffedd9);
+            
+        
+
+        marker_b3cf9c90ed5d2583445d4a86a822d395.bindPopup(popup_9fd6355b0898dd85b78d93eb20426f9a)
+        .openPopup();
+
+        
+    
+    
+            var marker_fe0bcb16a34b7d783717ce41d03be654 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_7f9afd480834f276566a993197222d7b = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_fc6c839d21844c72b62023d66378401b = $(`<div id="html_fc6c839d21844c72b62023d66378401b" style="width: 100.0%; height: 100.0%;">Feature 1:  970000<br>Feature 2: Zürich, 8052 Zürich<br>Feature 3: 83</div>`)[0];
+                popup_7f9afd480834f276566a993197222d7b.setContent(html_fc6c839d21844c72b62023d66378401b);
+            
+        
+
+        marker_fe0bcb16a34b7d783717ce41d03be654.bindPopup(popup_7f9afd480834f276566a993197222d7b)
+        .openPopup();
+
+        
+    
+    
+            var marker_e11512149f80236762cfe9b5ef725477 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_101dc4f4fdff0930e9606630cb5dc61f = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_1eca5a715e9aaca9ef113bda04047c2d = $(`<div id="html_1eca5a715e9aaca9ef113bda04047c2d" style="width: 100.0%; height: 100.0%;">Feature 1:  1690000<br>Feature 2: 8050 Zürich<br>Feature 3: 100</div>`)[0];
+                popup_101dc4f4fdff0930e9606630cb5dc61f.setContent(html_1eca5a715e9aaca9ef113bda04047c2d);
+            
+        
+
+        marker_e11512149f80236762cfe9b5ef725477.bindPopup(popup_101dc4f4fdff0930e9606630cb5dc61f)
+        .openPopup();
+
+        
+    
+    
+            var marker_03cc7504b2e31d176d51280af436a74f = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_6115d3d8dbb7cf7f3bd8192018bf85d3 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_0de81c49bfa52e8dbe8261476ae718ce = $(`<div id="html_0de81c49bfa52e8dbe8261476ae718ce" style="width: 100.0%; height: 100.0%;">Feature 1:  600000<br>Feature 2: 8045 Zürich<br>Feature 3: 50</div>`)[0];
+                popup_6115d3d8dbb7cf7f3bd8192018bf85d3.setContent(html_0de81c49bfa52e8dbe8261476ae718ce);
+            
+        
+
+        marker_03cc7504b2e31d176d51280af436a74f.bindPopup(popup_6115d3d8dbb7cf7f3bd8192018bf85d3)
+        .openPopup();
+
+        
+    
+    
+            var marker_0ade79ac70a219ee05073cc6bf7d896c = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_e9c443a49ec81345473d0010966c8196 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_f2fbaee128d912b514074c4ecc411b09 = $(`<div id="html_f2fbaee128d912b514074c4ecc411b09" style="width: 100.0%; height: 100.0%;">Feature 1:  2290000<br>Feature 2: 8002 Zürich<br>Feature 3: 130</div>`)[0];
+                popup_e9c443a49ec81345473d0010966c8196.setContent(html_f2fbaee128d912b514074c4ecc411b09);
+            
+        
+
+        marker_0ade79ac70a219ee05073cc6bf7d896c.bindPopup(popup_e9c443a49ec81345473d0010966c8196)
+        .openPopup();
+
+        
+    
+    
+            var marker_1d797ba8ea15f719e055fbadb544ab8c = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_b1867d36e0a3dbc3bfd5ac4bbce12fc0 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_b09571e25c249e222eb3196a1e23462e = $(`<div id="html_b09571e25c249e222eb3196a1e23462e" style="width: 100.0%; height: 100.0%;">Feature 1:  1265000<br>Feature 2: 8052 Zürich<br>Feature 3: 9</div>`)[0];
+                popup_b1867d36e0a3dbc3bfd5ac4bbce12fc0.setContent(html_b09571e25c249e222eb3196a1e23462e);
+            
+        
+
+        marker_1d797ba8ea15f719e055fbadb544ab8c.bindPopup(popup_b1867d36e0a3dbc3bfd5ac4bbce12fc0)
+        .openPopup();
+
+        
+    
+    
+            var marker_82331f38c8f3441b11c4c3fac60234be = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_fc9f92b0994f629d37cdd73997ae8759 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_654593ba37bb488a46ca1888539fabcd = $(`<div id="html_654593ba37bb488a46ca1888539fabcd" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: 8008 Zürich<br>Feature 3: 73</div>`)[0];
+                popup_fc9f92b0994f629d37cdd73997ae8759.setContent(html_654593ba37bb488a46ca1888539fabcd);
+            
+        
+
+        marker_82331f38c8f3441b11c4c3fac60234be.bindPopup(popup_fc9f92b0994f629d37cdd73997ae8759)
+        .openPopup();
+
+        
+    
+    
+            var marker_e2b99871ed2c6b8255c79db6d4aca9d0 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_cc6db85cf7f4c35bf6f24332263c0771 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_de147dfac74f5f35814c11e73cd4fe89 = $(`<div id="html_de147dfac74f5f35814c11e73cd4fe89" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: 8046 Zürich<br>Feature 3: 97</div>`)[0];
+                popup_cc6db85cf7f4c35bf6f24332263c0771.setContent(html_de147dfac74f5f35814c11e73cd4fe89);
+            
+        
+
+        marker_e2b99871ed2c6b8255c79db6d4aca9d0.bindPopup(popup_cc6db85cf7f4c35bf6f24332263c0771)
+        .openPopup();
+
+        
+    
+    
+            var marker_2c74493632ff7e5ed965af35adae0aad = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_ac6f6a04a7c6a19c61cab91f51ff2875 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_f1cf81141b187edc5e8ff8f08ea3c3a4 = $(`<div id="html_f1cf81141b187edc5e8ff8f08ea3c3a4" style="width: 100.0%; height: 100.0%;">Feature 1:  1470000<br>Feature 2: 8046 Zürich<br>Feature 3: 85</div>`)[0];
+                popup_ac6f6a04a7c6a19c61cab91f51ff2875.setContent(html_f1cf81141b187edc5e8ff8f08ea3c3a4);
+            
+        
+
+        marker_2c74493632ff7e5ed965af35adae0aad.bindPopup(popup_ac6f6a04a7c6a19c61cab91f51ff2875)
+        .openPopup();
+
+        
+    
+    
+            var marker_154012069b99e3bb330a4778fb489ea9 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_73935e7f92952ae5c779e4c7f4a902a8 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_5b0fd77068bf3ddc55614660d49fa040 = $(`<div id="html_5b0fd77068bf3ddc55614660d49fa040" style="width: 100.0%; height: 100.0%;">Feature 1:  995000<br>Feature 2: 8053 Zürich<br>Feature 3: 65</div>`)[0];
+                popup_73935e7f92952ae5c779e4c7f4a902a8.setContent(html_5b0fd77068bf3ddc55614660d49fa040);
+            
+        
+
+        marker_154012069b99e3bb330a4778fb489ea9.bindPopup(popup_73935e7f92952ae5c779e4c7f4a902a8)
+        .openPopup();
+
+        
+    
+    
+            var marker_f2bf4e173a06101e3b4fbb07e48e94f5 = L.marker(
+                [46.708274, 9.547881],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_ac2abdb514b282314b6e7be503d39127 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_2ab83dd5201d8486444aad9ef05b46df = $(`<div id="html_2ab83dd5201d8486444aad9ef05b46df" style="width: 100.0%; height: 100.0%;">Feature 1:  1860000<br>Feature 2: 8001 Lain / Lenzerheide<br>Feature 3: 98</div>`)[0];
+                popup_ac2abdb514b282314b6e7be503d39127.setContent(html_2ab83dd5201d8486444aad9ef05b46df);
+            
+        
+
+        marker_f2bf4e173a06101e3b4fbb07e48e94f5.bindPopup(popup_ac2abdb514b282314b6e7be503d39127)
+        .openPopup();
+
+        
+    
+    
+            var marker_ccfae41694c783fbddd27b8810cc12df = L.marker(
+                [47.3798598, 8.5062017],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_f97040d129dc1dfdf4773f6f2665ed80 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_0e23e60c4ff6a51f172c8aa1ad216e69 = $(`<div id="html_0e23e60c4ff6a51f172c8aa1ad216e69" style="width: 100.0%; height: 100.0%;">Feature 1:  890000<br>Feature 2: Badenerstrasse 415, 8003 Zürich<br>Feature 3: 45</div>`)[0];
+                popup_f97040d129dc1dfdf4773f6f2665ed80.setContent(html_0e23e60c4ff6a51f172c8aa1ad216e69);
+            
+        
+
+        marker_ccfae41694c783fbddd27b8810cc12df.bindPopup(popup_f97040d129dc1dfdf4773f6f2665ed80)
+        .openPopup();
+
+        
+    
+    
+            var marker_0e4b6986eb6f2be4e8c3eb5600299674 = L.marker(
+                [47.36618385, 8.563044041462419],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_93092aa767c80d283bb5b4d280104a30 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_c885daedc98d318b73a7a026f3230741 = $(`<div id="html_c885daedc98d318b73a7a026f3230741" style="width: 100.0%; height: 100.0%;">Feature 1:  695000<br>Feature 2: Veilchenstrasse 5, 8032 Zürich<br>Feature 3: 41</div>`)[0];
+                popup_93092aa767c80d283bb5b4d280104a30.setContent(html_c885daedc98d318b73a7a026f3230741);
+            
+        
+
+        marker_0e4b6986eb6f2be4e8c3eb5600299674.bindPopup(popup_93092aa767c80d283bb5b4d280104a30)
+        .openPopup();
+
+        
+    
+    
+            var marker_470deaa1990e53ce57407908f55e8a91 = L.marker(
+                [47.36618385, 8.563044041462419],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_fe12743447d651203005791d4799d8fa = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_2c8e723f1e7bd55cdb4d77a1590d77d4 = $(`<div id="html_2c8e723f1e7bd55cdb4d77a1590d77d4" style="width: 100.0%; height: 100.0%;">Feature 1:  2185000<br>Feature 2: Veilchenstrasse 5, 8032 Zürich<br>Feature 3: 133</div>`)[0];
+                popup_fe12743447d651203005791d4799d8fa.setContent(html_2c8e723f1e7bd55cdb4d77a1590d77d4);
+            
+        
+
+        marker_470deaa1990e53ce57407908f55e8a91.bindPopup(popup_fe12743447d651203005791d4799d8fa)
+        .openPopup();
+
+        
+    
+    
+            var marker_3946ce5b98560201a35a9538a1616d74 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_5840f0f59e5eb7be8f071fae02008332 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_95cea24873a8c1e767c0f9bad2f142ce = $(`<div id="html_95cea24873a8c1e767c0f9bad2f142ce" style="width: 100.0%; height: 100.0%;">Feature 1:  2700000<br>Feature 2: 8008 Zürich<br>Feature 3: 104</div>`)[0];
+                popup_5840f0f59e5eb7be8f071fae02008332.setContent(html_95cea24873a8c1e767c0f9bad2f142ce);
+            
+        
+
+        marker_3946ce5b98560201a35a9538a1616d74.bindPopup(popup_5840f0f59e5eb7be8f071fae02008332)
+        .openPopup();
+
+        
+    
+    
+            var marker_404eff8a80e83924fc934ce084f99072 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_7ea5cc393d285c20cd455e284d1d7faf = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_d91a8e58e3baf71008953a749c2c11b6 = $(`<div id="html_d91a8e58e3baf71008953a749c2c11b6" style="width: 100.0%; height: 100.0%;">Feature 1:  6200000<br>Feature 2: 8004 Zürich<br>Feature 3: 364</div>`)[0];
+                popup_7ea5cc393d285c20cd455e284d1d7faf.setContent(html_d91a8e58e3baf71008953a749c2c11b6);
+            
+        
+
+        marker_404eff8a80e83924fc934ce084f99072.bindPopup(popup_7ea5cc393d285c20cd455e284d1d7faf)
+        .openPopup();
+
+        
+    
+    
+            var marker_739079522b929c25e3f260e4785ce87c = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_0293deaee2ee5a0674ab501c722a097b = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_cae2fd3d564589de89354d274d31e6cd = $(`<div id="html_cae2fd3d564589de89354d274d31e6cd" style="width: 100.0%; height: 100.0%;">Feature 1:  2700000<br>Feature 2: 8051 Zürich<br>Feature 3: 120</div>`)[0];
+                popup_0293deaee2ee5a0674ab501c722a097b.setContent(html_cae2fd3d564589de89354d274d31e6cd);
+            
+        
+
+        marker_739079522b929c25e3f260e4785ce87c.bindPopup(popup_0293deaee2ee5a0674ab501c722a097b)
+        .openPopup();
+
+        
+    
+    
+            var marker_ef30c5a80c689ef61d997b5100672b85 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_f4196ff64c73369fcbf21b7d377d8c5c = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_a502827508c20ef3de0b5040066bb808 = $(`<div id="html_a502827508c20ef3de0b5040066bb808" style="width: 100.0%; height: 100.0%;">Feature 1:  7700000<br>Feature 2: 8044 Zürich<br>Feature 3: nan</div>`)[0];
+                popup_f4196ff64c73369fcbf21b7d377d8c5c.setContent(html_a502827508c20ef3de0b5040066bb808);
+            
+        
+
+        marker_ef30c5a80c689ef61d997b5100672b85.bindPopup(popup_f4196ff64c73369fcbf21b7d377d8c5c)
+        .openPopup();
+
+        
+    
+    
+            var marker_3f617d1b33c35116e739025ea65bd00d = L.marker(
+                [47.4095637, 8.530379450000002],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_81affccf6a8c2fbc7886760f0ee3a708 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_a1a430150e101c8b2532321b504eb1fa = $(`<div id="html_a1a430150e101c8b2532321b504eb1fa" style="width: 100.0%; height: 100.0%;">Feature 1:  1720000<br>Feature 2: Immenweg 23, 8050 Zürich<br>Feature 3: 95</div>`)[0];
+                popup_81affccf6a8c2fbc7886760f0ee3a708.setContent(html_a1a430150e101c8b2532321b504eb1fa);
+            
+        
+
+        marker_3f617d1b33c35116e739025ea65bd00d.bindPopup(popup_81affccf6a8c2fbc7886760f0ee3a708)
+        .openPopup();
+
+        
+    
+    
+            var marker_6fba194958f59e9adb090f81f7601bbb = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_41ae8f2dc077eaf9725810f97569adc4 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_afe5b8ef931ebcf57533085e70d73d04 = $(`<div id="html_afe5b8ef931ebcf57533085e70d73d04" style="width: 100.0%; height: 100.0%;">Feature 1:  3600000<br>Feature 2: 8053 Zürich<br>Feature 3: 191</div>`)[0];
+                popup_41ae8f2dc077eaf9725810f97569adc4.setContent(html_afe5b8ef931ebcf57533085e70d73d04);
+            
+        
+
+        marker_6fba194958f59e9adb090f81f7601bbb.bindPopup(popup_41ae8f2dc077eaf9725810f97569adc4)
+        .openPopup();
+
+        
+    
+    
+            var marker_a9f9207e94f3f5e9430cb37a3e7110db = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_01efb8114ae0b838b789badfce4d90d0 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_791e952873969cb9d2ea40debd2bfb3c = $(`<div id="html_791e952873969cb9d2ea40debd2bfb3c" style="width: 100.0%; height: 100.0%;">Feature 1:  1350000<br>Feature 2: 8041 Zürich<br>Feature 3: 88</div>`)[0];
+                popup_01efb8114ae0b838b789badfce4d90d0.setContent(html_791e952873969cb9d2ea40debd2bfb3c);
+            
+        
+
+        marker_a9f9207e94f3f5e9430cb37a3e7110db.bindPopup(popup_01efb8114ae0b838b789badfce4d90d0)
+        .openPopup();
+
+        
+    
+    
+            var marker_04537e6b32db3df51cfea6b443e0e061 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_7991f5524777bdc45f886c14d1b5eac5 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_3db80d2fd09d9aa0827075f667023876 = $(`<div id="html_3db80d2fd09d9aa0827075f667023876" style="width: 100.0%; height: 100.0%;">Feature 1:  12000000<br>Feature 2: 8004 Zürich<br>Feature 3: 610</div>`)[0];
+                popup_7991f5524777bdc45f886c14d1b5eac5.setContent(html_3db80d2fd09d9aa0827075f667023876);
+            
+        
+
+        marker_04537e6b32db3df51cfea6b443e0e061.bindPopup(popup_7991f5524777bdc45f886c14d1b5eac5)
+        .openPopup();
+
+        
+    
+    
+            var marker_69eef2c52b932227d01fd2597391ae04 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_aaebdba4fbfede7c35305b6714a9b96a = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_087178c3d637d4f3bc1329ab85dddeb6 = $(`<div id="html_087178c3d637d4f3bc1329ab85dddeb6" style="width: 100.0%; height: 100.0%;">Feature 1:  9000000<br>Feature 2: 8004 Zürich<br>Feature 3: 480</div>`)[0];
+                popup_aaebdba4fbfede7c35305b6714a9b96a.setContent(html_087178c3d637d4f3bc1329ab85dddeb6);
+            
+        
+
+        marker_69eef2c52b932227d01fd2597391ae04.bindPopup(popup_aaebdba4fbfede7c35305b6714a9b96a)
+        .openPopup();
+
+        
+    
+    
+            var marker_742962f2b645ab6c4bbdd5239b284d7f = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_258260d8154041c1b962204cacc63e3b = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_39a07e2d98551b8d890431f5aba8513a = $(`<div id="html_39a07e2d98551b8d890431f5aba8513a" style="width: 100.0%; height: 100.0%;">Feature 1:  2750000<br>Feature 2: 8053 Zürich<br>Feature 3: 154</div>`)[0];
+                popup_258260d8154041c1b962204cacc63e3b.setContent(html_39a07e2d98551b8d890431f5aba8513a);
+            
+        
+
+        marker_742962f2b645ab6c4bbdd5239b284d7f.bindPopup(popup_258260d8154041c1b962204cacc63e3b)
+        .openPopup();
+
+        
+    
+    
+            var marker_11c1e51a3160ab647d1344c7377934e5 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_7ef4f43544659f444b4426f9a49cf3ba = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_2dd940a46aae4651d9bae9fdfb930438 = $(`<div id="html_2dd940a46aae4651d9bae9fdfb930438" style="width: 100.0%; height: 100.0%;">Feature 1:  2495000<br>Feature 2: 8049 Zürich<br>Feature 3: 185</div>`)[0];
+                popup_7ef4f43544659f444b4426f9a49cf3ba.setContent(html_2dd940a46aae4651d9bae9fdfb930438);
+            
+        
+
+        marker_11c1e51a3160ab647d1344c7377934e5.bindPopup(popup_7ef4f43544659f444b4426f9a49cf3ba)
+        .openPopup();
+
+        
+    
+    
+            var marker_9dff778556de42d8e5985d5bdd3d2706 = L.marker(
+                [47.37188435, 8.57086320181562],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_15364ae62c5b8133ee5e3f113a4a7d99 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_23698333b6c5c52dbe5b5f73a13f333c = $(`<div id="html_23698333b6c5c52dbe5b5f73a13f333c" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: Pilatusstrasse 20, 8032 Zürich<br>Feature 3: 15</div>`)[0];
+                popup_15364ae62c5b8133ee5e3f113a4a7d99.setContent(html_23698333b6c5c52dbe5b5f73a13f333c);
+            
+        
+
+        marker_9dff778556de42d8e5985d5bdd3d2706.bindPopup(popup_15364ae62c5b8133ee5e3f113a4a7d99)
+        .openPopup();
+
+        
+    
+    
+            var marker_3ce1618f9bac8a5d872089ab20f21137 = L.marker(
+                [47.36075555, 8.521095965561225],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_41b67acbf1502e73a7a86c7bb936378f = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_0c179a51f808f1ecbc4dd4d60e1318aa = $(`<div id="html_0c179a51f808f1ecbc4dd4d60e1318aa" style="width: 100.0%; height: 100.0%;">Feature 1:  2300000<br>Feature 2: Rüdigerstrasse 7, 8045 Zürich<br>Feature 3: 107</div>`)[0];
+                popup_41b67acbf1502e73a7a86c7bb936378f.setContent(html_0c179a51f808f1ecbc4dd4d60e1318aa);
+            
+        
+
+        marker_3ce1618f9bac8a5d872089ab20f21137.bindPopup(popup_41b67acbf1502e73a7a86c7bb936378f)
+        .openPopup();
+
+        
+    
+    
+            var marker_244cedff9b6e2f6b7a0ee2528444ae5c = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_d51ae8dbaeb1fc9cacb12333cd577545 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_3605b5bb35bf6c9129c00f45b12254ef = $(`<div id="html_3605b5bb35bf6c9129c00f45b12254ef" style="width: 100.0%; height: 100.0%;">Feature 1:  2040000<br>Feature 2: 8006 Zürich<br>Feature 3: 100</div>`)[0];
+                popup_d51ae8dbaeb1fc9cacb12333cd577545.setContent(html_3605b5bb35bf6c9129c00f45b12254ef);
+            
+        
+
+        marker_244cedff9b6e2f6b7a0ee2528444ae5c.bindPopup(popup_d51ae8dbaeb1fc9cacb12333cd577545)
+        .openPopup();
+
+        
+    
+    
+            var marker_4faf37368feb90012caa87662cd85955 = L.marker(
+                [47.38702445, 8.512862368834448],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_26908a958e0c7aaba0733dacbdc59a6c = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_c90de257448dc1dcfd42ab1b5bf49f22 = $(`<div id="html_c90de257448dc1dcfd42ab1b5bf49f22" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: Turbinenstrasse 60, 8005 Zürich<br>Feature 3: 54</div>`)[0];
+                popup_26908a958e0c7aaba0733dacbdc59a6c.setContent(html_c90de257448dc1dcfd42ab1b5bf49f22);
+            
+        
+
+        marker_4faf37368feb90012caa87662cd85955.bindPopup(popup_26908a958e0c7aaba0733dacbdc59a6c)
+        .openPopup();
+
+        
+    
+    
+            var marker_b25439d24db5f85dcbabfa47a0bc9510 = L.marker(
+                [47.3742036, 8.5320652],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_546b90d553006d6863b3c1386e538199 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_ae37b65022e0079b0078f3a5764c0395 = $(`<div id="html_ae37b65022e0079b0078f3a5764c0395" style="width: 100.0%; height: 100.0%;">Feature 1:  1680000<br>Feature 2: Kasernenstrasse 17, 8004 Zürich<br>Feature 3: 91</div>`)[0];
+                popup_546b90d553006d6863b3c1386e538199.setContent(html_ae37b65022e0079b0078f3a5764c0395);
+            
+        
+
+        marker_b25439d24db5f85dcbabfa47a0bc9510.bindPopup(popup_546b90d553006d6863b3c1386e538199)
+        .openPopup();
+
+        
+    
+    
+            var marker_dcbf95f3bdc270ffc753eac40e21c533 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_21c521bcc301b5dd50bee1bb4c0da512 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_d378977821aecf95d6032daed00b777b = $(`<div id="html_d378977821aecf95d6032daed00b777b" style="width: 100.0%; height: 100.0%;">Feature 1:  15000000<br>Feature 2: 8037 Zürich<br>Feature 3: 700</div>`)[0];
+                popup_21c521bcc301b5dd50bee1bb4c0da512.setContent(html_d378977821aecf95d6032daed00b777b);
+            
+        
+
+        marker_dcbf95f3bdc270ffc753eac40e21c533.bindPopup(popup_21c521bcc301b5dd50bee1bb4c0da512)
+        .openPopup();
+
+        
+    
+    
+            var marker_bb02ec7d64af6d9f36c36578ffc46fa6 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_047e7211fe59c46844ea903b26810081 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_bbed568adcb0410e3e23a12907c7c5cc = $(`<div id="html_bbed568adcb0410e3e23a12907c7c5cc" style="width: 100.0%; height: 100.0%;">Feature 1:  2050000<br>Feature 2: 8049 Zürich<br>Feature 3: 135</div>`)[0];
+                popup_047e7211fe59c46844ea903b26810081.setContent(html_bbed568adcb0410e3e23a12907c7c5cc);
+            
+        
+
+        marker_bb02ec7d64af6d9f36c36578ffc46fa6.bindPopup(popup_047e7211fe59c46844ea903b26810081)
+        .openPopup();
+
+        
+    
+    
+            var marker_9d435941deb9375926d98e152f906795 = L.marker(
+                [47.342831149999995, 8.524897364962207],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_12cb707258a414d86c7957df9108bb86 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_6a5d2b25edd9020ede3e8cd47f9c74cc = $(`<div id="html_6a5d2b25edd9020ede3e8cd47f9c74cc" style="width: 100.0%; height: 100.0%;">Feature 1:  2450000<br>Feature 2: Frohalpstrasse 27, 8038 Zürich<br>Feature 3: 130</div>`)[0];
+                popup_12cb707258a414d86c7957df9108bb86.setContent(html_6a5d2b25edd9020ede3e8cd47f9c74cc);
+            
+        
+
+        marker_9d435941deb9375926d98e152f906795.bindPopup(popup_12cb707258a414d86c7957df9108bb86)
+        .openPopup();
+
+        
+    
+    
+            var marker_659c9b50d78c20f104545d84b47be889 = L.marker(
+                [47.34314755, 8.524756704238014],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_ae492263ddb17985c555097e92253db5 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_b3c22e74f06f31ecf628b400eb621880 = $(`<div id="html_b3c22e74f06f31ecf628b400eb621880" style="width: 100.0%; height: 100.0%;">Feature 1:  1570000<br>Feature 2: Frohalpstrasse 21, 8038 Zürich<br>Feature 3: 79</div>`)[0];
+                popup_ae492263ddb17985c555097e92253db5.setContent(html_b3c22e74f06f31ecf628b400eb621880);
+            
+        
+
+        marker_659c9b50d78c20f104545d84b47be889.bindPopup(popup_ae492263ddb17985c555097e92253db5)
+        .openPopup();
+
+        
+    
+    
+            var marker_982d76c1971683f3f1fdb429ae69a123 = L.marker(
+                [47.34314755, 8.524756704238014],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_1b0cbe3efb855b2c7f05b3111491c4aa = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_febfe75c3db3b3c3383c185f45298fc0 = $(`<div id="html_febfe75c3db3b3c3383c185f45298fc0" style="width: 100.0%; height: 100.0%;">Feature 1:  3420000<br>Feature 2: Frohalpstrasse 21, 8038 Zürich<br>Feature 3: 178</div>`)[0];
+                popup_1b0cbe3efb855b2c7f05b3111491c4aa.setContent(html_febfe75c3db3b3c3383c185f45298fc0);
+            
+        
+
+        marker_982d76c1971683f3f1fdb429ae69a123.bindPopup(popup_1b0cbe3efb855b2c7f05b3111491c4aa)
+        .openPopup();
+
+        
+    
+    
+            var marker_c027dbe77423a6b09f31b6d342f4ee14 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_ef64af1fca16ff1becc6cc51c645f98d = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_11d52b5650798d9e1f84aba758dee3d8 = $(`<div id="html_11d52b5650798d9e1f84aba758dee3d8" style="width: 100.0%; height: 100.0%;">Feature 1:  2150000<br>Feature 2: 8005 Zürich<br>Feature 3: 123</div>`)[0];
+                popup_ef64af1fca16ff1becc6cc51c645f98d.setContent(html_11d52b5650798d9e1f84aba758dee3d8);
+            
+        
+
+        marker_c027dbe77423a6b09f31b6d342f4ee14.bindPopup(popup_ef64af1fca16ff1becc6cc51c645f98d)
+        .openPopup();
+
+        
+    
+    
+            var marker_f77fb6fe812e19b98d63ca60ec22afe8 = L.marker(
+                [47.4240917, 8.4988479],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_190a285252c039d562512794b9487bf5 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_51512f296beedb480b8e7a68186bf3ce = $(`<div id="html_51512f296beedb480b8e7a68186bf3ce" style="width: 100.0%; height: 100.0%;">Feature 1:  1255000<br>Feature 2: Michael-Maggi-Strasse 14, 8046 Zürich<br>Feature 3: 97</div>`)[0];
+                popup_190a285252c039d562512794b9487bf5.setContent(html_51512f296beedb480b8e7a68186bf3ce);
+            
+        
+
+        marker_f77fb6fe812e19b98d63ca60ec22afe8.bindPopup(popup_190a285252c039d562512794b9487bf5)
+        .openPopup();
+
+        
+    
+    
+            var marker_387b5858f4988cabbeae8ffc2bdbfc99 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_eb642359d18a5ce978baa4e86485386e = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_d9a0f79a150fd2437dcefe04c4d8a390 = $(`<div id="html_d9a0f79a150fd2437dcefe04c4d8a390" style="width: 100.0%; height: 100.0%;">Feature 1:  1840000<br>Feature 2: 8003 Zürich, 8003 Zürich<br>Feature 3: 73</div>`)[0];
+                popup_eb642359d18a5ce978baa4e86485386e.setContent(html_d9a0f79a150fd2437dcefe04c4d8a390);
+            
+        
+
+        marker_387b5858f4988cabbeae8ffc2bdbfc99.bindPopup(popup_eb642359d18a5ce978baa4e86485386e)
+        .openPopup();
+
+        
+    
+    
+            var marker_86c5f2af513e76d31dbdf74e886ae72e = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_77e295a12f4a13ef3f47507d33c8598e = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_8a551c116d807fe19c6ac17c19a0b19e = $(`<div id="html_8a551c116d807fe19c6ac17c19a0b19e" style="width: 100.0%; height: 100.0%;">Feature 1:  15500000<br>Feature 2: 8037 Zürich<br>Feature 3: 700</div>`)[0];
+                popup_77e295a12f4a13ef3f47507d33c8598e.setContent(html_8a551c116d807fe19c6ac17c19a0b19e);
+            
+        
+
+        marker_86c5f2af513e76d31dbdf74e886ae72e.bindPopup(popup_77e295a12f4a13ef3f47507d33c8598e)
+        .openPopup();
+
+        
+    
+    
+            var marker_e2d0e10462cfe8774b903acf6c154409 = L.marker(
+                [47.3653382, 8.796110888658706],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_ffbf888023d2e21e442e70eaf97b3235 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_eab8090027aa2ca2920fc70b969b5b20 = $(`<div id="html_eab8090027aa2ca2920fc70b969b5b20" style="width: 100.0%; height: 100.0%;">Feature 1:  1740000<br>Feature 2: Stoffelstrasse 8, 8052 Zürich<br>Feature 3: 99</div>`)[0];
+                popup_ffbf888023d2e21e442e70eaf97b3235.setContent(html_eab8090027aa2ca2920fc70b969b5b20);
+            
+        
+
+        marker_e2d0e10462cfe8774b903acf6c154409.bindPopup(popup_ffbf888023d2e21e442e70eaf97b3235)
+        .openPopup();
+
+        
+    
+    
+            var marker_ac7de948a4b2f20fe40fc8a896969fc3 = L.marker(
+                [47.3980548, 8.609176627935604],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_c06f0db1469f4406f97a2bc24a1aa65d = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_8061fb1e95567e3f1db97bfa42e476c0 = $(`<div id="html_8061fb1e95567e3f1db97bfa42e476c0" style="width: 100.0%; height: 100.0%;">Feature 1:  1480000<br>Feature 2: Bühlwiesenstrasse 15, 8052 Zürich<br>Feature 3: 80</div>`)[0];
+                popup_c06f0db1469f4406f97a2bc24a1aa65d.setContent(html_8061fb1e95567e3f1db97bfa42e476c0);
+            
+        
+
+        marker_ac7de948a4b2f20fe40fc8a896969fc3.bindPopup(popup_c06f0db1469f4406f97a2bc24a1aa65d)
+        .openPopup();
+
+        
+    
+    
+            var marker_e328262e598bd270b37d483d8487aea3 = L.marker(
+                [47.4152911, 8.553867],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_fe90ab7d7ebd630def4d547866a1c220 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_2ee42fa60ff4c320915e7d5057156383 = $(`<div id="html_2ee42fa60ff4c320915e7d5057156383" style="width: 100.0%; height: 100.0%;">Feature 1:  2675000<br>Feature 2: Leutschenbachstrasse 30, 8050 Zürich<br>Feature 3: 170</div>`)[0];
+                popup_fe90ab7d7ebd630def4d547866a1c220.setContent(html_2ee42fa60ff4c320915e7d5057156383);
+            
+        
+
+        marker_e328262e598bd270b37d483d8487aea3.bindPopup(popup_fe90ab7d7ebd630def4d547866a1c220)
+        .openPopup();
+
+        
+    
+    
+            var marker_1e0377d38583e128e60cc925a585854b = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_37ff37e502556117a0ad75d4ff53d0ff = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_853638d223d063d2f2cdf10afdb9df4e = $(`<div id="html_853638d223d063d2f2cdf10afdb9df4e" style="width: 100.0%; height: 100.0%;">Feature 1:  1850000<br>Feature 2: 8047 Zürich<br>Feature 3: 129</div>`)[0];
+                popup_37ff37e502556117a0ad75d4ff53d0ff.setContent(html_853638d223d063d2f2cdf10afdb9df4e);
+            
+        
+
+        marker_1e0377d38583e128e60cc925a585854b.bindPopup(popup_37ff37e502556117a0ad75d4ff53d0ff)
+        .openPopup();
+
+        
+    
+    
+            var marker_b1b2536c71e9f3d0f03b3dbce82179a5 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_30aac5a7a2b3a87f5e174504d958f73a = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_b734c8b573b4e3ceda5bcc06f57ec548 = $(`<div id="html_b734c8b573b4e3ceda5bcc06f57ec548" style="width: 100.0%; height: 100.0%;">Feature 1:  1990000<br>Feature 2: 8049 Zürich<br>Feature 3: 137</div>`)[0];
+                popup_30aac5a7a2b3a87f5e174504d958f73a.setContent(html_b734c8b573b4e3ceda5bcc06f57ec548);
+            
+        
+
+        marker_b1b2536c71e9f3d0f03b3dbce82179a5.bindPopup(popup_30aac5a7a2b3a87f5e174504d958f73a)
+        .openPopup();
+
+        
+    
+    
+            var marker_ad41003887f0c4a420acbaad4b9e0b60 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_555d6fb377592129f8d4378317d6310b = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_d63d5a8fb545e65b764d610f0abd7753 = $(`<div id="html_d63d5a8fb545e65b764d610f0abd7753" style="width: 100.0%; height: 100.0%;">Feature 1:  1195000<br>Feature 2: 8038 Zürich<br>Feature 3: nan</div>`)[0];
+                popup_555d6fb377592129f8d4378317d6310b.setContent(html_d63d5a8fb545e65b764d610f0abd7753);
+            
+        
+
+        marker_ad41003887f0c4a420acbaad4b9e0b60.bindPopup(popup_555d6fb377592129f8d4378317d6310b)
+        .openPopup();
+
+        
+    
+    
+            var marker_6064c3078931b567060056e1a77b67fc = L.marker(
+                [47.4036022, 8.559058792117606],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_f9044567809f3335b1c2becb509f93fe = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_8ab13059c6755a7b759ceebf403b65fa = $(`<div id="html_8ab13059c6755a7b759ceebf403b65fa" style="width: 100.0%; height: 100.0%;">Feature 1:  1575000<br>Feature 2: Hubenstrasse 17, 8057 Zürich<br>Feature 3: 107</div>`)[0];
+                popup_f9044567809f3335b1c2becb509f93fe.setContent(html_8ab13059c6755a7b759ceebf403b65fa);
+            
+        
+
+        marker_6064c3078931b567060056e1a77b67fc.bindPopup(popup_f9044567809f3335b1c2becb509f93fe)
+        .openPopup();
+
+        
+    
+    
+            var marker_db842c0171c4ea2d045c69ce9bf0c97d = L.marker(
+                [47.423695949999995, 8.54127579463668],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_477dc656556feb9470ea5d085ece6705 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_d546b8d1eedf749906ecc4193a5dbf20 = $(`<div id="html_d546b8d1eedf749906ecc4193a5dbf20" style="width: 100.0%; height: 100.0%;">Feature 1:  575000<br>Feature 2: Seebacherstrasse 66, 8052 Zürich<br>Feature 3: 55</div>`)[0];
+                popup_477dc656556feb9470ea5d085ece6705.setContent(html_d546b8d1eedf749906ecc4193a5dbf20);
+            
+        
+
+        marker_db842c0171c4ea2d045c69ce9bf0c97d.bindPopup(popup_477dc656556feb9470ea5d085ece6705)
+        .openPopup();
+
+        
+    
+    
+            var marker_abc61bb851d861d52ff7de573b5c2c89 = L.marker(
+                [47.36618385, 8.563044041462419],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_beffdd0d6a3775e67dc52381ec105a42 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_3bca17ec7f01652f2d91f2f92260398c = $(`<div id="html_3bca17ec7f01652f2d91f2f92260398c" style="width: 100.0%; height: 100.0%;">Feature 1:  1490000<br>Feature 2: Veilchenstrasse 5, 8032 Zürich<br>Feature 3: 9</div>`)[0];
+                popup_beffdd0d6a3775e67dc52381ec105a42.setContent(html_3bca17ec7f01652f2d91f2f92260398c);
+            
+        
+
+        marker_abc61bb851d861d52ff7de573b5c2c89.bindPopup(popup_beffdd0d6a3775e67dc52381ec105a42)
+        .openPopup();
+
+        
+    
+    
+            var marker_2f128d55dd4a15660f7c69df41555f7d = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_6257e8d3dd451ab640c6d2160df71ea6 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_2a489aa01057a453a57bffe12b21566b = $(`<div id="html_2a489aa01057a453a57bffe12b21566b" style="width: 100.0%; height: 100.0%;">Feature 1:  1660000<br>Feature 2: 8052 Zürich<br>Feature 3: 9</div>`)[0];
+                popup_6257e8d3dd451ab640c6d2160df71ea6.setContent(html_2a489aa01057a453a57bffe12b21566b);
+            
+        
+
+        marker_2f128d55dd4a15660f7c69df41555f7d.bindPopup(popup_6257e8d3dd451ab640c6d2160df71ea6)
+        .openPopup();
+
+        
+    
+    
+            var marker_eb5c45f3e99e69944721ba38d75f418c = L.marker(
+                [47.38097545, 8.507322246628128],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_c2e2ef646b6c37a667c25e2a1cb34624 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_d9f3cdeadf0694eb1aab077cb06d3b5c = $(`<div id="html_d9f3cdeadf0694eb1aab077cb06d3b5c" style="width: 100.0%; height: 100.0%;">Feature 1:  1450000<br>Feature 2: Bienenstrasse 5, 8004 Zürich<br>Feature 3: 100</div>`)[0];
+                popup_c2e2ef646b6c37a667c25e2a1cb34624.setContent(html_d9f3cdeadf0694eb1aab077cb06d3b5c);
+            
+        
+
+        marker_eb5c45f3e99e69944721ba38d75f418c.bindPopup(popup_c2e2ef646b6c37a667c25e2a1cb34624)
+        .openPopup();
+
+        
+    
+    
+            var marker_7bd7c76d61e0df78bfbfc5827bf97679 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_b572e0acef4762e159e1dca166d53d88 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_b6cc35f49c5d7cfb0ed0113f619f7f1a = $(`<div id="html_b6cc35f49c5d7cfb0ed0113f619f7f1a" style="width: 100.0%; height: 100.0%;">Feature 1:  3490000<br>Feature 2: 8005 Zürich<br>Feature 3: 170</div>`)[0];
+                popup_b572e0acef4762e159e1dca166d53d88.setContent(html_b6cc35f49c5d7cfb0ed0113f619f7f1a);
+            
+        
+
+        marker_7bd7c76d61e0df78bfbfc5827bf97679.bindPopup(popup_b572e0acef4762e159e1dca166d53d88)
+        .openPopup();
+
+        
+    
+    
+            var marker_68e64d58c1b844e101c0845e4c7f8289 = L.marker(
+                [47.38049945, 8.47982783410075],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_8434a02d4ec756e07e47706b8426d065 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_0cb4a2465a76244db5fc87fc98dcfd7b = $(`<div id="html_0cb4a2465a76244db5fc87fc98dcfd7b" style="width: 100.0%; height: 100.0%;">Feature 1:  940000<br>Feature 2: Zwischenbächen 139, 8048 Zürich<br>Feature 3: 7</div>`)[0];
+                popup_8434a02d4ec756e07e47706b8426d065.setContent(html_0cb4a2465a76244db5fc87fc98dcfd7b);
+            
+        
+
+        marker_68e64d58c1b844e101c0845e4c7f8289.bindPopup(popup_8434a02d4ec756e07e47706b8426d065)
+        .openPopup();
+
+        
+    
+    
+            var marker_2a8db9abfae4abdc286f6caf2e545da5 = L.marker(
+                [47.3929736, 8.5508038],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_d895b86b8654842d19d3df71c95b8bdf = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_68d3ba6cd5873162b61c6597a5be9b24 = $(`<div id="html_68d3ba6cd5873162b61c6597a5be9b24" style="width: 100.0%; height: 100.0%;">Feature 1:  1660000<br>Feature 2: Frohburgstrasse, 8006 Zürich<br>Feature 3: 133</div>`)[0];
+                popup_d895b86b8654842d19d3df71c95b8bdf.setContent(html_68d3ba6cd5873162b61c6597a5be9b24);
+            
+        
+
+        marker_2a8db9abfae4abdc286f6caf2e545da5.bindPopup(popup_d895b86b8654842d19d3df71c95b8bdf)
+        .openPopup();
+
+        
+    
+    
+            var marker_349565d1cdd3660f58e905058886c03e = L.marker(
+                [47.38279895, 8.55327595],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_534301f318daec655fdddf99e1e16ae9 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_5bc13f1a6a0afbc0b2922b879ebef26c = $(`<div id="html_5bc13f1a6a0afbc0b2922b879ebef26c" style="width: 100.0%; height: 100.0%;">Feature 1:  2680000<br>Feature 2: Spyristrasse 34, 8044 Zürich<br>Feature 3: 101</div>`)[0];
+                popup_534301f318daec655fdddf99e1e16ae9.setContent(html_5bc13f1a6a0afbc0b2922b879ebef26c);
+            
+        
+
+        marker_349565d1cdd3660f58e905058886c03e.bindPopup(popup_534301f318daec655fdddf99e1e16ae9)
+        .openPopup();
+
+        
+    
+    
+            var marker_78363498dafe8cb8e7bb508bddb320dc = L.marker(
+                [47.38279895, 8.55327595],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_ae50d4a040762f02832933f4780cfa42 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_356b8746ad19a349e82b40f228ea43da = $(`<div id="html_356b8746ad19a349e82b40f228ea43da" style="width: 100.0%; height: 100.0%;">Feature 1:  3280000<br>Feature 2: Spyristrasse 34, 8044 Zürich<br>Feature 3: 125</div>`)[0];
+                popup_ae50d4a040762f02832933f4780cfa42.setContent(html_356b8746ad19a349e82b40f228ea43da);
+            
+        
+
+        marker_78363498dafe8cb8e7bb508bddb320dc.bindPopup(popup_ae50d4a040762f02832933f4780cfa42)
+        .openPopup();
+
+        
+    
+    
+            var marker_a77c643e8dbda21927571370c1ba89cd = L.marker(
+                [47.418579699999995, 8.55646613964166],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_2cd08db0a233ba7b98ba47e7c5a3f7dd = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_e92d84f30cf652dc54e50da5b234cdce = $(`<div id="html_e92d84f30cf652dc54e50da5b234cdce" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: Schärenmoosstrasse 76, 8052 Zürich<br>Feature 3: 00</div>`)[0];
+                popup_2cd08db0a233ba7b98ba47e7c5a3f7dd.setContent(html_e92d84f30cf652dc54e50da5b234cdce);
+            
+        
+
+        marker_a77c643e8dbda21927571370c1ba89cd.bindPopup(popup_2cd08db0a233ba7b98ba47e7c5a3f7dd)
+        .openPopup();
+
+        
+    
+    
+            var marker_b430a1f858e1aba1d57223b871802d29 = L.marker(
+                [47.4029668, 8.553901873877809],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_dc5047a7bde05ca011971f9f4d2bfade = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_0092a6920edcb01315c0c19c0452ab8f = $(`<div id="html_0092a6920edcb01315c0c19c0452ab8f" style="width: 100.0%; height: 100.0%;">Feature 1:  690000<br>Feature 2: Winterthurerstrasse 295, 8057 Zürich<br>Feature 3: 71</div>`)[0];
+                popup_dc5047a7bde05ca011971f9f4d2bfade.setContent(html_0092a6920edcb01315c0c19c0452ab8f);
+            
+        
+
+        marker_b430a1f858e1aba1d57223b871802d29.bindPopup(popup_dc5047a7bde05ca011971f9f4d2bfade)
+        .openPopup();
+
+        
+    
+    
+            var marker_85572f75456fb9a6678de2fdfd86f2f1 = L.marker(
+                [47.405288549999995, 8.494005202882946],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_12c0fd50b97ac09cae1a88a7ff7e43cd = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_eae8c4a7d3c9f6ad4aa5bb2978fbb7e6 = $(`<div id="html_eae8c4a7d3c9f6ad4aa5bb2978fbb7e6" style="width: 100.0%; height: 100.0%;">Feature 1:  1645000<br>Feature 2: Michelstrasse 13, 8049 Zürich<br>Feature 3: 108</div>`)[0];
+                popup_12c0fd50b97ac09cae1a88a7ff7e43cd.setContent(html_eae8c4a7d3c9f6ad4aa5bb2978fbb7e6);
+            
+        
+
+        marker_85572f75456fb9a6678de2fdfd86f2f1.bindPopup(popup_12c0fd50b97ac09cae1a88a7ff7e43cd)
+        .openPopup();
+
+        
+    
+    
+            var marker_01e9118a4bc7fceb3a9119026ffc56fa = L.marker(
+                [47.405288549999995, 8.494005202882946],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_d1aa8d3acc876d1c97ddefcb72e56e01 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_62062773effbc1c4b90b8e0381579a95 = $(`<div id="html_62062773effbc1c4b90b8e0381579a95" style="width: 100.0%; height: 100.0%;">Feature 1:  1935000<br>Feature 2: Michelstrasse 13, 8049 Zürich<br>Feature 3: 13</div>`)[0];
+                popup_d1aa8d3acc876d1c97ddefcb72e56e01.setContent(html_62062773effbc1c4b90b8e0381579a95);
+            
+        
+
+        marker_01e9118a4bc7fceb3a9119026ffc56fa.bindPopup(popup_d1aa8d3acc876d1c97ddefcb72e56e01)
+        .openPopup();
+
+        
+    
+    
+            var marker_86c1923cd693e14eca0db2e52ad9c503 = L.marker(
+                [47.405288549999995, 8.494005202882946],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_c66c9bb2bbad6972e74b657907cf41e6 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_ceded2febc1e6b6d04e7ac8f46479a90 = $(`<div id="html_ceded2febc1e6b6d04e7ac8f46479a90" style="width: 100.0%; height: 100.0%;">Feature 1:  1705000<br>Feature 2: Michelstrasse 13, 8049 Zürich<br>Feature 3: 111</div>`)[0];
+                popup_c66c9bb2bbad6972e74b657907cf41e6.setContent(html_ceded2febc1e6b6d04e7ac8f46479a90);
+            
+        
+
+        marker_86c1923cd693e14eca0db2e52ad9c503.bindPopup(popup_c66c9bb2bbad6972e74b657907cf41e6)
+        .openPopup();
+
+        
+    
+    
+            var marker_fd59ce7e3133c699f51085d6ca9152fe = L.marker(
+                [47.405288549999995, 8.494005202882946],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_7b832aacd604ba847e6438d2087c2dad = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_5db131e5ee7df5e1420a9f1e04658f59 = $(`<div id="html_5db131e5ee7df5e1420a9f1e04658f59" style="width: 100.0%; height: 100.0%;">Feature 1:  1540000<br>Feature 2: Michelstrasse 13, 8049 Zürich<br>Feature 3: 98</div>`)[0];
+                popup_7b832aacd604ba847e6438d2087c2dad.setContent(html_5db131e5ee7df5e1420a9f1e04658f59);
+            
+        
+
+        marker_fd59ce7e3133c699f51085d6ca9152fe.bindPopup(popup_7b832aacd604ba847e6438d2087c2dad)
+        .openPopup();
+
+        
+    
+    
+            var marker_1de54b7ac62c00cf5bb6e2def711ef10 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_e0710371c3e6ad9c4471c9bc27d55219 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_80cfeb8886d7d7c5d0eedf4b1fcc4899 = $(`<div id="html_80cfeb8886d7d7c5d0eedf4b1fcc4899" style="width: 100.0%; height: 100.0%;">Feature 1:  1050000<br>Feature 2: 8047 Zürich<br>Feature 3: 56</div>`)[0];
+                popup_e0710371c3e6ad9c4471c9bc27d55219.setContent(html_80cfeb8886d7d7c5d0eedf4b1fcc4899);
+            
+        
+
+        marker_1de54b7ac62c00cf5bb6e2def711ef10.bindPopup(popup_e0710371c3e6ad9c4471c9bc27d55219)
+        .openPopup();
+
+        
+    
+    
+            var marker_643a50e056c1070952b37bbd9870eb5e = L.marker(
+                [47.35870945, 8.5875046111928],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_b5a40091cf3377d4c1c04580a8919f4e = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_1ec61b5aa16d7e1ca7016eb16865042c = $(`<div id="html_1ec61b5aa16d7e1ca7016eb16865042c" style="width: 100.0%; height: 100.0%;">Feature 1:  1360000<br>Feature 2: Witikonerstrasse 313, 8053 Zürich<br>Feature 3: 85</div>`)[0];
+                popup_b5a40091cf3377d4c1c04580a8919f4e.setContent(html_1ec61b5aa16d7e1ca7016eb16865042c);
+            
+        
+
+        marker_643a50e056c1070952b37bbd9870eb5e.bindPopup(popup_b5a40091cf3377d4c1c04580a8919f4e)
+        .openPopup();
+
+        
+    
+    
+            var marker_e19107079e748419ae56f672ba336e46 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_a9a1d292e5682c0138ac4cf6f24a4ef0 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_ddbee8a4a019de0642269c7b64b0954a = $(`<div id="html_ddbee8a4a019de0642269c7b64b0954a" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: 8046 Zürich<br>Feature 3: 129</div>`)[0];
+                popup_a9a1d292e5682c0138ac4cf6f24a4ef0.setContent(html_ddbee8a4a019de0642269c7b64b0954a);
+            
+        
+
+        marker_e19107079e748419ae56f672ba336e46.bindPopup(popup_a9a1d292e5682c0138ac4cf6f24a4ef0)
+        .openPopup();
+
+        
+    
+    
+            var marker_b25e5d730235ec92ce5b363dde4dcb02 = L.marker(
+                [47.359810100000004, 8.589449566791659],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_0fdae2de40feb719dda2345a4b8b9f89 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_e9a71f7706e4ed4eabc06dd0469d3cba = $(`<div id="html_e9a71f7706e4ed4eabc06dd0469d3cba" style="width: 100.0%; height: 100.0%;">Feature 1:  1220000<br>Feature 2: Lehfrauenweg 17, 8053 Zürich<br>Feature 3: 63</div>`)[0];
+                popup_0fdae2de40feb719dda2345a4b8b9f89.setContent(html_e9a71f7706e4ed4eabc06dd0469d3cba);
+            
+        
+
+        marker_b25e5d730235ec92ce5b363dde4dcb02.bindPopup(popup_0fdae2de40feb719dda2345a4b8b9f89)
+        .openPopup();
+
+        
+    
+    
+            var marker_b648d44232cf2c7a534bac8acaaef6cb = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_69ada2a2f51076f462a6e1f58fbc40b3 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_b9bef35e40aa8646a1f349bd16a22272 = $(`<div id="html_b9bef35e40aa8646a1f349bd16a22272" style="width: 100.0%; height: 100.0%;">Feature 1:  1925000<br>Feature 2: 8041 Zürich<br>Feature 3: 150</div>`)[0];
+                popup_69ada2a2f51076f462a6e1f58fbc40b3.setContent(html_b9bef35e40aa8646a1f349bd16a22272);
+            
+        
+
+        marker_b648d44232cf2c7a534bac8acaaef6cb.bindPopup(popup_69ada2a2f51076f462a6e1f58fbc40b3)
+        .openPopup();
+
+        
+    
+    
+            var marker_b8cef118c22a29c0ba0151b322db1b79 = L.marker(
+                [47.39227405, 8.50705436357854],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_feddcadbb926d3bddb30ead83f82f730 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_75464489f46f65cb52078e0537886ff8 = $(`<div id="html_75464489f46f65cb52078e0537886ff8" style="width: 100.0%; height: 100.0%;">Feature 1:  1980000<br>Feature 2: Förrlibuckstrasse 227, 8005 Zürich<br>Feature 3: 94</div>`)[0];
+                popup_feddcadbb926d3bddb30ead83f82f730.setContent(html_75464489f46f65cb52078e0537886ff8);
+            
+        
+
+        marker_b8cef118c22a29c0ba0151b322db1b79.bindPopup(popup_feddcadbb926d3bddb30ead83f82f730)
+        .openPopup();
+
+        
+    
+    
+            var marker_e50b046d40451164f68a51aa72ccbf1d = L.marker(
+                [47.3767769, 8.5587745],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_16974b125fac7879d5f7320f36bf3475 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_4ba3872e6b3fda797f07886f58e11a7b = $(`<div id="html_4ba3872e6b3fda797f07886f58e11a7b" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: 8032 Fluntern<br>Feature 3: 99</div>`)[0];
+                popup_16974b125fac7879d5f7320f36bf3475.setContent(html_4ba3872e6b3fda797f07886f58e11a7b);
+            
+        
+
+        marker_e50b046d40451164f68a51aa72ccbf1d.bindPopup(popup_16974b125fac7879d5f7320f36bf3475)
+        .openPopup();
+
+        
+    
+    
+            var marker_bbc18da998a5f4d73554fbbe89db4c50 = L.marker(
+                [47.355332000000004, 8.603932956179047],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_493a44b6dd2f6d5ae39e55b9dae71aa5 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_bec0b054ec140a1ecba2614846f83186 = $(`<div id="html_bec0b054ec140a1ecba2614846f83186" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: Kienastenwiesweg 40, 8053 Zürich<br>Feature 3: 179</div>`)[0];
+                popup_493a44b6dd2f6d5ae39e55b9dae71aa5.setContent(html_bec0b054ec140a1ecba2614846f83186);
+            
+        
+
+        marker_bbc18da998a5f4d73554fbbe89db4c50.bindPopup(popup_493a44b6dd2f6d5ae39e55b9dae71aa5)
+        .openPopup();
+
+        
+    
+    
+            var marker_9e1b843afc0eee12c6891cd91ce2218c = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_16388b8d6f646bc52b777e018d2ff89d = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_cff41b66152c60556a7356537a2c1775 = $(`<div id="html_cff41b66152c60556a7356537a2c1775" style="width: 100.0%; height: 100.0%;">Feature 1:  850000<br>Feature 2: 8044 Zürich<br>Feature 3: 49</div>`)[0];
+                popup_16388b8d6f646bc52b777e018d2ff89d.setContent(html_cff41b66152c60556a7356537a2c1775);
+            
+        
+
+        marker_9e1b843afc0eee12c6891cd91ce2218c.bindPopup(popup_16388b8d6f646bc52b777e018d2ff89d)
+        .openPopup();
+
+        
+    
+    
+            var marker_1ca8d51bbf775a58063431e5ae62334a = L.marker(
+                [47.33399125, 8.516797886197715],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_da1011f6572c8656207d3447e8d2cac2 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_1e45a7840b318d12627daefb069c61f8 = $(`<div id="html_1e45a7840b318d12627daefb069c61f8" style="width: 100.0%; height: 100.0%;">Feature 1:  2850000<br>Feature 2: Wegackerstrasse 37, 8041 Zürich<br>Feature 3: 1</div>`)[0];
+                popup_da1011f6572c8656207d3447e8d2cac2.setContent(html_1e45a7840b318d12627daefb069c61f8);
+            
+        
+
+        marker_1ca8d51bbf775a58063431e5ae62334a.bindPopup(popup_da1011f6572c8656207d3447e8d2cac2)
+        .openPopup();
+
+        
+    
+    
+            var marker_ca5631ba465cfdd123359ee1f9c08ac7 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_e07b52d61d27f764db4c9b1e5a991fdb = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_879d1e9d87cfbf3870369436fd513f23 = $(`<div id="html_879d1e9d87cfbf3870369436fd513f23" style="width: 100.0%; height: 100.0%;">Feature 1:  12000000<br>Feature 2: 8002 Zürich<br>Feature 3: 470</div>`)[0];
+                popup_e07b52d61d27f764db4c9b1e5a991fdb.setContent(html_879d1e9d87cfbf3870369436fd513f23);
+            
+        
+
+        marker_ca5631ba465cfdd123359ee1f9c08ac7.bindPopup(popup_e07b52d61d27f764db4c9b1e5a991fdb)
+        .openPopup();
+
+        
+    
+    
+            var marker_27ae6f2bd6dae68a18c523dd04cb44c8 = L.marker(
+                [47.40085415, 8.53253127279162],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_15f57551f16c2b38128d9a286e9ad21a = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_27c9bcd3e4ea4fc660e2c53dd5b59229 = $(`<div id="html_27c9bcd3e4ea4fc660e2c53dd5b59229" style="width: 100.0%; height: 100.0%;">Feature 1:  2100000<br>Feature 2: Käferholzstrasse 30, 8057 Zürich<br>Feature 3: 117</div>`)[0];
+                popup_15f57551f16c2b38128d9a286e9ad21a.setContent(html_27c9bcd3e4ea4fc660e2c53dd5b59229);
+            
+        
+
+        marker_27ae6f2bd6dae68a18c523dd04cb44c8.bindPopup(popup_15f57551f16c2b38128d9a286e9ad21a)
+        .openPopup();
+
+        
+    
+    
+            var marker_ec9990653d5166b84e182b6856abb2ae = L.marker(
+                [47.3805883, 8.480092592575758],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_bb79a0bf4c2998f05b785a536d298366 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_1aad60078ef29a6a377b5df11ecf8d19 = $(`<div id="html_1aad60078ef29a6a377b5df11ecf8d19" style="width: 100.0%; height: 100.0%;">Feature 1:  1020000<br>Feature 2: Zwischenbächen 141, 8048 Zürich<br>Feature 3: 81</div>`)[0];
+                popup_bb79a0bf4c2998f05b785a536d298366.setContent(html_1aad60078ef29a6a377b5df11ecf8d19);
+            
+        
+
+        marker_ec9990653d5166b84e182b6856abb2ae.bindPopup(popup_bb79a0bf4c2998f05b785a536d298366)
+        .openPopup();
+
+        
+    
+    
+            var marker_911ad88b938e58822105dc97d9d809e1 = L.marker(
+                [47.408007600000005, 8.56103986322156],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_0585e5bea148ca3993441f7fc452138d = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_7c43059b1b5c39542b46575e0c7fadb8 = $(`<div id="html_7c43059b1b5c39542b46575e0c7fadb8" style="width: 100.0%; height: 100.0%;">Feature 1:  955000<br>Feature 2: Tramstrasse 142, 8050 Zürich<br>Feature 3: 6</div>`)[0];
+                popup_0585e5bea148ca3993441f7fc452138d.setContent(html_7c43059b1b5c39542b46575e0c7fadb8);
+            
+        
+
+        marker_911ad88b938e58822105dc97d9d809e1.bindPopup(popup_0585e5bea148ca3993441f7fc452138d)
+        .openPopup();
+
+        
+    
+    
+            var marker_edb69c515e8b371920f2a54331df1fab = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_073104be236839dde25a024b095699fa = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_e02a9d042897c5e75e31292de742d267 = $(`<div id="html_e02a9d042897c5e75e31292de742d267" style="width: 100.0%; height: 100.0%;">Feature 1:  1500000<br>Feature 2: 8045 Zürich<br>Feature 3: 61</div>`)[0];
+                popup_073104be236839dde25a024b095699fa.setContent(html_e02a9d042897c5e75e31292de742d267);
+            
+        
+
+        marker_edb69c515e8b371920f2a54331df1fab.bindPopup(popup_073104be236839dde25a024b095699fa)
+        .openPopup();
+
+        
+    
+    
+            var marker_9238b6572c41f7cabf610f7eca18f478 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_84ee1b841a9ffdd7555a86f841c305f9 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_7083f632b6920f2dca219dcced1a279b = $(`<div id="html_7083f632b6920f2dca219dcced1a279b" style="width: 100.0%; height: 100.0%;">Feature 1:  1380000<br>Feature 2: 8050 Zürich<br>Feature 3: 93</div>`)[0];
+                popup_84ee1b841a9ffdd7555a86f841c305f9.setContent(html_7083f632b6920f2dca219dcced1a279b);
+            
+        
+
+        marker_9238b6572c41f7cabf610f7eca18f478.bindPopup(popup_84ee1b841a9ffdd7555a86f841c305f9)
+        .openPopup();
+
+        
+    
+    
+            var marker_208e83b6d88a8b598cba842365edbb2c = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_57c336818014d45ce310bcccd03399fa = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_082559b1b22d5805129d950630c437fe = $(`<div id="html_082559b1b22d5805129d950630c437fe" style="width: 100.0%; height: 100.0%;">Feature 1:  6900000<br>Feature 2: 8044 Zürich<br>Feature 3: 90</div>`)[0];
+                popup_57c336818014d45ce310bcccd03399fa.setContent(html_082559b1b22d5805129d950630c437fe);
+            
+        
+
+        marker_208e83b6d88a8b598cba842365edbb2c.bindPopup(popup_57c336818014d45ce310bcccd03399fa)
+        .openPopup();
+
+        
+    
+    
+            var marker_01a49fa37b473b0e299cecba13e1d72a = L.marker(
+                [47.3799835, 8.507053],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_ec4de074d73ccc8a66423785195abce8 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_7edf6df8badac4654e78ecd20e1c041f = $(`<div id="html_7edf6df8badac4654e78ecd20e1c041f" style="width: 100.0%; height: 100.0%;">Feature 1:  650000<br>Feature 2: Badenerstrasse 414, 8004 Zürich<br>Feature 3: 54</div>`)[0];
+                popup_ec4de074d73ccc8a66423785195abce8.setContent(html_7edf6df8badac4654e78ecd20e1c041f);
+            
+        
+
+        marker_01a49fa37b473b0e299cecba13e1d72a.bindPopup(popup_ec4de074d73ccc8a66423785195abce8)
+        .openPopup();
+
+        
+    
+    
+            var marker_96a9b0ecff9d666f360d9d14a052717e = L.marker(
+                [47.4049209, 8.49506245],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_75597b67be269ef28ab04f45e2111992 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_fa516344ab7f6de4bb8a933c94450843 = $(`<div id="html_fa516344ab7f6de4bb8a933c94450843" style="width: 100.0%; height: 100.0%;">Feature 1:  884000<br>Feature 2: Michelstrasse 7, 8049 Zürich<br>Feature 3: 54</div>`)[0];
+                popup_75597b67be269ef28ab04f45e2111992.setContent(html_fa516344ab7f6de4bb8a933c94450843);
+            
+        
+
+        marker_96a9b0ecff9d666f360d9d14a052717e.bindPopup(popup_75597b67be269ef28ab04f45e2111992)
+        .openPopup();
+
+        
+    
+    
+            var marker_31d428fc319aed5377d195b27acf4a4e = L.marker(
+                [47.405059800000004, 8.494704394517768],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_ab62594f4f37809d1d251961cfca2335 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_17847982ca5af0d2bace38f4e0064016 = $(`<div id="html_17847982ca5af0d2bace38f4e0064016" style="width: 100.0%; height: 100.0%;">Feature 1:  1396000<br>Feature 2: Michelstrasse 9, 8049 Zürich<br>Feature 3: 9</div>`)[0];
+                popup_ab62594f4f37809d1d251961cfca2335.setContent(html_17847982ca5af0d2bace38f4e0064016);
+            
+        
+
+        marker_31d428fc319aed5377d195b27acf4a4e.bindPopup(popup_ab62594f4f37809d1d251961cfca2335)
+        .openPopup();
+
+        
+    
+    
+            var marker_907632f95f833d7425d13cae7e7e3846 = L.marker(
+                [47.4049209, 8.49506245],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_3d68c035c8fbc4e354e9fd6771be46de = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_4a1d89b281e792fe464266bb598243cb = $(`<div id="html_4a1d89b281e792fe464266bb598243cb" style="width: 100.0%; height: 100.0%;">Feature 1:  1455000<br>Feature 2: Michelstrasse 7, 8049 Zürich<br>Feature 3: 94</div>`)[0];
+                popup_3d68c035c8fbc4e354e9fd6771be46de.setContent(html_4a1d89b281e792fe464266bb598243cb);
+            
+        
+
+        marker_907632f95f833d7425d13cae7e7e3846.bindPopup(popup_3d68c035c8fbc4e354e9fd6771be46de)
+        .openPopup();
+
+        
+    
+    
+            var marker_a00144d136362dc3209a2d591ce26efc = L.marker(
+                [47.5162937, 8.6331167],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_69b76b0e0afd964cbb766f317f7af30e = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_8e315d5e13f9077c345a0b59ae6baa88 = $(`<div id="html_8e315d5e13f9077c345a0b59ae6baa88" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: Privatstrasse, 8038 Zürich<br>Feature 3: 740</div>`)[0];
+                popup_69b76b0e0afd964cbb766f317f7af30e.setContent(html_8e315d5e13f9077c345a0b59ae6baa88);
+            
+        
+
+        marker_a00144d136362dc3209a2d591ce26efc.bindPopup(popup_69b76b0e0afd964cbb766f317f7af30e)
+        .openPopup();
+
+        
+    
+    
+            var marker_04d3bae8732e63510a035467e99e2a96 = L.marker(
+                [47.5162937, 8.6331167],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_2973d7830b6c75cc615d3ba19ca33c8e = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_9ff61d2bb4b208644e53aa9b99099ff6 = $(`<div id="html_9ff61d2bb4b208644e53aa9b99099ff6" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: Privatstrasse, 8038 Zürich<br>Feature 3: 740</div>`)[0];
+                popup_2973d7830b6c75cc615d3ba19ca33c8e.setContent(html_9ff61d2bb4b208644e53aa9b99099ff6);
+            
+        
+
+        marker_04d3bae8732e63510a035467e99e2a96.bindPopup(popup_2973d7830b6c75cc615d3ba19ca33c8e)
+        .openPopup();
+
+        
+    
+    
+            var marker_bb475b495612ce4b38fd640f2b9c455f = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_0b657f5082336486ea76ca06187ea6e6 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_ed9bed6bab8280668eebcc407ab6246a = $(`<div id="html_ed9bed6bab8280668eebcc407ab6246a" style="width: 100.0%; height: 100.0%;">Feature 1:  4100000<br>Feature 2: 8044 Zürich<br>Feature 3: 191</div>`)[0];
+                popup_0b657f5082336486ea76ca06187ea6e6.setContent(html_ed9bed6bab8280668eebcc407ab6246a);
+            
+        
+
+        marker_bb475b495612ce4b38fd640f2b9c455f.bindPopup(popup_0b657f5082336486ea76ca06187ea6e6)
+        .openPopup();
+
+        
+    
+    
+            var marker_c9b9ccf74a0736f741b2ae3ed326363e = L.marker(
+                [47.42960315, 8.539064084676534],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_011a38e4b6b63c67abf1edb0820592c5 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_d8253d55b8427d5b5945c36bcb94285b = $(`<div id="html_d8253d55b8427d5b5945c36bcb94285b" style="width: 100.0%; height: 100.0%;">Feature 1:  690000<br>Feature 2: Käshaldenstrasse 39, 8052 Zürich<br>Feature 3: 68</div>`)[0];
+                popup_011a38e4b6b63c67abf1edb0820592c5.setContent(html_d8253d55b8427d5b5945c36bcb94285b);
+            
+        
+
+        marker_c9b9ccf74a0736f741b2ae3ed326363e.bindPopup(popup_011a38e4b6b63c67abf1edb0820592c5)
+        .openPopup();
+
+        
+    
+    
+            var marker_c1423010da2ae5944a2bf0c758755693 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_6ef99e0546e2f1c5fdfde57f74ac4fd6 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_ca42670fc7c46bfe2f9c199dffc0f275 = $(`<div id="html_ca42670fc7c46bfe2f9c199dffc0f275" style="width: 100.0%; height: 100.0%;">Feature 1:  1590000<br>Feature 2: 8053 Zürich<br>Feature 3: 85</div>`)[0];
+                popup_6ef99e0546e2f1c5fdfde57f74ac4fd6.setContent(html_ca42670fc7c46bfe2f9c199dffc0f275);
+            
+        
+
+        marker_c1423010da2ae5944a2bf0c758755693.bindPopup(popup_6ef99e0546e2f1c5fdfde57f74ac4fd6)
+        .openPopup();
+
+        
+    
+    
+            var marker_509bbf99295b60d46abcf6a330c013c2 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_e3c19eb4936d6fb555743e7f1ca7d3bf = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_55338b6b283dcb785f25b674fb6675a9 = $(`<div id="html_55338b6b283dcb785f25b674fb6675a9" style="width: 100.0%; height: 100.0%;">Feature 1:  1885000<br>Feature 2: 8041 Zürich<br>Feature 3: 119</div>`)[0];
+                popup_e3c19eb4936d6fb555743e7f1ca7d3bf.setContent(html_55338b6b283dcb785f25b674fb6675a9);
+            
+        
+
+        marker_509bbf99295b60d46abcf6a330c013c2.bindPopup(popup_e3c19eb4936d6fb555743e7f1ca7d3bf)
+        .openPopup();
+
+        
+    
+    
+            var marker_da6883a5392190310389745394ce63de = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_93a3e00631366c6f0ecd636a53bf7ff5 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_2e22c4304421fd0af315467a07f79cdb = $(`<div id="html_2e22c4304421fd0af315467a07f79cdb" style="width: 100.0%; height: 100.0%;">Feature 1:  2480000<br>Feature 2: 8049 Zürich<br>Feature 3: 16</div>`)[0];
+                popup_93a3e00631366c6f0ecd636a53bf7ff5.setContent(html_2e22c4304421fd0af315467a07f79cdb);
+            
+        
+
+        marker_da6883a5392190310389745394ce63de.bindPopup(popup_93a3e00631366c6f0ecd636a53bf7ff5)
+        .openPopup();
+
+        
+    
+    
+            var marker_1c8c37a0088a7ff5d2b23f290eced0c2 = L.marker(
+                [47.4034427, 8.559250955954088],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_c091768d80aff9185b3d3ed53983cf41 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_e683126dda6c320c05a050bfb74061db = $(`<div id="html_e683126dda6c320c05a050bfb74061db" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: Hubenstrasse 19, 8057 Zürich<br>Feature 3: 96</div>`)[0];
+                popup_c091768d80aff9185b3d3ed53983cf41.setContent(html_e683126dda6c320c05a050bfb74061db);
+            
+        
+
+        marker_1c8c37a0088a7ff5d2b23f290eced0c2.bindPopup(popup_c091768d80aff9185b3d3ed53983cf41)
+        .openPopup();
+
+        
+    
+    
+            var marker_cfb5476c9a1230106cbb517f7971560f = L.marker(
+                [47.34385945, 8.53290389152798],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_6f6ac9e173ffb5d0c74f6d74ef0497ee = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_6a1e371fcccd37b43f33d88468d85b24 = $(`<div id="html_6a1e371fcccd37b43f33d88468d85b24" style="width: 100.0%; height: 100.0%;">Feature 1:  6000000<br>Feature 2: Kilchbergsteig 5, 8038 Zürich<br>Feature 3: nan</div>`)[0];
+                popup_6f6ac9e173ffb5d0c74f6d74ef0497ee.setContent(html_6a1e371fcccd37b43f33d88468d85b24);
+            
+        
+
+        marker_cfb5476c9a1230106cbb517f7971560f.bindPopup(popup_6f6ac9e173ffb5d0c74f6d74ef0497ee)
+        .openPopup();
+
+        
+    
+    
+            var marker_c5d75eeb8183369bbb3a1881bf61da8a = L.marker(
+                [47.40600605, 8.492009780130685],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_533dad902f468a878215d135e2d94747 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_7d0e1c5e980c529cd8df12a922dc35bf = $(`<div id="html_7d0e1c5e980c529cd8df12a922dc35bf" style="width: 100.0%; height: 100.0%;">Feature 1:  1450000<br>Feature 2: Regensdorferstrasse 56, 8049 Zürich<br>Feature 3: 93</div>`)[0];
+                popup_533dad902f468a878215d135e2d94747.setContent(html_7d0e1c5e980c529cd8df12a922dc35bf);
+            
+        
+
+        marker_c5d75eeb8183369bbb3a1881bf61da8a.bindPopup(popup_533dad902f468a878215d135e2d94747)
+        .openPopup();
+
+        
+    
+    
+            var marker_595fd0e327f45285674a3022218cb9c5 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_4c61676ad8eb751b4dcbbfc38a29d6ba = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_b15043173c95b536f60317da5a05670b = $(`<div id="html_b15043173c95b536f60317da5a05670b" style="width: 100.0%; height: 100.0%;">Feature 1:  2050000<br>Feature 2: 8006 Zürich<br>Feature 3: 87</div>`)[0];
+                popup_4c61676ad8eb751b4dcbbfc38a29d6ba.setContent(html_b15043173c95b536f60317da5a05670b);
+            
+        
+
+        marker_595fd0e327f45285674a3022218cb9c5.bindPopup(popup_4c61676ad8eb751b4dcbbfc38a29d6ba)
+        .openPopup();
+
+        
+    
+    
+            var marker_9414e1d20863bc6e37ab38a44b496078 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_71b96c928c4010200799861c776afc65 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_a5f3702d8231b5d51dfa2b334c45810d = $(`<div id="html_a5f3702d8231b5d51dfa2b334c45810d" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: 8048 Zürich<br>Feature 3: 59</div>`)[0];
+                popup_71b96c928c4010200799861c776afc65.setContent(html_a5f3702d8231b5d51dfa2b334c45810d);
+            
+        
+
+        marker_9414e1d20863bc6e37ab38a44b496078.bindPopup(popup_71b96c928c4010200799861c776afc65)
+        .openPopup();
+
+        
+    
+    
+            var marker_5b3728d38d51c9f165e0ae17d905e482 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_8e36172cb7ca9949acbf3efdcb1663c9 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_f797cfa26cff8a929c33549f24cdbdef = $(`<div id="html_f797cfa26cff8a929c33549f24cdbdef" style="width: 100.0%; height: 100.0%;">Feature 1:  2750000<br>Feature 2: 8000 Zürich<br>Feature 3: 6</div>`)[0];
+                popup_8e36172cb7ca9949acbf3efdcb1663c9.setContent(html_f797cfa26cff8a929c33549f24cdbdef);
+            
+        
+
+        marker_5b3728d38d51c9f165e0ae17d905e482.bindPopup(popup_8e36172cb7ca9949acbf3efdcb1663c9)
+        .openPopup();
+
+        
+    
+    
+            var marker_aeb071e245c2892e459b4eb8cfc8d3de = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_ea2cac981a01179f125e295fa36f2fae = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_afa4af18fa69b9bd95e8334b1b40d19e = $(`<div id="html_afa4af18fa69b9bd95e8334b1b40d19e" style="width: 100.0%; height: 100.0%;">Feature 1:  2730000<br>Feature 2: 8038 Zürich<br>Feature 3: 88</div>`)[0];
+                popup_ea2cac981a01179f125e295fa36f2fae.setContent(html_afa4af18fa69b9bd95e8334b1b40d19e);
+            
+        
+
+        marker_aeb071e245c2892e459b4eb8cfc8d3de.bindPopup(popup_ea2cac981a01179f125e295fa36f2fae)
+        .openPopup();
+
+        
+    
+    
+            var marker_8ed508c4ec6c4b78898f51d3e770fc55 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_76907b311b4122a9b1788d07929352cd = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_9bbe0b1c2908b657f006bc620f808b16 = $(`<div id="html_9bbe0b1c2908b657f006bc620f808b16" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: 8004 Zürich<br>Feature 3: nan</div>`)[0];
+                popup_76907b311b4122a9b1788d07929352cd.setContent(html_9bbe0b1c2908b657f006bc620f808b16);
+            
+        
+
+        marker_8ed508c4ec6c4b78898f51d3e770fc55.bindPopup(popup_76907b311b4122a9b1788d07929352cd)
+        .openPopup();
+
+        
+    
+    
+            var marker_1663a1b6c3c71448a411e51f283ba255 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_c0fccb75423c641f97f54bc9712c003c = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_f183b687086e0e1c5f06652ebe35b362 = $(`<div id="html_f183b687086e0e1c5f06652ebe35b362" style="width: 100.0%; height: 100.0%;">Feature 1:  2780000<br>Feature 2: 8044 Zürich<br>Feature 3: 141</div>`)[0];
+                popup_c0fccb75423c641f97f54bc9712c003c.setContent(html_f183b687086e0e1c5f06652ebe35b362);
+            
+        
+
+        marker_1663a1b6c3c71448a411e51f283ba255.bindPopup(popup_c0fccb75423c641f97f54bc9712c003c)
+        .openPopup();
+
+        
+    
+    
+            var marker_756d72d3c922d33c23ddccdefba6a122 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_15665df74d98c989b5e1eaa9ffc5b0f5 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_3b61dc8f177314e9b7e2f598f803004e = $(`<div id="html_3b61dc8f177314e9b7e2f598f803004e" style="width: 100.0%; height: 100.0%;">Feature 1:  3670000<br>Feature 2: 8044 Zürich<br>Feature 3: 148</div>`)[0];
+                popup_15665df74d98c989b5e1eaa9ffc5b0f5.setContent(html_3b61dc8f177314e9b7e2f598f803004e);
+            
+        
+
+        marker_756d72d3c922d33c23ddccdefba6a122.bindPopup(popup_15665df74d98c989b5e1eaa9ffc5b0f5)
+        .openPopup();
+
+        
+    
+    
+            var marker_d5bbec7c09d3d73b5597b2830d167421 = L.marker(
+                [47.3869046, 8.5162087],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_58c15c18462168a4c4b42f069e699db6 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_7671f5c01cb08454d6e0e4c898cc6943 = $(`<div id="html_7671f5c01cb08454d6e0e4c898cc6943" style="width: 100.0%; height: 100.0%;">Feature 1:  1680000<br>Feature 2: Naphtastrasse, 8005 Zürich<br>Feature 3: 99</div>`)[0];
+                popup_58c15c18462168a4c4b42f069e699db6.setContent(html_7671f5c01cb08454d6e0e4c898cc6943);
+            
+        
+
+        marker_d5bbec7c09d3d73b5597b2830d167421.bindPopup(popup_58c15c18462168a4c4b42f069e699db6)
+        .openPopup();
+
+        
+    
+    
+            var marker_5a565cc97e46d6b4b59534c9b3eda0ca = L.marker(
+                [47.3418594, 8.520889],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_a251afc4bcb8f386e88fd5516df1b85d = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_1a19aa77dfe6f7babc3e2e940967240c = $(`<div id="html_1a19aa77dfe6f7babc3e2e940967240c" style="width: 100.0%; height: 100.0%;">Feature 1:  2230000<br>Feature 2: Tuchmacherstrasse, 8041 Zürich<br>Feature 3: 106</div>`)[0];
+                popup_a251afc4bcb8f386e88fd5516df1b85d.setContent(html_1a19aa77dfe6f7babc3e2e940967240c);
+            
+        
+
+        marker_5a565cc97e46d6b4b59534c9b3eda0ca.bindPopup(popup_a251afc4bcb8f386e88fd5516df1b85d)
+        .openPopup();
+
+        
+    
+    
+            var marker_8697dbc207cb9a8a295fca41aa1eb52c = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_2d219f29c9b2ac77ae8048e16f18e1b0 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_34a543c452fe1a0fde0e9ae6fb6abb97 = $(`<div id="html_34a543c452fe1a0fde0e9ae6fb6abb97" style="width: 100.0%; height: 100.0%;">Feature 1:  2790000<br>Feature 2: 8005 Zürich<br>Feature 3: 103</div>`)[0];
+                popup_2d219f29c9b2ac77ae8048e16f18e1b0.setContent(html_34a543c452fe1a0fde0e9ae6fb6abb97);
+            
+        
+
+        marker_8697dbc207cb9a8a295fca41aa1eb52c.bindPopup(popup_2d219f29c9b2ac77ae8048e16f18e1b0)
+        .openPopup();
+
+        
+    
+    
+            var marker_ae84691abc92963fd70406c548568f42 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_e1734a8aa4c363e9bb588e4ab6fbb7bf = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_2426e3e0558176d666c6c034523532ea = $(`<div id="html_2426e3e0558176d666c6c034523532ea" style="width: 100.0%; height: 100.0%;">Feature 1:  1195000<br>Feature 2: 8052 Zürich<br>Feature 3: 101</div>`)[0];
+                popup_e1734a8aa4c363e9bb588e4ab6fbb7bf.setContent(html_2426e3e0558176d666c6c034523532ea);
+            
+        
+
+        marker_ae84691abc92963fd70406c548568f42.bindPopup(popup_e1734a8aa4c363e9bb588e4ab6fbb7bf)
+        .openPopup();
+
+        
+    
+    
+            var marker_2186f93ec4d2e9fffe4dc4eb8da1d1fb = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_4b59a22343403b8368516dc847cd6fe6 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_35d9cb01a013328e60f5b74db8e2bc6e = $(`<div id="html_35d9cb01a013328e60f5b74db8e2bc6e" style="width: 100.0%; height: 100.0%;">Feature 1:  1550000<br>Feature 2: 8052 Zürich<br>Feature 3: 9</div>`)[0];
+                popup_4b59a22343403b8368516dc847cd6fe6.setContent(html_35d9cb01a013328e60f5b74db8e2bc6e);
+            
+        
+
+        marker_2186f93ec4d2e9fffe4dc4eb8da1d1fb.bindPopup(popup_4b59a22343403b8368516dc847cd6fe6)
+        .openPopup();
+
+        
+    
+    
+            var marker_7d830640914923855c1957a02014da2f = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_675629095f684a8507bb2af39fadd46a = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_64de57652f9d16b6606104546deef5ab = $(`<div id="html_64de57652f9d16b6606104546deef5ab" style="width: 100.0%; height: 100.0%;">Feature 1:  2135000<br>Feature 2: 8005 Zürich<br>Feature 3: 118</div>`)[0];
+                popup_675629095f684a8507bb2af39fadd46a.setContent(html_64de57652f9d16b6606104546deef5ab);
+            
+        
+
+        marker_7d830640914923855c1957a02014da2f.bindPopup(popup_675629095f684a8507bb2af39fadd46a)
+        .openPopup();
+
+        
+    
+    
+            var marker_c80936e00e02d64d01c3084a03cf5a3a = L.marker(
+                [47.3563805, 8.582851051874059],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_0d7b7721442269ff863a36007d0d00c1 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_76b36dc46711ebf2a9b18942c0083b7a = $(`<div id="html_76b36dc46711ebf2a9b18942c0083b7a" style="width: 100.0%; height: 100.0%;">Feature 1:  2980000<br>Feature 2: Wirzenweid 34, 8053 Zürich<br>Feature 3: 154</div>`)[0];
+                popup_0d7b7721442269ff863a36007d0d00c1.setContent(html_76b36dc46711ebf2a9b18942c0083b7a);
+            
+        
+
+        marker_c80936e00e02d64d01c3084a03cf5a3a.bindPopup(popup_0d7b7721442269ff863a36007d0d00c1)
+        .openPopup();
+
+        
+    
+    
+            var marker_2f3ad1f63a9f5d657e969ded08bf675b = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_469476b884e3f019e4f769b5e8eb5fcf = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_f62c149d7beee85a61a78e2e5cfa2b96 = $(`<div id="html_f62c149d7beee85a61a78e2e5cfa2b96" style="width: 100.0%; height: 100.0%;">Feature 1:  4800000<br>Feature 2: 8032 Zürich<br>Feature 3: nan</div>`)[0];
+                popup_469476b884e3f019e4f769b5e8eb5fcf.setContent(html_f62c149d7beee85a61a78e2e5cfa2b96);
+            
+        
+
+        marker_2f3ad1f63a9f5d657e969ded08bf675b.bindPopup(popup_469476b884e3f019e4f769b5e8eb5fcf)
+        .openPopup();
+
+        
+    
+    
+            var marker_7283cc0da4c57f19223813855cf38d53 = L.marker(
+                [47.3371055, 8.5195985],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_434c3fe6feca7c1e13ba8991909da1c6 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_c3faa90eb0b767240b9d36ddf626db93 = $(`<div id="html_c3faa90eb0b767240b9d36ddf626db93" style="width: 100.0%; height: 100.0%;">Feature 1:  1895000<br>Feature 2: Butzenstrasse, 8041 Zürich<br>Feature 3: 121</div>`)[0];
+                popup_434c3fe6feca7c1e13ba8991909da1c6.setContent(html_c3faa90eb0b767240b9d36ddf626db93);
+            
+        
+
+        marker_7283cc0da4c57f19223813855cf38d53.bindPopup(popup_434c3fe6feca7c1e13ba8991909da1c6)
+        .openPopup();
+
+        
+    
+    
+            var marker_f7b730532cce77d006c876bedf40cb00 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_69161dda455c91982bb22efdba20cdd0 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_3d633a9980d541494760861ed1fcb9ac = $(`<div id="html_3d633a9980d541494760861ed1fcb9ac" style="width: 100.0%; height: 100.0%;">Feature 1:  2200000<br>Feature 2: 8048 Zürich<br>Feature 3: 110</div>`)[0];
+                popup_69161dda455c91982bb22efdba20cdd0.setContent(html_3d633a9980d541494760861ed1fcb9ac);
+            
+        
+
+        marker_f7b730532cce77d006c876bedf40cb00.bindPopup(popup_69161dda455c91982bb22efdba20cdd0)
+        .openPopup();
+
+        
+    
+    
+            var marker_bcd88d904edaf9b5c3c96b35f20fdb06 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_25cb0c03ff44fb804ae558b2ae359d0a = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_b8c277ec488a702dc6b879da75cde2d7 = $(`<div id="html_b8c277ec488a702dc6b879da75cde2d7" style="width: 100.0%; height: 100.0%;">Feature 1:  2480000<br>Feature 2: 8045 Zürich<br>Feature 3: 10</div>`)[0];
+                popup_25cb0c03ff44fb804ae558b2ae359d0a.setContent(html_b8c277ec488a702dc6b879da75cde2d7);
+            
+        
+
+        marker_bcd88d904edaf9b5c3c96b35f20fdb06.bindPopup(popup_25cb0c03ff44fb804ae558b2ae359d0a)
+        .openPopup();
+
+        
+    
+    
+            var marker_07a1a0e1acb063cde57fe8d3af812f57 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_d1ae10d3953aa860930fcd213f5ab64e = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_322be0121f0d5e3fe57dbb98d239a7bc = $(`<div id="html_322be0121f0d5e3fe57dbb98d239a7bc" style="width: 100.0%; height: 100.0%;">Feature 1:  2380000<br>Feature 2: 8002 Zürich<br>Feature 3: 89</div>`)[0];
+                popup_d1ae10d3953aa860930fcd213f5ab64e.setContent(html_322be0121f0d5e3fe57dbb98d239a7bc);
+            
+        
+
+        marker_07a1a0e1acb063cde57fe8d3af812f57.bindPopup(popup_d1ae10d3953aa860930fcd213f5ab64e)
+        .openPopup();
+
+        
+    
+    
+            var marker_2730f4ad4ddea6f880167643428e573a = L.marker(
+                [47.3882483, 8.5144863],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_1f6bafc418f7fc63815526e1cb2e32a7 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_067967e4b617cf9a7adc8aa26aef44f0 = $(`<div id="html_067967e4b617cf9a7adc8aa26aef44f0" style="width: 100.0%; height: 100.0%;">Feature 1:  3900000<br>Feature 2: Turbinenstrasse 18, 8005 Zürich<br>Feature 3: 04</div>`)[0];
+                popup_1f6bafc418f7fc63815526e1cb2e32a7.setContent(html_067967e4b617cf9a7adc8aa26aef44f0);
+            
+        
+
+        marker_2730f4ad4ddea6f880167643428e573a.bindPopup(popup_1f6bafc418f7fc63815526e1cb2e32a7)
+        .openPopup();
+
+        
+    
+    
+            var marker_eb78607cb699f90d9e91b45222a180a4 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_ad275b2d01e0d42876cb21e8075e1547 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_016f26f02cfd43ee6d04667f3a93df33 = $(`<div id="html_016f26f02cfd43ee6d04667f3a93df33" style="width: 100.0%; height: 100.0%;">Feature 1:  1160000<br>Feature 2: 8055 Zürich<br>Feature 3: 79</div>`)[0];
+                popup_ad275b2d01e0d42876cb21e8075e1547.setContent(html_016f26f02cfd43ee6d04667f3a93df33);
+            
+        
+
+        marker_eb78607cb699f90d9e91b45222a180a4.bindPopup(popup_ad275b2d01e0d42876cb21e8075e1547)
+        .openPopup();
+
+        
+    
+    
+            var marker_910439183c60f4417a43e9ab7af4be7e = L.marker(
+                [47.3387609, 8.520509],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_58081f34fd9e1855d02352cee44e4f38 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_b7cc166e554462b4d6fcb2ec8ac6e4d1 = $(`<div id="html_b7cc166e554462b4d6fcb2ec8ac6e4d1" style="width: 100.0%; height: 100.0%;">Feature 1:  1190000<br>Feature 2: Spinnereiplatz 1, 8041 Zürich<br>Feature 3: 71</div>`)[0];
+                popup_58081f34fd9e1855d02352cee44e4f38.setContent(html_b7cc166e554462b4d6fcb2ec8ac6e4d1);
+            
+        
+
+        marker_910439183c60f4417a43e9ab7af4be7e.bindPopup(popup_58081f34fd9e1855d02352cee44e4f38)
+        .openPopup();
+
+        
+    
+    
+            var marker_af31bf1b80caa0b55c1254f5eb2fa400 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_5a07a51e0e01ae8e64ac1fbc7490abf5 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_3defa2c12496604728c994366d60c969 = $(`<div id="html_3defa2c12496604728c994366d60c969" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: 8044 Zürich<br>Feature 3: 4</div>`)[0];
+                popup_5a07a51e0e01ae8e64ac1fbc7490abf5.setContent(html_3defa2c12496604728c994366d60c969);
+            
+        
+
+        marker_af31bf1b80caa0b55c1254f5eb2fa400.bindPopup(popup_5a07a51e0e01ae8e64ac1fbc7490abf5)
+        .openPopup();
+
+        
+    
+    
+            var marker_cb71fcbbb28434ba9c2f5e6e27b4be07 = L.marker(
+                [47.35341285, 8.578345307069632],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_13f82024651dedf911c1e3daf0ca2d32 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_775eebe269c7673d5cafadbbd576e70e = $(`<div id="html_775eebe269c7673d5cafadbbd576e70e" style="width: 100.0%; height: 100.0%;">Feature 1:  4050000<br>Feature 2: Balgriststrasse 90, 8008 Zürich<br>Feature 3: 183</div>`)[0];
+                popup_13f82024651dedf911c1e3daf0ca2d32.setContent(html_775eebe269c7673d5cafadbbd576e70e);
+            
+        
+
+        marker_cb71fcbbb28434ba9c2f5e6e27b4be07.bindPopup(popup_13f82024651dedf911c1e3daf0ca2d32)
+        .openPopup();
+
+        
+    
+    
+            var marker_8c1c4e4c4d8c57c765f69d29d5c31b87 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_05b3936aa8bc5d7f19b901311c163a63 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_aad7f6af610ded03e84ce74ba3335fb4 = $(`<div id="html_aad7f6af610ded03e84ce74ba3335fb4" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: 8044 Zürich<br>Feature 3: 543</div>`)[0];
+                popup_05b3936aa8bc5d7f19b901311c163a63.setContent(html_aad7f6af610ded03e84ce74ba3335fb4);
+            
+        
+
+        marker_8c1c4e4c4d8c57c765f69d29d5c31b87.bindPopup(popup_05b3936aa8bc5d7f19b901311c163a63)
+        .openPopup();
+
+        
+    
+    
+            var marker_5757ca9a50a8995c962f3c09c92ac602 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_bafff56b4ca882c3255efb36cb79ea57 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_63343f817f1a42c0eea2053c4a2fec41 = $(`<div id="html_63343f817f1a42c0eea2053c4a2fec41" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: 8000 Zürich<br>Feature 3: 00</div>`)[0];
+                popup_bafff56b4ca882c3255efb36cb79ea57.setContent(html_63343f817f1a42c0eea2053c4a2fec41);
+            
+        
+
+        marker_5757ca9a50a8995c962f3c09c92ac602.bindPopup(popup_bafff56b4ca882c3255efb36cb79ea57)
+        .openPopup();
+
+        
+    
+    
+            var marker_a57a61dc2bc33f4d015583685ebd7fe5 = L.marker(
+                [47.3755837, 8.4844044],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_30dad9c033dc83e7fddc2ea183c4d9b9 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_d8282c25407371cc7955509a8081989c = $(`<div id="html_d8282c25407371cc7955509a8081989c" style="width: 100.0%; height: 100.0%;">Feature 1:  1675000<br>Feature 2: Altstetterstrasse, 8047 Zürich<br>Feature 3: 118</div>`)[0];
+                popup_30dad9c033dc83e7fddc2ea183c4d9b9.setContent(html_d8282c25407371cc7955509a8081989c);
+            
+        
+
+        marker_a57a61dc2bc33f4d015583685ebd7fe5.bindPopup(popup_30dad9c033dc83e7fddc2ea183c4d9b9)
+        .openPopup();
+
+        
+    
+    
+            var marker_2712fdc0b706f2b5d48aa2b67b26ba84 = L.marker(
+                [47.343539699999994, 8.53446395976918],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_0361802de49d02ac50573dcd4ca5e5f7 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_1c34604fcd6d093e615214d9eb3cc2d1 = $(`<div id="html_1c34604fcd6d093e615214d9eb3cc2d1" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: Rumpumpsteig 3, 8038 Zürich<br>Feature 3: 126</div>`)[0];
+                popup_0361802de49d02ac50573dcd4ca5e5f7.setContent(html_1c34604fcd6d093e615214d9eb3cc2d1);
+            
+        
+
+        marker_2712fdc0b706f2b5d48aa2b67b26ba84.bindPopup(popup_0361802de49d02ac50573dcd4ca5e5f7)
+        .openPopup();
+
+        
+    
+    
+            var marker_1159738577c15f6a5cbcde4297945a44 = L.marker(
+                [47.343539699999994, 8.53446395976918],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_eb775b40a2c5e0f8a4d959d8ad753d3a = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_c0c58aefe0b90016808fb2ee13b2a3c1 = $(`<div id="html_c0c58aefe0b90016808fb2ee13b2a3c1" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: Rumpumpsteig 3, 8038 Zürich<br>Feature 3: 135</div>`)[0];
+                popup_eb775b40a2c5e0f8a4d959d8ad753d3a.setContent(html_c0c58aefe0b90016808fb2ee13b2a3c1);
+            
+        
+
+        marker_1159738577c15f6a5cbcde4297945a44.bindPopup(popup_eb775b40a2c5e0f8a4d959d8ad753d3a)
+        .openPopup();
+
+        
+    
+    
+            var marker_507b63cbb242c8d0a2de4ae527725572 = L.marker(
+                [47.343539699999994, 8.53446395976918],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_8381cbe1f9e680f4a7269584c2812f84 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_e69adcef09e118a11532da3675997fcd = $(`<div id="html_e69adcef09e118a11532da3675997fcd" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: Rumpumpsteig 3, 8038 Zürich<br>Feature 3: 118</div>`)[0];
+                popup_8381cbe1f9e680f4a7269584c2812f84.setContent(html_e69adcef09e118a11532da3675997fcd);
+            
+        
+
+        marker_507b63cbb242c8d0a2de4ae527725572.bindPopup(popup_8381cbe1f9e680f4a7269584c2812f84)
+        .openPopup();
+
+        
+    
+    
+            var marker_f46d4333d6b8e973706e48fe7c6f874e = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_a7811ac373ff0dabce7420ddae589200 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_bb0d4f386269bb0a690c11cce80a42e9 = $(`<div id="html_bb0d4f386269bb0a690c11cce80a42e9" style="width: 100.0%; height: 100.0%;">Feature 1:  3200000<br>Feature 2: 8037 Zürich<br>Feature 3: 137</div>`)[0];
+                popup_a7811ac373ff0dabce7420ddae589200.setContent(html_bb0d4f386269bb0a690c11cce80a42e9);
+            
+        
+
+        marker_f46d4333d6b8e973706e48fe7c6f874e.bindPopup(popup_a7811ac373ff0dabce7420ddae589200)
+        .openPopup();
+
+        
+    
+    
+            var marker_26949ef646d270f8e5a9d9b1a1cdd38b = L.marker(
+                [47.3791924, 8.4937936],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_a72700d4bc7b839f6dafed1e502384cf = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_e8ab27e61ed44db32818da5e874bbc49 = $(`<div id="html_e8ab27e61ed44db32818da5e874bbc49" style="width: 100.0%; height: 100.0%;">Feature 1:  2355000<br>Feature 2: Spiserstrasse, 8047 Zürich<br>Feature 3: 107</div>`)[0];
+                popup_a72700d4bc7b839f6dafed1e502384cf.setContent(html_e8ab27e61ed44db32818da5e874bbc49);
+            
+        
+
+        marker_26949ef646d270f8e5a9d9b1a1cdd38b.bindPopup(popup_a72700d4bc7b839f6dafed1e502384cf)
+        .openPopup();
+
+        
+    
+    
+            var marker_3d00a8becd0c5457c7e220c1118c919f = L.marker(
+                [47.3958932, 8.512752317135991],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_7f037f1894acfa4e630319de1e5cd4b7 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_405d7eead6a0f34d2012b0733114e668 = $(`<div id="html_405d7eead6a0f34d2012b0733114e668" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: Ackersteinstrasse 28, 8049 Zürich<br>Feature 3: nan</div>`)[0];
+                popup_7f037f1894acfa4e630319de1e5cd4b7.setContent(html_405d7eead6a0f34d2012b0733114e668);
+            
+        
+
+        marker_3d00a8becd0c5457c7e220c1118c919f.bindPopup(popup_7f037f1894acfa4e630319de1e5cd4b7)
+        .openPopup();
+
+        
+    
+    
+            var marker_9874c3e375e13615d9e789d5a915ca07 = L.marker(
+                [47.3791924, 8.4937936],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_44812c01bd7849d5acaee4d7a3701d40 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_6b42dc4f69d0ec16b3f033029dbd83d2 = $(`<div id="html_6b42dc4f69d0ec16b3f033029dbd83d2" style="width: 100.0%; height: 100.0%;">Feature 1:  2310000<br>Feature 2: Spiserstrasse, 8047 Zürich<br>Feature 3: 105</div>`)[0];
+                popup_44812c01bd7849d5acaee4d7a3701d40.setContent(html_6b42dc4f69d0ec16b3f033029dbd83d2);
+            
+        
+
+        marker_9874c3e375e13615d9e789d5a915ca07.bindPopup(popup_44812c01bd7849d5acaee4d7a3701d40)
+        .openPopup();
+
+        
+    
+    
+            var marker_1c7afa306805ce92a12db5e95b94b4ec = L.marker(
+                [47.3791924, 8.4937936],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_aef6ed3524d350c021fbe5862fe102b8 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_431b5b919c78f5062b0d11bbc44dde5f = $(`<div id="html_431b5b919c78f5062b0d11bbc44dde5f" style="width: 100.0%; height: 100.0%;">Feature 1:  2640000<br>Feature 2: Spiserstrasse, 8047 Zürich<br>Feature 3: 120</div>`)[0];
+                popup_aef6ed3524d350c021fbe5862fe102b8.setContent(html_431b5b919c78f5062b0d11bbc44dde5f);
+            
+        
+
+        marker_1c7afa306805ce92a12db5e95b94b4ec.bindPopup(popup_aef6ed3524d350c021fbe5862fe102b8)
+        .openPopup();
+
+        
+    
+    
+            var marker_792d3a5ced3e5e7538d3a837364ed502 = L.marker(
+                [47.3536007, 8.598658900149353],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_925ba04e9b748b83c99675d5d7a9a951 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_53866333c0537a6e4b0824fef80a4c63 = $(`<div id="html_53866333c0537a6e4b0824fef80a4c63" style="width: 100.0%; height: 100.0%;">Feature 1:  2460000<br>Feature 2: Wiesliacher 39a, 8053 Zürich<br>Feature 3: 128</div>`)[0];
+                popup_925ba04e9b748b83c99675d5d7a9a951.setContent(html_53866333c0537a6e4b0824fef80a4c63);
+            
+        
+
+        marker_792d3a5ced3e5e7538d3a837364ed502.bindPopup(popup_925ba04e9b748b83c99675d5d7a9a951)
+        .openPopup();
+
+        
+    
+    
+            var marker_d491f827dd91a9843809cdb8aff97a1c = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_2d4a720c629ac222f6811a419c3484be = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_b8433cfeb245c804cf7712e6e88a7d65 = $(`<div id="html_b8433cfeb245c804cf7712e6e88a7d65" style="width: 100.0%; height: 100.0%;">Feature 1:  1245000<br>Feature 2: 8050 Zürich<br>Feature 3: 68</div>`)[0];
+                popup_2d4a720c629ac222f6811a419c3484be.setContent(html_b8433cfeb245c804cf7712e6e88a7d65);
+            
+        
+
+        marker_d491f827dd91a9843809cdb8aff97a1c.bindPopup(popup_2d4a720c629ac222f6811a419c3484be)
+        .openPopup();
+
+        
+    
+    
+            var marker_d546dd97c228f8b09ca2badee0263f12 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_0309995c544b0d570b858b150531fc11 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_ff0c1c5cee0ca244e99a2c90a8bc9383 = $(`<div id="html_ff0c1c5cee0ca244e99a2c90a8bc9383" style="width: 100.0%; height: 100.0%;">Feature 1:  3600000<br>Feature 2: 8049 Zürich<br>Feature 3: 164</div>`)[0];
+                popup_0309995c544b0d570b858b150531fc11.setContent(html_ff0c1c5cee0ca244e99a2c90a8bc9383);
+            
+        
+
+        marker_d546dd97c228f8b09ca2badee0263f12.bindPopup(popup_0309995c544b0d570b858b150531fc11)
+        .openPopup();
+
+        
+    
+    
+            var marker_29546bd2450c559bd1427a838fc9dc8c = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_f62620d1b696fb66793b90a343695223 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_7048e50277e79726668d7cf91ce453d8 = $(`<div id="html_7048e50277e79726668d7cf91ce453d8" style="width: 100.0%; height: 100.0%;">Feature 1:  2700000<br>Feature 2: 8041 Zürich<br>Feature 3: 193</div>`)[0];
+                popup_f62620d1b696fb66793b90a343695223.setContent(html_7048e50277e79726668d7cf91ce453d8);
+            
+        
+
+        marker_29546bd2450c559bd1427a838fc9dc8c.bindPopup(popup_f62620d1b696fb66793b90a343695223)
+        .openPopup();
+
+        
+    
+    
+            var marker_29662eaff90f89fb7059055a3e59514c = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_dd9c24a104ea3c5753b683e74b447b4b = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_cbbec4604975db5180e60bbe34b7e1c7 = $(`<div id="html_cbbec4604975db5180e60bbe34b7e1c7" style="width: 100.0%; height: 100.0%;">Feature 1:  1200000<br>Feature 2: 8001 Zürich<br>Feature 3: 347</div>`)[0];
+                popup_dd9c24a104ea3c5753b683e74b447b4b.setContent(html_cbbec4604975db5180e60bbe34b7e1c7);
+            
+        
+
+        marker_29662eaff90f89fb7059055a3e59514c.bindPopup(popup_dd9c24a104ea3c5753b683e74b447b4b)
+        .openPopup();
+
+        
+    
+    
+            var marker_60b3d037696f509f90a96c188c419381 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_5cda57bee0784168eed096719c622bd7 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_0029aeefc0068ed880780bbd7f3bff95 = $(`<div id="html_0029aeefc0068ed880780bbd7f3bff95" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: 8044 Zürich<br>Feature 3: 7</div>`)[0];
+                popup_5cda57bee0784168eed096719c622bd7.setContent(html_0029aeefc0068ed880780bbd7f3bff95);
+            
+        
+
+        marker_60b3d037696f509f90a96c188c419381.bindPopup(popup_5cda57bee0784168eed096719c622bd7)
+        .openPopup();
+
+        
+    
+    
+            var marker_68fd6f3a631f8d7417878c1ebaad08e8 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_0e1fa740948dffe45e0a5377a9484463 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_245701070f74ff59450838526ebfe49a = $(`<div id="html_245701070f74ff59450838526ebfe49a" style="width: 100.0%; height: 100.0%;">Feature 1:  2700000<br>Feature 2: 8041 Zürich<br>Feature 3: 193</div>`)[0];
+                popup_0e1fa740948dffe45e0a5377a9484463.setContent(html_245701070f74ff59450838526ebfe49a);
+            
+        
+
+        marker_68fd6f3a631f8d7417878c1ebaad08e8.bindPopup(popup_0e1fa740948dffe45e0a5377a9484463)
+        .openPopup();
+
+        
+    
+    
+            var marker_4f728e91b8eed36ed72c2b7c27b862a0 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_43e1c170bbe36663ecc89a98fd1821ea = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_b3409cc434ebdd55bed8e967bb2d7ad9 = $(`<div id="html_b3409cc434ebdd55bed8e967bb2d7ad9" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: 8044 Zürich<br>Feature 3: 7</div>`)[0];
+                popup_43e1c170bbe36663ecc89a98fd1821ea.setContent(html_b3409cc434ebdd55bed8e967bb2d7ad9);
+            
+        
+
+        marker_4f728e91b8eed36ed72c2b7c27b862a0.bindPopup(popup_43e1c170bbe36663ecc89a98fd1821ea)
+        .openPopup();
+
+        
+    
+    
+            var marker_10e70f6e972d353ae2f799a7c6a1acfa = L.marker(
+                [47.3930855, 8.470711303253534],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_01e3a285febe112d557eea53c6da2924 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_205cef71dc2bdf6b76026bfd0f767292 = $(`<div id="html_205cef71dc2bdf6b76026bfd0f767292" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: Feusisbergli 19, 8048 Zürich<br>Feature 3: 115</div>`)[0];
+                popup_01e3a285febe112d557eea53c6da2924.setContent(html_205cef71dc2bdf6b76026bfd0f767292);
+            
+        
+
+        marker_10e70f6e972d353ae2f799a7c6a1acfa.bindPopup(popup_01e3a285febe112d557eea53c6da2924)
+        .openPopup();
+
+        
+    
+    
+            var marker_7cabba7a877b15c04dbcf1ce3b239d82 = L.marker(
+                [47.4054481, 8.559074674028945],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_6edc687edfaf0fbc1b1dfcf069eb531c = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_cc443317470b7873194d1a41fd628048 = $(`<div id="html_cc443317470b7873194d1a41fd628048" style="width: 100.0%; height: 100.0%;">Feature 1:  3500000<br>Feature 2: Ueberlandstrasse 43, 8050 Zürich<br>Feature 3: 636</div>`)[0];
+                popup_6edc687edfaf0fbc1b1dfcf069eb531c.setContent(html_cc443317470b7873194d1a41fd628048);
+            
+        
+
+        marker_7cabba7a877b15c04dbcf1ce3b239d82.bindPopup(popup_6edc687edfaf0fbc1b1dfcf069eb531c)
+        .openPopup();
+
+        
+    
+    
+            var marker_8e42e052a7d6ab42c6166f6a71f5147d = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_3ce8a6b1711e7dd5bcdc950c45ae204b = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_23768996de5ca0ce98292ff4849dc7ab = $(`<div id="html_23768996de5ca0ce98292ff4849dc7ab" style="width: 100.0%; height: 100.0%;">Feature 1:  2600000<br>Feature 2: 8048 Zürich<br>Feature 3: 138</div>`)[0];
+                popup_3ce8a6b1711e7dd5bcdc950c45ae204b.setContent(html_23768996de5ca0ce98292ff4849dc7ab);
+            
+        
+
+        marker_8e42e052a7d6ab42c6166f6a71f5147d.bindPopup(popup_3ce8a6b1711e7dd5bcdc950c45ae204b)
+        .openPopup();
+
+        
+    
+    
+            var marker_cf010c25afbb76d2fd03c33377608e27 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_e8b8cbe6fe2397be2943509a515e4508 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_73014826b90fb8f73b2962abdedc1522 = $(`<div id="html_73014826b90fb8f73b2962abdedc1522" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: 8037 Zürich<br>Feature 3: 138</div>`)[0];
+                popup_e8b8cbe6fe2397be2943509a515e4508.setContent(html_73014826b90fb8f73b2962abdedc1522);
+            
+        
+
+        marker_cf010c25afbb76d2fd03c33377608e27.bindPopup(popup_e8b8cbe6fe2397be2943509a515e4508)
+        .openPopup();
+
+        
+    
+    
+            var marker_43e867b9ef634562a4009f48116782ff = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_8620d984a1befb2771b96e0da4613e71 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_4c6115611df2c5278a6e2b2fce573e64 = $(`<div id="html_4c6115611df2c5278a6e2b2fce573e64" style="width: 100.0%; height: 100.0%;">Feature 1:  5075000<br>Feature 2: 8000 Zürich<br>Feature 3: 1</div>`)[0];
+                popup_8620d984a1befb2771b96e0da4613e71.setContent(html_4c6115611df2c5278a6e2b2fce573e64);
+            
+        
+
+        marker_43e867b9ef634562a4009f48116782ff.bindPopup(popup_8620d984a1befb2771b96e0da4613e71)
+        .openPopup();
+
+        
+    
+    
+            var marker_44941940292ce762ad8ed42a16c63614 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_ead700447192dff54432674b11c82a24 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_2b99bd511f277d934ad8dedb45eb0025 = $(`<div id="html_2b99bd511f277d934ad8dedb45eb0025" style="width: 100.0%; height: 100.0%;">Feature 1:  975000<br>Feature 2: 8000 Zürich<br>Feature 3: 1</div>`)[0];
+                popup_ead700447192dff54432674b11c82a24.setContent(html_2b99bd511f277d934ad8dedb45eb0025);
+            
+        
+
+        marker_44941940292ce762ad8ed42a16c63614.bindPopup(popup_ead700447192dff54432674b11c82a24)
+        .openPopup();
+
+        
+    
+    
+            var marker_b3f3f371858eac517595e46ea1393efd = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_cd419eb9563e5b71a82389b2fece5e4d = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_0d5d13b643aa476b5a02e6310918fdb2 = $(`<div id="html_0d5d13b643aa476b5a02e6310918fdb2" style="width: 100.0%; height: 100.0%;">Feature 1:  5350000<br>Feature 2: 8005 Zürich<br>Feature 3: 34</div>`)[0];
+                popup_cd419eb9563e5b71a82389b2fece5e4d.setContent(html_0d5d13b643aa476b5a02e6310918fdb2);
+            
+        
+
+        marker_b3f3f371858eac517595e46ea1393efd.bindPopup(popup_cd419eb9563e5b71a82389b2fece5e4d)
+        .openPopup();
+
+        
+    
+    
+            var marker_2e7e610d4fef2c634cbfbd5ed34bdb76 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_d9f82c4c6a5bf3b8eb00f65a0c502dd4 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_5c03f955697e70a240c0531a570d65a5 = $(`<div id="html_5c03f955697e70a240c0531a570d65a5" style="width: 100.0%; height: 100.0%;">Feature 1:  1580000<br>Feature 2: 8041 Zürich<br>Feature 3: 108</div>`)[0];
+                popup_d9f82c4c6a5bf3b8eb00f65a0c502dd4.setContent(html_5c03f955697e70a240c0531a570d65a5);
+            
+        
+
+        marker_2e7e610d4fef2c634cbfbd5ed34bdb76.bindPopup(popup_d9f82c4c6a5bf3b8eb00f65a0c502dd4)
+        .openPopup();
+
+        
+    
+    
+            var marker_a43c59ed5da434dbc2ec2e15023e565b = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_565695b9b82e53fd17572a76b63374da = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_32c12fc1e1d0354c023d25f98e69bc8b = $(`<div id="html_32c12fc1e1d0354c023d25f98e69bc8b" style="width: 100.0%; height: 100.0%;">Feature 1:  4295000<br>Feature 2: 8006 Zürich<br>Feature 3: 414</div>`)[0];
+                popup_565695b9b82e53fd17572a76b63374da.setContent(html_32c12fc1e1d0354c023d25f98e69bc8b);
+            
+        
+
+        marker_a43c59ed5da434dbc2ec2e15023e565b.bindPopup(popup_565695b9b82e53fd17572a76b63374da)
+        .openPopup();
+
+        
+    
+    
+            var marker_0bcbdd0b36b9c7b2f49994f34915e093 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_bd3424c440734c3acddb33bba17b91d0 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_c14d7603bc76d28f71fa22773229eba1 = $(`<div id="html_c14d7603bc76d28f71fa22773229eba1" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: 8055 Zürich<br>Feature 3: 175</div>`)[0];
+                popup_bd3424c440734c3acddb33bba17b91d0.setContent(html_c14d7603bc76d28f71fa22773229eba1);
+            
+        
+
+        marker_0bcbdd0b36b9c7b2f49994f34915e093.bindPopup(popup_bd3424c440734c3acddb33bba17b91d0)
+        .openPopup();
+
+        
+    
+    
+            var marker_2672bbb2bdbe7d33b78b64ddfcfdfcf6 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_c8368815cbef3f5a26d682b97d6bbbfc = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_388e4272bf669fa21eab73b719cbe43b = $(`<div id="html_388e4272bf669fa21eab73b719cbe43b" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: 8044 Zürich<br>Feature 3: 145</div>`)[0];
+                popup_c8368815cbef3f5a26d682b97d6bbbfc.setContent(html_388e4272bf669fa21eab73b719cbe43b);
+            
+        
+
+        marker_2672bbb2bdbe7d33b78b64ddfcfdfcf6.bindPopup(popup_c8368815cbef3f5a26d682b97d6bbbfc)
+        .openPopup();
+
+        
+    
+    
+            var marker_22177f509457b8cc343e697f5019db95 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_e6a08ac78b849a96483201e538b9bc8a = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_9116e47dadd0d6f703fd3a693677a588 = $(`<div id="html_9116e47dadd0d6f703fd3a693677a588" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: 8057 Zürich<br>Feature 3: 93</div>`)[0];
+                popup_e6a08ac78b849a96483201e538b9bc8a.setContent(html_9116e47dadd0d6f703fd3a693677a588);
+            
+        
+
+        marker_22177f509457b8cc343e697f5019db95.bindPopup(popup_e6a08ac78b849a96483201e538b9bc8a)
+        .openPopup();
+
+        
+    
+    
+            var marker_716f5888e00f405e46c086a621e5dbf6 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_388d82fb43351ab44161a9987a0294a6 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_28be6f25b8e0ca76569a3a68e07015f4 = $(`<div id="html_28be6f25b8e0ca76569a3a68e07015f4" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: 8055 Zürich<br>Feature 3: nan</div>`)[0];
+                popup_388d82fb43351ab44161a9987a0294a6.setContent(html_28be6f25b8e0ca76569a3a68e07015f4);
+            
+        
+
+        marker_716f5888e00f405e46c086a621e5dbf6.bindPopup(popup_388d82fb43351ab44161a9987a0294a6)
+        .openPopup();
+
+        
+    
+    
+            var marker_1c405c8450f08621f732be7a2fba0c99 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_4a26c6b4c88a585b93ccb01ce5cd766b = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_eae4a0d71706390c9669008a06ee4324 = $(`<div id="html_eae4a0d71706390c9669008a06ee4324" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: 8032 Zürich<br>Feature 3: 40</div>`)[0];
+                popup_4a26c6b4c88a585b93ccb01ce5cd766b.setContent(html_eae4a0d71706390c9669008a06ee4324);
+            
+        
+
+        marker_1c405c8450f08621f732be7a2fba0c99.bindPopup(popup_4a26c6b4c88a585b93ccb01ce5cd766b)
+        .openPopup();
+
+        
+    
+    
+            var marker_71b28fe88d225e79a8ab0ed4e194f81a = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_996307d7678419282d5cb4c9f9fdcdcf = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_60d17e68bc7d451b72b4ae31fe25f3ca = $(`<div id="html_60d17e68bc7d451b72b4ae31fe25f3ca" style="width: 100.0%; height: 100.0%;">Feature 1:  21000000<br>Feature 2: 8000 Zürich<br>Feature 3: 1,600</div>`)[0];
+                popup_996307d7678419282d5cb4c9f9fdcdcf.setContent(html_60d17e68bc7d451b72b4ae31fe25f3ca);
+            
+        
+
+        marker_71b28fe88d225e79a8ab0ed4e194f81a.bindPopup(popup_996307d7678419282d5cb4c9f9fdcdcf)
+        .openPopup();
+
+        
+    
+    
+            var marker_083ae1a4758d7cb85c6602ccc4de5e59 = L.marker(
+                [47.3744489, 8.5410422],
+                {}
+            ).addTo(map_12c95d24852b746c858de16b16197fa9);
+        
+    
+        var popup_0e3f94b73093b4afa6d9e5471bcad956 = L.popup({"autoClose": false, "maxWidth": 250});
+
+        
+            
+                var html_72daf09388e3ea33eb0fd0b958a41aa3 = $(`<div id="html_72daf09388e3ea33eb0fd0b958a41aa3" style="width: 100.0%; height: 100.0%;">Feature 1: Price on request<br>Feature 2: 8000 Zürich<br>Feature 3: 121</div>`)[0];
+                popup_0e3f94b73093b4afa6d9e5471bcad956.setContent(html_72daf09388e3ea33eb0fd0b958a41aa3);
+            
+        
+
+        marker_083ae1a4758d7cb85c6602ccc4de5e59.bindPopup(popup_0e3f94b73093b4afa6d9e5471bcad956)
+        .openPopup();
+
+        
+    
+</script>
+</html>

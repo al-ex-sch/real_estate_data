@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-class SplitFeatures:
+class AdjustFeatures:
     """
     A class used to split and process features and main_info columns in a DataFrame.
     """
@@ -14,7 +14,7 @@ class SplitFeatures:
         :param df: Input DataFrame with a features_furnishings column.
         :return: DataFrame with processed features_furnishings columns.
         """
-        df['features_furnishings'] = df['features_furnishings'].apply(lambda x: x.split(', ') if pd.notna(x) else [])
+        df['features_furnishings'] = df['features_furnishings'].apply(lambda x: x.split(', ') if pd.notna(x) else None)
         dummy_features = df['features_furnishings'].apply(pd.Series).stack().str.get_dummies().groupby(level=0).sum()
         df = pd.concat([df, dummy_features], axis=1)
         for col in dummy_features.columns:

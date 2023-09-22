@@ -9,9 +9,9 @@ from selenium.common.exceptions import NoSuchElementException
 
 import undetected_chromedriver as uc
 
-from src.get_real_estate_data.listings_scraper.data_cleaner import DataCleaner
-from src.get_real_estate_data.listings_scraper.features_split import SplitFeatures
-from src.get_real_estate_data.shared.webscraping_helper import WebscrapingHelper
+from src.get_real_estate_data.listings_details_scraper.data_cleaner import DataCleaner
+from src.get_real_estate_data.listings_details_scraper.adjust_features import AdjustFeatures
+from src.get_real_estate_data.helper.webscraping_helper import WebscrapingHelper
 
 
 class IndividualListingsScraper(WebscrapingHelper):
@@ -47,9 +47,9 @@ class IndividualListingsScraper(WebscrapingHelper):
         :param df: pd.DataFrame, the DataFrame containing rows
         :return: Dict, dictionary containing extracted links and existing information
         """
-        existing_info_dict = {'link': row['url']}
+        existing_info_dict = {'link': row['link']}
         for column in df.columns:
-            if column != 'url':
+            if column != 'link':
                 existing_info_dict[column] = row[column]
         return existing_info_dict
 
@@ -173,7 +173,7 @@ class IndividualListingsScraper(WebscrapingHelper):
         :param counter: int, the counter for processed links
         :return: Dict, updated dictionary with cleaned get_real_estate_data
         """
-        self.driver.get(row['url'])
+        self.driver.get(row['link'])
 
         if not self.driver.find_elements(By.CSS_SELECTOR, self.helper_paths['detect_unavailable_prop']):
             return self._handle_unavailable_property(existing_info_dict)
@@ -211,6 +211,12 @@ class IndividualListingsScraper(WebscrapingHelper):
         file_name_with_date = f"{file_name}_{today}.csv"
         df.to_csv(file_name_with_date, index=False, encoding="utf-8")
 
+    @staticmethod
+    def _perform_feature_engineering(df):
+        split_features = AdjustFeatures()
+        processed_df = split_features.process_data(df)
+        return processed_df
+
     def scrape_all_properties(self, df: pd.DataFrame) -> pd.DataFrame:
         """
         Scrape all properties in the given DataFrame.
@@ -225,7 +231,7 @@ class IndividualListingsScraper(WebscrapingHelper):
 
         total_properties = len(df)
         for counter, (_, row) in enumerate(rows):
-            property_id = row["url"].split("/")[-1]
+            property_id = row["link"].split("/")[-1]
             print(f"Scraping property {property_id} ({counter + 1} out of {total_properties})")
 
             try:
@@ -245,9 +251,8 @@ class IndividualListingsScraper(WebscrapingHelper):
 
         listings_details_df = pd.DataFrame(listings_details)
 
-        split_features = SplitFeatures()
-        processed_df = split_features.process_data(listings_details_df)
+        processed_df = self._perform_feature_engineering(df=listings_details_df)
 
         self.save_df_to_csv(processed_df, "listings_details")
-
+        self.driver.quit()
         return processed_df

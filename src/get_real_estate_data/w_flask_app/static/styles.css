@@ -1,0 +1,23 @@
+/* static/styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+#map-container {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 20px;
+}
+
+.property-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.property-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiss Real Estate</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #map-container {
+            width: 75%;
+            height: 100%;
+            float: left;
+        }
+
+        #property-list {
+            width: 25%;
+            height: 100%;
+            float: right;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
+        .property-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            grid-column: 1 / span 2;
+        }
+
+        .buttons-row {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            width: 48%;
+            color: #ffffff;
+        }
+
+        .btn-selected {
+            background-color: #007bff;
+        }
+
+        .btn-unselected {
+            background-color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div id="map-container">
+        {% include "map.html" %}
+    </div>
+    <div id="property-list">
+        <div class="buttons-container">
+            <div class="buttons-row">
+                <button class="btn btn-selected" id="buy">Buy</button>
+                <button class="btn btn-unselected" id="rent">Rent</button>
+            </div>
+            <div class="buttons-row">
+                <button class="btn btn-selected" id="apartment">Apartment</button>
+                <button class="btn btn-unselected" id="house">House</button>
+            </div>
+        </div>
+        {% for index, property in properties.iterrows() %}
+            <div class="property-item" data-marker-id="{{ index }}">
+                <img class="property-image" src="{{ property.image_url }}" alt="{{ property.address }}">
+                <div class="property-info">
+                    <h4>{{ property.price }} CHF</h4>
+                    <p>{{ property.rooms }} rooms, {{ property.living_space }} m²</p>
+                    <p>{{ property.address }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <script>
+    var defaultIcon = L.icon({
+        iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    });
+
+    var highlightedIcon = L.icon({
+        iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    });
+
+    var markers = [];
+    {% for coords in marker_coords %}
+        markers.push(L.marker([{{ coords[0] }}, {{ coords[1] }}], {index: {{ loop.index0 }}}));
+    {% endfor %}
+
+    function initMapListeners() {
+    map.on('moveend', updateVisibleListings);
+    map.on('zoomend', updateVisibleListings);
+    }
+
+
+    function updateVisibleListings() {
+    var bounds = map.getBounds();
+    markers.forEach(function(marker) {
+        if (bounds.contains(marker.getLatLng())) {
+            $(".property-item[data-marker-id='" + marker.options.index + "']").show();
+        } else {
+            $(".property-item[data-marker-id='" + marker.options.index + "']").hide();
+        }
+    });
+    }
+
+
+    $(document).ready(function() {
+        $(".property-item").hover(function() {
+            var markerId = $(this).data("marker-id");
+            markers[markerId].setIcon(highlightedIcon);
+        }, function() {
+            var markerId = $(this).data("marker-id");
+            markers[markerId].setIcon(defaultIcon);
+        });
+
+        markers.forEach(function(marker, index) {
+            marker.on('mouseover', function() {
+                $(".property-item[data-marker-id='" + index + "']").addClass("hovered");
+            });
+            marker.on('mouseout', function() {
+                $(".property-item[data-marker-id='" + index + "']").removeClass("hovered");
+            });
+        });
+
+        $("#buy, #rent").click(function() {
+            $(this).toggleClass("btn-selected").toggleClass("btn-unselected");
+        });
+
+        $("#apartment, #house").click(function() {
+            $(this).toggleClass("btn-selected").toggleClass("btn-unselected");
+        });
+
+        map.on('moveend', updateVisibleListings);
+        map.on('zoomend', updateVisibleListings);
+        updateVisibleListings();
+    });
+</script>
+
+</body>
+</html>

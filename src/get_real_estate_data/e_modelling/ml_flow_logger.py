@@ -2,7 +2,7 @@
 import mlflow
 import mlflow.sklearn
 
-from src.get_real_estate_data.d_modelling.metrics import Metrics
+from src.get_real_estate_data.e_modelling.metrics import Metrics
 
 
 def log_model(model, model_name, X_train, y_train, X_test, y_test):

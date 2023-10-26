@@ -1,9 +1,9 @@
 ##
 import pandas as pd
 
-from src.get_real_estate_data.e_nlp.text_processor import TextProcessor
-from src.get_real_estate_data.e_nlp.topic_model_analyzer import TopicModelAnalyzer
-from src.get_real_estate_data.e_nlp.word_frequency_analyzer import WordFrequencyAnalyzer
+from src.get_real_estate_data.d_nlp.text_processor import TextProcessor
+from src.get_real_estate_data.d_nlp.topic_model_analyzer import TopicModelAnalyzer
+from src.get_real_estate_data.d_nlp.word_frequency_analyzer import WordFrequencyAnalyzer
 
 
 df1 = pd.read_csv('nlp.csv')

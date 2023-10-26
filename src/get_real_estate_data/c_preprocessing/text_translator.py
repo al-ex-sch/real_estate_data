@@ -1,14 +1,4 @@
-##
-import pandas as pd
 from googletrans import Translator
-
-
-df_apt_buy = pd.read_csv(
-    'C:/Users/alexandra.sulcova/PycharmProjects/real_estate/df_apt_buy_new.csv', index_col=0,
-)
-df_apt_rent = pd.read_csv(
-    'C:/Users/alexandra.sulcova/PycharmProjects/real_estate/df_apt_rent_new.csv', index_col=0,
-)
 
 
 class TextTranslator:
@@ -37,8 +27,3 @@ class TextTranslator:
             else:
                 print(f"Skipping record at index {index}")
         return self.df
-
-
-translator = TextTranslator(df_apt_rent)
-translated_df = translator.translate_column()
-translated_df.to_csv('translated_rent_df.csv', index=False)

@@ -51,31 +51,19 @@ class PropertyTracker:
             stock_combined = stock
 
         stock_combined = self._remove_duplicate_columns(stock_combined)
-        stock_combined = self._cast_datatypes(df=stock_combined)
         return stock_combined
 
     def _find_new_properties(self, yesterday: pd.DataFrame, today: pd.DataFrame) -> pd.DataFrame:
         new_properties = today[~today['property_id'].isin(yesterday['property_id'])]
         new_properties = self._remove_duplicate_columns(new_properties)
         new_properties = self._add_columns(properties=new_properties, new=1)
-        new_properties = self._cast_datatypes(df=new_properties)
         return new_properties
 
     def _find_sold_properties(self, yesterday: pd.DataFrame, today: pd.DataFrame) -> pd.DataFrame:
         sold_properties = yesterday[~yesterday['property_id'].isin(today['property_id'])]
         sold_properties = self._remove_duplicate_columns(sold_properties)
         sold_properties = self._add_columns(properties=sold_properties, sold=1)
-        sold_properties = self._cast_datatypes(df=sold_properties)
         return sold_properties
-
-    @staticmethod
-    def _cast_datatypes(df):  # TODO: do for all columns, replace int64 with int32 and lower
-        cols = ['first_price', 'price', 'page']
-        for col in cols:
-            df[col] = df[col].astype('int64')
-
-        df = df.reset_index(drop=True)
-        return df
 
     def _add_columns(self, properties: pd.DataFrame, stock: int = 0, sold: int = 0, new: int = 0) -> pd.DataFrame:
         properties = properties.copy()

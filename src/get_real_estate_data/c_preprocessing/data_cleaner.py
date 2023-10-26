@@ -1,19 +1,15 @@
-import os
+from sklearn.pipeline import Pipeline
 
-from dotenv import load_dotenv
-
-from src.get_real_estate_data.c_preprocessing.geo_coder import GeoCoder
-from src.get_real_estate_data.d_modelling.room_imputer import RoomsImputer
-
-load_dotenv()
-geo_api = os.getenv("geo_api")
-
-# TODO: check whether all cols have correct data types
+from src.get_real_estate_data.a_helper.config import living_space_ranges
+from src.get_real_estate_data.c_preprocessing.living_space_categorizer import LivingSpaceCategorizer
+from src.get_real_estate_data.c_preprocessing.room_categorizer import RoomCategorizer
+from src.get_real_estate_data.c_preprocessing.room_imputer import RoomsImputer
 
 
 class DataCleaner:
 
     def __init__(self, buy_or_rent, property_type, bounds):
+        self.buy_or_rent = buy_or_rent
         self.bounds = bounds
         self.current_bounds = self.bounds[f'{property_type}_{buy_or_rent}']
         self.removed = None
@@ -62,6 +58,17 @@ class DataCleaner:
         removed_rows = df.loc[mask]
         return clean_df, removed_rows
 
+    def _categorize_rooms_and_living_space(self, df):
+        living_space_key = 'apartment_buy' if self.buy_or_rent == 'buy' else 'apartment_rent'
+
+        pipeline_cat = Pipeline([
+            ('room_categorizer', RoomCategorizer(upper_limit=6)),
+            ('living_space_categorizer',
+             LivingSpaceCategorizer(living_space_dict=living_space_ranges, selected_key=living_space_key)),
+        ])
+        transformed_df = pipeline_cat.fit_transform(df)
+        return transformed_df
+
     def perform_data_cleaning(self, df):
         df, nans = self._remove_nans_living_space(df)
         df, imputed_rows = self._perform_imputing(df=df)
@@ -82,10 +89,5 @@ class DataCleaner:
         ]
         df, keywords_removed = self._remove_rows_with_keywords(df=df, column='text', keywords=to_remove)
         self.removed = nans, outliers0, outliers1, outliers2, outliers3, duplicates, imputed_rows, keywords_removed
+        df = self._categorize_rooms_and_living_space(df=df)
         return df
-
-    @staticmethod
-    def perform_geocoding(df):
-        geo = GeoCoder(user_agent=geo_api)
-        df_processed = geo.process_data(df=df)
-        return df_processed

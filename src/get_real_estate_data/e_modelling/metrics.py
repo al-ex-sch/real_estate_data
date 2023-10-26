@@ -15,11 +15,6 @@ class Metrics:
         self.cv = cv
         self.y_pred = None
 
-    @staticmethod
-    def mean_absolute_percentage_error(y_true, y_pred):
-        y_true, y_pred = np.array(y_true), np.array(y_pred)
-        return np.mean(np.abs((y_true - y_pred) / y_true)) * 100
-
     def cross_val_rmse(self):
         cv_scores = cross_val_score(
             self.model, self.X_train, self.y_train, cv=self.cv, scoring='neg_mean_squared_error'
@@ -29,7 +24,12 @@ class Metrics:
         std_rmse_cv_score = np.std(rmse_cv_scores)
         return mean_rmse_cv_score, std_rmse_cv_score
 
-    def fit_and_predict(self):
+    @staticmethod
+    def _mean_absolute_percentage_error(y_true, y_pred):
+        y_true, y_pred = np.array(y_true), np.array(y_pred)
+        return np.mean(np.abs((y_true - y_pred) / y_true)) * 100
+
+    def _fit_and_predict(self):
         self.model.fit(self.X_train, self.y_train)
         self.y_pred = self.model.predict(self.X_test)
 
@@ -38,7 +38,7 @@ class Metrics:
         return rmse
 
     def test_mape(self):
-        mape = self.mean_absolute_percentage_error(self.y_test, self.y_pred)
+        mape = self._mean_absolute_percentage_error(self.y_test, self.y_pred)
         return mape
 
     def plot_residuals(self):
@@ -59,9 +59,9 @@ class Metrics:
         plt.show()
 
     def report(self):
-        self.fit_and_predict()
+        self._fit_and_predict()
         mean_rmse_cv_score, std_rmse_cv_score = self.cross_val_rmse()
-        print(f"Mean RMSE CV Score: {mean_rmse_cv_score:.4f}, Std. Dev: {std_rmse_cv_score:.4f}")
+        print(f"Mean RMSE CV Score on Train Data: {mean_rmse_cv_score:.4f}, Std. Dev: {std_rmse_cv_score:.4f}")
         rmse = self.test_rmse()
         print(f"Root Mean Squared Error on Test Data: {rmse:.4f}")
         mape = self.test_mape()

@@ -7,9 +7,9 @@ from sklearn.model_selection import train_test_split
 import xgboost as xgb
 
 from src.get_real_estate_data.a_helper.config import living_space_ranges
-from src.get_real_estate_data.d_modelling.avg_metric_transformer import AverageMetricPerCategory, ColumnKeeper
-from src.get_real_estate_data.d_modelling.categorizers_transformers import LivingSpaceCategorizer, RoomCategorizer
-from src.get_real_estate_data.d_modelling.metrics import Metrics
+from src.get_real_estate_data.e_modelling.avg_metric_transformer import AverageMetricPerCategory, ColumnKeeper
+from src.get_real_estate_data.c_preprocessing.living_space_categorizer import LivingSpaceCategorizer, RoomCategorizer
+from src.get_real_estate_data.e_modelling.metrics import Metrics
 
 warnings.simplefilter(action='ignore', category=FutureWarning)
 

@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 from src.get_real_estate_data.a_helper.config import bounds_outliers, cantons
 from src.get_real_estate_data.c_preprocessing.geo_coder import GeoCoder
 from src.get_real_estate_data.c_preprocessing.plotter_utils import plot_distribution, plot_all_cantons
-from src.get_real_estate_data.d_modelling.room_imputer import RoomsImputer
+from src.get_real_estate_data.c_preprocessing.room_imputer import RoomsImputer
 
 load_dotenv()
 geo_api = os.getenv("geo_api")

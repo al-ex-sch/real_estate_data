@@ -49,7 +49,7 @@ class CombineCSVs:
         df['living_space'] = df['temp_living_space'].combine_first(df['living_space'])
         df['rooms'] = df['rooms'].apply(lambda x: None if 'm²' in str(x) else x).astype(float)
         df = df.drop('temp_living_space', axis=1)
-        df['living_space'] = df['living_space'].apply(lambda x: str(x).rstrip('²') if '²' in str(x) else x)  # TODO: del
+        df['living_space'] = df['living_space'].apply(lambda x: str(x).rstrip('²') if '²' in str(x) else x)
         df['living_space'] = pd.to_numeric(df['living_space'], errors='coerce', downcast='integer')
         return df
 

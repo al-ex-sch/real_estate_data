@@ -6,13 +6,13 @@ from src.get_real_estate_data.c_preprocessing.plotter_utils import plot_distribu
 
 df = pd.read_csv('C:/Users/alexandra.sulcova/PycharmProjects/real_estate/old_data/df_apt_buy_new.csv')
 
-##
+# choose between: rooms, price_sqm, living_space, price
+col_name = 'rooms'
 
-to_plot = ['price', 'price_sqm', 'living_space', 'rooms']
+# choose between: single, cantons
+plot_type = 'single'
 
-plot_distribution(df, 'rooms')
-
-
-##
-
-plot_all_cantons(df=df, cantons=cantons, metric='price')
+if plot_type == 'single':
+    plot_distribution(df, col_name)
+else:
+    plot_all_cantons(df=df, cantons=cantons, metric=col_name)

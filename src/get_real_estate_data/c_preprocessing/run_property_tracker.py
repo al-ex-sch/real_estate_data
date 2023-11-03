@@ -1,14 +1,13 @@
 ##
 import os
-import glob
 
 import pandas as pd
 from dotenv import load_dotenv
 
 from src.get_real_estate_data.c_preprocessing.property_tracker import PropertyTracker
 from src.get_real_estate_data.c_preprocessing.geo_coder import GeoCoder
-from src.get_real_estate_data.c_preprocessing.reverse_geocoding import LocationInfo
 from src.get_real_estate_data.c_preprocessing.text_translator import TextTranslator
+from src.get_real_estate_data.d_nlp.location_size_matcher import LocationSizeMatcher
 
 load_dotenv()
 geo_api = os.getenv("geo_api")
@@ -91,39 +90,15 @@ class RunPropertyTracker:
         full_history_df.to_csv(full_history_file, index=False)
 
     @staticmethod
-    def _find_latest_full_history_file(output_dir):
-        search_pattern = os.path.join(output_dir, "*full_history*.csv")
-        files = glob.glob(search_pattern)
-        files.sort(key=os.path.getmtime, reverse=True)
-
-        if not files:
-            raise FileNotFoundError("No files found with 'full_history' in their name")
-
-        return files[0]
-
-    @staticmethod
-    def _merge_on_full_history(df, previous_full_history_df):
-        df['property_id'] = df['property_id'].astype(str)
-        previous_full_history_df['property_id'] = previous_full_history_df['property_id'].astype(str)
-        df = df.merge(
-            previous_full_history_df[
-                ['property_id', 'latitude', 'longitude', 'village', 'town', 'city', 'text_translated']
-            ],
-            how='left',
-            on='property_id'
-        )
-        return df
-
-    @staticmethod
     def _perform_geocoding(df):
         geo = GeoCoder(user_agent=geo_api)
         df_processed = geo.process_data(df=df)
         return df_processed
 
     @staticmethod
-    def _perform_reverse_geocoding(df):
-        location_info = LocationInfo(df, "latitude", "longitude")
-        df = location_info.apply_location_info()
+    def _get_location_size(df):
+        matcher = LocationSizeMatcher(cities_df=cities)
+        df = matcher.match_location_size(df=df)
         return df
 
     @staticmethod
@@ -144,20 +119,13 @@ class RunPropertyTracker:
         stock_df, new_df, sold_df = property_tracker.perform_property_tracking(yesterday=yesterday_df, today=today_df)
 
         if not first_run:
-            # latest_full_history_file = self._find_latest_full_history_file(output_dir)
-            # previous_full_history = pd.read_csv(latest_full_history_file)
-            # sold_df = self._merge_on_full_history(df=sold_df, previous_full_history_df=previous_full_history)
-            # stock_df = self._merge_on_full_history(df=stock_df, previous_full_history_df=previous_full_history)
-
-            # geocoding, reverse geocoding and translation only on the new listings
-            # new_df = self._perform_geocoding(df=new_df)
-            # new_df = self._perform_reverse_geocoding(df=new_df)
-            # new_df = self._perform_translation(df=new_df)
-            new_df = pd.read_csv('C:/Users/alexandra.sulcova/PycharmProjects/real_estate/translated_df_temp.csv')
+            # only on the new listings
+            new_df = self._perform_geocoding(df=new_df)
+            new_df = self._get_location_size(df=new_df)
+            new_df = self._perform_translation(df=new_df)
 
         current_properties = self._combine_dfs(df1=new_df, df2=stock_df)
         sold_history_df = self._combine_sold_dfs(sold_df=sold_df, first_run=first_run, file_path=sold_file_path)
-
         full_history_df = self._combine_dfs(df1=sold_history_df, df2=current_properties)
         current_properties, full_history_df, sold_history_df = [
             self._cast_datatypes(df) for df in [current_properties, full_history_df, sold_history_df]
@@ -200,9 +168,12 @@ paths = {
     }
 }
 
-# choose between: buy, rent
-prop_type = 'buy'
+cities = pd.read_excel(
+    'C:/Users/alexandra.sulcova/PycharmProjects/real_estate/data/dimensions/cities_ch.xlsx'
+)  # TODO: make parameter - input in the class
 
+# choose between: buy, rent
+prop_type = 'rent'
 
 prop_track = RunPropertyTracker()
 current_stock, sold_history, full_history = prop_track.track_properties(
@@ -210,22 +181,6 @@ current_stock, sold_history, full_history = prop_track.track_properties(
     yesterday_file=paths[prop_type]['yesterday'],
     sold_file_path=paths[prop_type]['sold'],
     output_dir=paths[prop_type]['output'],
-    first_run=False,
-)
-
-
-
-##
-
-# choose between: buy, rent
-prop_type2 = 'rent'
-
-prop_track2 = RunPropertyTracker()
-current_stock2, sold_history2, full_history2 = prop_track2.track_properties(
-    today_file=paths[prop_type2]['today'],
-    yesterday_file=paths[prop_type2]['yesterday'],
-    sold_file_path=paths[prop_type2]['sold'],
-    output_dir=paths[prop_type2]['output'],
     first_run=False,
 )
 

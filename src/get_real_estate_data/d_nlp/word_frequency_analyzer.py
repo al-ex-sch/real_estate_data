@@ -1,4 +1,6 @@
-##
+import ast
+
+import nltk
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -16,7 +18,7 @@ class WordFrequencyAnalyzer:
         return word_counts
 
     def get_sorted_word_frequencies(self, df, column):
-        tokenized_texts = df[column]
+        tokenized_texts = df[column].apply(lambda x: ast.literal_eval(x))
         word_frequencies = self.count_words(tokenized_texts)
         sorted_word_frequencies = {
             k: v for k, v in sorted(word_frequencies.items(), key=lambda item: item[1], reverse=True)

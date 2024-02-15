@@ -30,7 +30,7 @@ class Metrics:
         return np.mean(np.abs((y_true - y_pred) / y_true)) * 100
 
     def _fit_and_predict(self):
-        self.model.fit(self.X_train, self.y_train)
+        self.model.fit(self.X_train, self.y_train, verbose=True)
         self.y_pred = self.model.predict(self.X_test)
 
     def test_rmse(self):

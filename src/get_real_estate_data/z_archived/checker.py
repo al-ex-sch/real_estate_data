@@ -8,7 +8,7 @@ import undetected_chromedriver as uc
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 
-from src.get_real_estate_data.a_helper.config import scrape_links_houses, scrape_links
+from src.get_real_estate_data.a_helper.config import scrape_links_houses, scrape_links_buy
 
 
 class HomegateChecker:
@@ -73,6 +73,6 @@ class HomegateChecker:
 
 driver = uc.Chrome()
 file_path = '/2023-09-23 apartments buy'
-checker = HomegateChecker(scrape_links, driver, file_path)
+checker = HomegateChecker(scrape_links_buy, driver, file_path)
 checker.run()
 driver.quit()

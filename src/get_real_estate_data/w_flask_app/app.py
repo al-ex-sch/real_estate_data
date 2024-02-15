@@ -30,12 +30,13 @@ custom_css = """
 @app.route("/", methods=["GET", "POST"])
 def home():
     rent_apartment = pd.read_csv("C:/Users/alexandra.sulcova/PycharmProjects/real_estate/output.csv")
+    rent_apartment = rent_apartment.sample(1000)
     rent_apartment = rent_apartment.dropna(subset='latitude')
 
     swiss_map = folium.Map(location=[46.8, 8.33], zoom_start=8)
 
-    topojson_file = '/src/get_real_estate_data/w_flask_app/muni_topo.json'
-    cantons_topojson_file = '/src/get_real_estate_data/w_flask_app/cantons_topo.json'
+    topojson_file = 'C:/Users/alexandra.sulcova/PycharmProjects/real_estate/src/get_real_estate_data/w_flask_app/muni_topo.json'
+    cantons_topojson_file = 'C:/Users/alexandra.sulcova/PycharmProjects/real_estate/src/get_real_estate_data/w_flask_app/cantons_topo.json'
 
     municipalities_geojson = topojson_to_geojson(topojson_file)
     cantons_geojson = topojson_to_geojson(cantons_topojson_file)
@@ -53,7 +54,8 @@ def home():
         var childCount = cluster.getChildCount();    
         var color = 'black';    
         return L.divIcon({    
-            html: '<div style="background-color:rgba(0, 0, 0, 0.5); color:white; border-radius:50%; width: 30px; height: 30px; line-height: 30px; text-align: center;"><span>' + childCount + '</span></div>',    
+            html: '<div style="background-color:rgba(0, 0, 0, 0.5); color:white; border-radius:50%; width: 30px; 
+            height: 30px; line-height: 30px; text-align: center;"><span>' + childCount + '</span></div>',    
             className: 'marker-cluster'    
         });    
     }    
@@ -61,7 +63,7 @@ def home():
 
     marker_cluster = MarkerCluster(icon_create_function=custom_marker_cluster).add_to(swiss_map)
     properties = rent_apartment
-    markers = []  # Add this line
+    markers = []
     for index, row in properties.iterrows():
         marker = folium.Marker(
             location=[row["latitude"], row["longitude"]],
@@ -69,7 +71,7 @@ def home():
             popup=f"<a href='{row['link']}' target='_blank'>View details</a>",
         )
         marker.add_to(marker_cluster)
-        markers.append(marker)  # Add this line
+        markers.append(marker)
 
     for feature in cantons_geojson['features']:
         canton_id = feature['properties']['id']

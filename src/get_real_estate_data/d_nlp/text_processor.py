@@ -101,5 +101,8 @@ class TextProcessor:
         :param column_name: Column name containing text to process.
         :return: DataFrame with a new column named 'text_transformed' containing transformed tokens.
         """
-        df['text_transformed'] = df[column_name].apply(lambda x: self._preprocess_text(x))
+        df[column_name + '_tokenized'] = df[column_name].fillna('')
+        for index, row in df.iterrows():
+            print(f"Processing row {index}")
+            df.at[index, column_name + '_tokenized'] = self._preprocess_text(row[column_name])
         return df

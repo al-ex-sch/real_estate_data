@@ -1,9 +1,7 @@
-##
 import warnings
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from sklearn.ensemble import GradientBoostingRegressor, VotingRegressor
 import xgboost as xgb
 
 from src.get_real_estate_data.e_modelling.metrics import Metrics
@@ -17,6 +15,7 @@ class RentPrediction:
     def __init__(self, training_cols):
         self.training_cols = training_cols
         self.train_set = None
+        self.model = None
 
     @staticmethod
     def _split_rent_df(df):
@@ -37,55 +36,29 @@ class RentPrediction:
             rent_train_X_y=train_combined,
             training_cols=self.training_cols
         )
-        """
-        pipeline_sk = PipelineSklearn()
-        pipeline = pipeline_sk.get_pipeline(
-            df_apt_buy=df_apt_buy,
-            rent_train_X_y=train_combined,
-            training_cols=self.training_cols,
-        )
-        """
         X_train_trans = pipeline.fit_transform(train_combined)
         X_test_trans = pipeline.fit_transform(test_combined)
 
         return X_train_trans, X_test_trans
 
-    @staticmethod
-    def _train_models(X_train_trans, y_train, X_test_trans, y_test, log_model_bool, model_name):
-        # TODO: simplify, or move to other class
-        gb_regressor = GradientBoostingRegressor(n_estimators=100, random_state=22)
-        gb_metrics = Metrics(
-            model=gb_regressor, X_train=X_train_trans, y_train=y_train, X_test=X_test_trans, y_test=y_test,
-        )
-        gb_metrics.report()
-
+    def _train_models(self, X_train_trans, y_train, X_test_trans, y_test, log_model_bool, model_name):
         xgb_regressor = xgb.XGBRegressor(
             objective='reg:squarederror',
-            n_estimators=20
+            n_estimators=20,
+            random_state=22,
         )
         xgb_metrics = Metrics(
             model=xgb_regressor, X_train=X_train_trans, y_train=y_train, X_test=X_test_trans, y_test=y_test,
         )
         xgb_metrics.report()
 
-        # TODO: is it fitted when we return it?
-        ensemble_model = VotingRegressor(
-            estimators=[
-                ('xgb', xgb_regressor),
-                ('gb', gb_regressor)
-            ],
-            weights=[0.5, 0.5]
-        )
-        ensemble_metrics = Metrics(
-            model=ensemble_model, X_train=X_train_trans, y_train=y_train, X_test=X_test_trans, y_test=y_test,
-        )
-        ensemble_metrics.report()
-
         if log_model_bool:
             log_model(
-                ensemble_model, model_name, X_train=X_train_trans, y_train=y_train, X_test=X_test_trans, y_test=y_test,
+                xgb_metrics, model_name, X_train=X_train_trans, y_train=y_train, X_test=X_test_trans, y_test=y_test,
             )
-        return ensemble_model
+
+        self.model = xgb_regressor
+        return xgb_regressor
 
     @staticmethod
     def _calculate_metrics(df_apt_buy):
@@ -103,7 +76,7 @@ class RentPrediction:
         pipeline = rent_and_buy_pipe.get_pipeline(
             df_apt_buy=df_apt_buy,
             rent_train_X_y=df_apt_rent,
-            training_cols=self.training_cols
+            training_cols=self.training_cols,
         )
         # TODO: we will predict on current stock, not full history
         X_apt_buy = pipeline.fit_transform(df_apt_buy)
@@ -126,115 +99,9 @@ class RentPrediction:
             log_model_bool=log_model_bool,
             model_name=model_name,
         )
+
         df_buy_with_preds = self._get_apt_buy_df_with_preds(
             model=model, df_apt_buy_orig=df_apt_buy, df_apt_rent=df_apt_rent,
         )
+
         return df_buy_with_preds
-
-
-apt_buy = pd.read_csv(
-    'C:/Users/alexandra.sulcova/PycharmProjects/real_estate/full_history_apt_buy_cat.csv'
-)
-apt_rent = pd.read_csv(
-    'C:/Users/alexandra.sulcova/PycharmProjects/real_estate/full_history_apt_rent_cat.csv'
-)
-
-train_cols = [
-    'rooms',
-    'living_space',
-    'sqm_per_room',
-    'page',
-    'has_image',
-    'date_month',
-    'date_year',
-    'date_quarter',
-    'latitude',
-    'longitude',
-
-    'avg_price_sqm_by_canton_room_range',
-    'avg_price_sqm_by_canton_living_space_range',
-    # 'avg_price_stock_sqm_by_canton_room_range',
-    # 'avg_price_stock_sqm_by_canton_living_space_range',
-    # 'avg_price_sold_sqm_by_canton_room_range',
-    # 'avg_price_sold_sqm_by_canton_living_space_range',
-
-    'count_buy_by_canton_room_range',
-    'count_buy_by_canton_living_space_range',
-    # 'count_sold_buy_by_canton_room_range',
-    # 'count_sold_buy_by_canton_living_space_range',
-    # 'count_new_buy_by_canton_room_range',
-    # 'count_new_buy_by_canton_living_space_range',
-    # 'count_stock_buy_by_canton_room_range',
-    # 'count_stock_buy_by_canton_living_space_range',
-
-    'stockturn_buy_by_canton_room_range',
-    'stockturn_buy_by_canton_living_space_range',
-    'share_new_props_buy_by_canton_room_range',
-    'share_new_props_buy_by_canton_living_space_range',
-
-    'avg_net_drops_buy_by_canton_room_range',
-    'avg_net_drops_buy_by_canton_living_space_range',
-    'avg_net_increases_buy_by_canton_room_range',  # got worse
-    'avg_net_increases_buy_by_canton_living_space_range',  # got worse
-    'avg_sold_dis_buy_by_canton_room_range',
-    'avg_sold_dis_buy_by_canton_living_space_range',
-    'avg_stock_dis_buy_by_canton_room_range',
-    'avg_stock_dis_buy_by_canton_living_space_range',
-
-    'pct_diff_avg_buy_sold_vs_stock_sqm_by_canton_room_range',
-    'pct_diff_avg_buy_sold_vs_stock_sqm_by_canton_living_space_range',
-
-
-
-    'avg_rent_sqm_by_canton_room_range',
-    'avg_rent_sqm_by_canton_living_space_range',
-    # 'avg_rent_stock_sqm_by_canton_room_range',
-    # 'avg_rent_stock_sqm_by_canton_living_space_range',
-    # 'avg_rent_sold_sqm_by_canton_room_range',
-    # 'avg_rent_sold_sqm_by_canton_living_space_range',
-
-    'count_rent_by_canton_room_range',
-    'count_rent_by_canton_living_space_range',
-    # 'count_sold_rent_by_canton_room_range',
-    # 'count_sold_rent_by_canton_living_space_range',
-    # 'count_new_rent_by_canton_room_range',
-    # 'count_new_rent_by_canton_living_space_range',
-    # 'count_stock_rent_by_canton_room_range',
-    # 'count_stock_rent_by_canton_living_space_range',
-
-    'stockturn_rent_by_canton_room_range',
-    'stockturn_rent_by_canton_living_space_range',
-    'share_new_props_rent_by_canton_room_range',
-    'share_new_props_rent_by_canton_living_space_range',
-
-    'avg_net_drops_rent_by_canton_room_range',
-    'avg_net_drops_rent_by_canton_living_space_range',
-    'avg_net_increases_rent_by_canton_room_range',
-    'avg_net_increases_rent_by_canton_living_space_range',
-    'avg_sold_dis_rent_by_canton_room_range',
-    'avg_sold_dis_rent_by_canton_living_space_range',
-    'avg_stock_dis_rent_by_canton_room_range',
-    'avg_stock_dis_rent_by_canton_living_space_range',
-
-    'ratio_count_stock_rent_vs_buy_by_canton_room_range',
-    'ratio_count_new_rent_vs_buy_by_canton_room_range',
-    'ratio_count_sold_rent_vs_buy_by_canton_room_range',
-
-    'share_rent_sqm_vs_price_sqm_by_canton_room_range',
-    'share_rent_sqm_vs_price_sqm_by_canton_living_space_range',
-
-    'pct_diff_avg_rent_sold_vs_stock_sqm_by_canton_room_range',
-    'pct_diff_avg_rent_sold_vs_stock_sqm_by_canton_living_space_range',
-]
-
-# dis_sold, last_price (sold price), count sold will make sense once we have more data
-
-rent_prediction = RentPrediction(training_cols=train_cols)
-df_buy_pred = rent_prediction.run(df_apt_buy=apt_buy, df_apt_rent=apt_rent)
-
-
-# TODO: make plots - distribution - profitability by canton, living space range etc.
-
-##
-
-tst = rent_prediction.train_set.copy()

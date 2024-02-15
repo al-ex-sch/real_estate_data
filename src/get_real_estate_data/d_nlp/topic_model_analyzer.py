@@ -1,8 +1,8 @@
-##
 import seaborn as sns
 import matplotlib.pyplot as plt
 from gensim import corpora
 from gensim.models.ldamodel import LdaModel
+from gensim.models.phrases import Phrases, Phraser
 from sklearn.manifold import TSNE
 import numpy as np
 
@@ -15,8 +15,15 @@ class TopicModelAnalyzer:
         self.lda_model = None
         self.num_topics = None
 
+    @staticmethod
+    def create_phrases_model(tokenized_texts):
+        phrases = Phrases(tokenized_texts, min_count=1, threshold=1)
+        return Phraser(phrases)
+
     def create_dictionary_and_corpus(self):
         tokenized_texts = self.df[self.column]
+        phrases_model = self.create_phrases_model(tokenized_texts)
+        tokenized_texts = [phrases_model[t] for t in tokenized_texts]
         dictionary = corpora.Dictionary(tokenized_texts)
         corpus = [dictionary.doc2bow(text) for text in tokenized_texts]
         return dictionary, corpus

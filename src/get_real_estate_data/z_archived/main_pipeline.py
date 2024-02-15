@@ -11,8 +11,8 @@ from src.get_real_estate_data.c_preprocessing.property_tracker import PropertyTr
 from src.get_real_estate_data.a_helper.config import links_paths, paths_helper, path_images, details_paths, cols_dict
 from src.get_real_estate_data.b_links_scraper.property_links_scraper import PropertyLinksScraper
 from src.get_real_estate_data.z_archived.individual_listings_scraper import IndividualListingsScraper
-from src.get_real_estate_data.z_archived.process_before_saving_to_db import ProcessBeforeSavingToDb
-from src.get_real_estate_data.z_archived.db_utils import DbUtils
+from src.get_real_estate_data.g_save_to_db.process_before_saving_to_db import ProcessBeforeSavingToDb
+from src.get_real_estate_data.g_save_to_db.save_to_db import SaveToDb
 
 pd.set_option("mode.chained_assignment", None)
 
@@ -43,7 +43,7 @@ class MainPipeline:
         return property_links_scraper.scrape_data()
 
     def _create_connection(self):
-        dbutils = DbUtils()
+        dbutils = SaveToDb()
         conn = dbutils.connect_to_db(
             host_name=self.host_name,
             db_name=self.db_name,

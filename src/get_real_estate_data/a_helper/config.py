@@ -1,10 +1,10 @@
 links_paths = {
-    'property': 'a.HgCardElevated_link_OMJcD',
-    'price': 'span.HgListingCard_price_sIIoV',
-    'rooms': 'div.HgListingRoomsLivingSpace_roomsLivingSpace_FiW9E > span:nth-child(1) > strong',
-    'living_space': 'div.HgListingRoomsLivingSpace_roomsLivingSpace_FiW9E > span:nth-child(2) > strong',
-    'address': 'div.HgListingCard_address_dbLZ8 > address',
-    'text': 'div.HgListingDescription_description_SoeAa',
+    'property': 'a.HgCardElevated_link_EHfr7',
+    'price': 'span.HgListingCard_price_JoPAs',
+    'rooms': 'div.HgListingRoomsLivingSpace_roomsLivingSpace_GyVgq > span:nth-child(1) > strong',
+    'living_space': 'div.HgListingRoomsLivingSpace_roomsLivingSpace_GyVgq > span:nth-child(2) > strong',
+    'address': 'div.HgListingCard_address_JGiFv > address',
+    'text': 'div.HgListingDescription_description_r5HCO.HgListingCard_description_kmLhw',
     'image': 'li.glide__slide.glide__slide--active > picture > img',
     'next_page': 'a:nth-child(7)',
 }
@@ -40,7 +40,7 @@ cantons_split_apartments_rent = {
     'vaud': [2000],
 }
 
-scrape_links = [
+scrape_links_buy = [
     'https://www.homegate.ch/buy/apartment/canton-bern/matching-list?ipd=true',
     'https://www.homegate.ch/buy/apartment/canton-lucerne/matching-list?ipd=true',
     'https://www.homegate.ch/buy/apartment/canton-uri/matching-list?ipd=true',

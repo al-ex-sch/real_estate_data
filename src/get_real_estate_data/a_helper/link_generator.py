@@ -1,11 +1,8 @@
-##
 import math
 from typing import List, Dict
 
 import undetected_chromedriver as uc
 from selenium.webdriver.common.by import By
-
-from src.get_real_estate_data.a_helper.config import cantons, cantons_split_apartments  # cantons_split_apartments_rent
 
 
 class LinkGenerator:
@@ -57,7 +54,3 @@ class LinkGenerator:
         original_links = self.get_original_links()
         generated_links = self.generate_all_links()
         return original_links + generated_links
-
-
-link_generator = LinkGenerator(cantons, cantons_split_apartments)
-links_list = link_generator.get_all_links()

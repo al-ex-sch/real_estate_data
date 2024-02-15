@@ -1,4 +1,3 @@
-##
 import os
 
 import pandas as pd
@@ -7,13 +6,13 @@ from dotenv import load_dotenv
 from src.get_real_estate_data.c_preprocessing.property_tracker import PropertyTracker
 from src.get_real_estate_data.c_preprocessing.geo_coder import GeoCoder
 from src.get_real_estate_data.c_preprocessing.text_translator import TextTranslator
-from src.get_real_estate_data.d_nlp.location_size_matcher import LocationSizeMatcher
+from src.get_real_estate_data.c_preprocessing.location_size_matcher import LocationSizeMatcher
 
 load_dotenv()
 geo_api = os.getenv("geo_api")
 
 
-class RunPropertyTracker:
+class FeatureEngineering:
 
     @staticmethod
     def _combine_dfs(df1, df2):
@@ -96,7 +95,7 @@ class RunPropertyTracker:
         return df_processed
 
     @staticmethod
-    def _get_location_size(df):
+    def _get_location_size(df, cities):
         matcher = LocationSizeMatcher(cities_df=cities)
         df = matcher.match_location_size(df=df)
         return df
@@ -107,7 +106,7 @@ class RunPropertyTracker:
         df = translator.translate_column()
         return df
 
-    def track_properties(self, today_file, yesterday_file, sold_file_path, output_dir, first_run=False):
+    def track_properties(self, today_file, yesterday_file, sold_file_path, output_dir, cities, first_run=False):
         today_df = pd.read_csv(today_file)
         yesterday_df = pd.read_csv(yesterday_file, usecols=lambda column: column != 'Unnamed: 0')
 
@@ -121,7 +120,7 @@ class RunPropertyTracker:
         if not first_run:
             # only on the new listings
             new_df = self._perform_geocoding(df=new_df)
-            new_df = self._get_location_size(df=new_df)
+            new_df = self._get_location_size(df=new_df, cities=cities)
             new_df = self._perform_translation(df=new_df)
 
         current_properties = self._combine_dfs(df1=new_df, df2=stock_df)
@@ -142,48 +141,3 @@ class RunPropertyTracker:
         )
 
         return current_properties, sold_df, full_history_df
-
-
-date_today = '2023-10-21'
-date_yesterday = '2023-10-14'
-
-paths = {
-    'buy': {
-        'today': f'C:/Users/alexandra.sulcova/PycharmProjects/real_estate/data/data_step_2/apartment_buy/'
-                 f'{date_today}_apartments_buy_step2.csv',
-        'yesterday': f'C:/Users/alexandra.sulcova/PycharmProjects/real_estate/data/data_step_3/apartment_buy/'
-                     f'{date_yesterday}_apartments_buy_current_stock_step3.csv',
-        'sold': f'C:/Users/alexandra.sulcova/PycharmProjects/real_estate/data/data_step_3/apartment_buy/'
-                f'{date_yesterday}_apartments_buy_sold_history_step3.csv',
-        'output': 'C:/Users/alexandra.sulcova/PycharmProjects/real_estate/data/data_step_3/apartment_buy',
-    },
-    'rent': {
-        'today': f'C:/Users/alexandra.sulcova/PycharmProjects/real_estate/data/data_step_2/apartment_rent/'
-                 f'{date_today}_apartments_rent_step2.csv',
-        'yesterday': f'C:/Users/alexandra.sulcova/PycharmProjects/real_estate/data/data_step_3/apartment_rent/'
-                     f'{date_yesterday}_apartments_rent_current_stock_step3.csv',
-        'sold': f'C:/Users/alexandra.sulcova/PycharmProjects/real_estate/data/data_step_3/apartment_rent/'
-                f'{date_yesterday}_apartments_rent_sold_history_step3.csv',
-        'output': 'C:/Users/alexandra.sulcova/PycharmProjects/real_estate/data/data_step_3/apartment_rent',
-    }
-}
-
-cities = pd.read_excel(
-    'C:/Users/alexandra.sulcova/PycharmProjects/real_estate/data/dimensions/cities_ch.xlsx'
-)  # TODO: make parameter - input in the class
-
-# choose between: buy, rent
-prop_type = 'rent'
-
-prop_track = RunPropertyTracker()
-current_stock, sold_history, full_history = prop_track.track_properties(
-    today_file=paths[prop_type]['today'],
-    yesterday_file=paths[prop_type]['yesterday'],
-    sold_file_path=paths[prop_type]['sold'],
-    output_dir=paths[prop_type]['output'],
-    first_run=False,
-)
-
-# TODO: properties that were falsely "sold" (taken from the market) in past
-#  and now are newly listed on the market will not have the same id - think about removing duplicates in full history
-#  based on unique key made of features (address, canton, living space, rooms)
